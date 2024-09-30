@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "WebAppPharma/1.0.0": {
+        "runtime": {
+          "WebAppPharma.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WebAppPharma/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
