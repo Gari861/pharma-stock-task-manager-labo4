@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using WebAppLibros.Models;
+using WebAppPharma.Models;
 
 namespace WebAppPharma.Models
 {

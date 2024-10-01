@@ -1,11 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebAppLibros.Models;
+using WebAppPharma.Models;
 
 namespace WebAppPharma.Models
 {
@@ -20,7 +15,6 @@ namespace WebAppPharma.Models
         public AppDBcontext(DbContextOptions<AppDBcontext> options)
         : base(options)
         {
-
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -29,22 +23,22 @@ namespace WebAppPharma.Models
             modelBuilder.Entity<Producto>()
                 .HasOne(l => l.UbicacionProducto)
                 .WithOne(u => u.Producto)
-                .HasForeignKey<UbicacionBiblioteca>(u => u.IdProducto);
+                .HasForeignKey<UbicacionProducto>(u => u.IdProducto);
 
             // Relación UNO A MUCHOS
             modelBuilder.Entity<Tarea>()
                 .HasOne(l => l.Prioridad)
-                .WithMany(g => g.Tarea)
+                .WithMany(g => g.Tareas)
                 .HasForeignKey(l => l.IdPrioridad);
 
             modelBuilder.Entity<Tarea>()
                 .HasOne(l => l.EstadodeTarea)
-                .WithMany(g => g.Tarea)
+                .WithMany(g => g.Tareas)
                 .HasForeignKey(l => l.IdEstadodeTarea);
 
             modelBuilder.Entity<Empleado>()
                 .HasOne(l => l.Cargo)
-                .WithMany(g => g.Empleado)
+                .WithMany(g => g.Empleados)
                 .HasForeignKey(l => l.IdCargo);
 
             // Relación MUCHOS A MUCHOS
@@ -69,14 +63,23 @@ namespace WebAppPharma.Models
                 .WithMany(p => p.ProductosProveedores)
                 .HasForeignKey(pp => pp.IdProducto);
 
-            modelBuilder.Entity<ProductoProveedor>()
+            modelBuilder.Entity<ProductoProveedor>()//
                 .HasOne(pp => pp.Proveedor)
                 .WithMany(pv => pv.ProductosProveedores)
                 .HasForeignKey(pp => pp.IdProveedor);
 
-            //asignacion
+            modelBuilder.Entity<TareaEmpleado>()
+                .HasKey(pp => new { pp.IdTarea, pp.IdEmpleado });
 
+            modelBuilder.Entity<TareaEmpleado>()
+                .HasOne(pp => pp.Tarea)
+                .WithMany(p => p.TareasEmpleados)
+                .HasForeignKey(pp => pp.IdTarea);
 
+            modelBuilder.Entity<TareaEmpleado>()
+                .HasOne(pp => pp.Empleado)
+                .WithMany(pv => pv.TareasEmpleados)
+                .HasForeignKey(pp => pp.IdEmpleado);
         }
 
         //Tablas
@@ -89,7 +92,7 @@ namespace WebAppPharma.Models
         public DbSet<Tarea> Tareas { get; set; }
         public DbSet<Prioridad> Prioridades { get; set; }
         public DbSet<EstadodeTarea> EstadosdeTareas { get; set; }
-        public DbSet<EstadodeTarea> EstadosdeTareas { get; set; }
+        public DbSet<TareaEmpleado> TareasEmpleados { get; set; }
         public DbSet<Empleado> Empleados { get; set; }
         public DbSet<Cargo> Cargos { get; set; }
         public DbSet<EstadodeEmpleado> EstadosdeEmpleados { get; set; }

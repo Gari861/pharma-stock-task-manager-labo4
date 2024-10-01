@@ -16,14 +16,6 @@ namespace WebAppPharma.Models
         [Display(Name = "Descripcion")]
         public string? Descripcion { get; set; }
 
-        [Required(ErrorMessage = "La FECHA CREACION es obligatoria")]
-        [Display(Name = "Fecha de Creacion")]
-        public DateTime FechaCreacion { get; set; }
-
-        [Required(ErrorMessage = "La FECHA LIMITE es obligatoria")]
-        [Display(Name = "Fecha Limite")]
-        public DateTime FechaLimite { get; set; }
-
         //Relación de UNO A MUCHOS
         [Required(ErrorMessage = "La PRIORIDAD es obligatoria")]
         [Display(Name = "Prioridad")]
@@ -35,7 +27,15 @@ namespace WebAppPharma.Models
         [Display(Name = "Estado")]
         public int IdEstadodeTarea { get; set; }
         [ForeignKey(nameof(IdEstadodeTarea))]
-        public EstadodeTarea? Estado { get; set; }
+        public EstadodeTarea? EstadodeTarea { get; set; }
+
+        [Required(ErrorMessage = "La FECHA CREACION es obligatoria")]
+        [Display(Name = "Fecha de Creacion")]
+        public DateTime FechaCreacion { get; set; }
+
+        [Required(ErrorMessage = "La FECHA LIMITE es obligatoria")]
+        [Display(Name = "Fecha Limite")]
+        public DateTime FechaLimite { get; set; }
 
         //Relación MUCHOS A MUCHOS
         [Required(ErrorMessage = "La ASIGNACION es obligatoria")]

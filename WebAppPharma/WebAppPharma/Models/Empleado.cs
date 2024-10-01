@@ -43,5 +43,9 @@ namespace WebAppPharma.Models
 
         [Display(Name = "Foto")]
         public string? Foto { get; set; }
+
+        //Relación MUCHOS A MUCHOS
+        [Display(Name = "Asignacion")]
+        public List<TareaEmpleado>? TareasEmpleados { get; set; }
     }
 }

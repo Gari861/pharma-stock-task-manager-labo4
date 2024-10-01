@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\WebAppPharma"
+    "\\WebAppPharma",
+    "\\WebAppPharma\\WebAppPharma",
+    "\\WebAppPharma\\WebAppPharma\\Models"
   ],
   "SelectedNode": "\\WebAppPharma\\WebAppPharma.sln",
   "PreviewInSolutionExplorer": false
