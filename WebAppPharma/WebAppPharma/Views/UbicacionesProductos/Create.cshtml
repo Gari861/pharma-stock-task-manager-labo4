@@ -12,26 +12,26 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Estante" class="control-label"></label>
+            <div class="form-group mb-2">
+                <label asp-for="Estante" style="font-weight: bold;" class="control-label"></label>
                 <input asp-for="Estante" class="form-control" />
                 <span asp-validation-for="Estante" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Seccion" class="control-label"></label>
+            <div class="form-group mb-2">
+                <label asp-for="Seccion" style="font-weight: bold;" class="control-label"></label>
                 <input asp-for="Seccion" class="form-control" />
                 <span asp-validation-for="Seccion" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Pasillo" class="control-label"></label>
+            <div class="form-group mb-2">
+                <label asp-for="Pasillo" style="font-weight: bold;" class="control-label"></label>
                 <input asp-for="Pasillo" class="form-control" />
                 <span asp-validation-for="Pasillo" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="IdProducto" class="control-label"></label>
+            <div class="form-group mb-2">
+                <label asp-for="IdProducto" style="font-weight: bold;" class="control-label"></label>
                 <select asp-for="IdProducto" class ="form-control" asp-items="ViewBag.IdProducto"></select>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-2">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
