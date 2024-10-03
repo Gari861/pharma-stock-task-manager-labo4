@@ -3,51 +3,42 @@
 @{
     ViewData["Title"] = "Index";
 }
+<div class="container mt-5">
+    <h1 class="text-center mb-4" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        <i class="fas fa-map-marker-alt"></i> UBICACIONES DE PRODUCTOS
+    </h1>
 
-<h1>UBICACIONES DE PRODUCTOS</h1>
+    <p class="text-center">
+        <a asp-action="Create" class="btn btn-success btn-lg mb-3" style="background-color: #2ecc71; border: none;">
+            <i class="fas fa-plus"></i> Crear Nuevo Producto
+        </a>
+    </p>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Estante)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Seccion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Pasillo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Producto)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Estante)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Seccion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pasillo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Producto.Nombre)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IdUbicacion">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdUbicacion">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdUbicacion">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered table-striped text-center align-middle">
+            <thead class="thead-dark">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Estante)</th>
+                    <th>@Html.DisplayNameFor(model => model.Seccion)</th>
+                    <th>@Html.DisplayNameFor(model => model.Pasillo)</th>
+                    <th>@Html.DisplayNameFor(model => model.Producto)</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Estante)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Seccion)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Pasillo)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Producto.Nombre)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+

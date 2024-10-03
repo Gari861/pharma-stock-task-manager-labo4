@@ -1,22 +1,59 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+
+
+.navbar-custom {
+    background-color: #007bff; /* Color principal */
+}
+
+    .navbar-custom .nav-link {
+        color: white; /* Color del texto */
+        font-size: 0.8rem; /* Tamaño de texto más pequeño */
+        padding: 0.4rem 0.6rem; /* Ajuste de padding */
+    }
+
+        .navbar-custom .nav-link:hover {
+            color: #ffdd57; /* Color al hacer hover */
+        }
+
+.nav-highlight {
+    font-weight: bold;
+    color: #ffdd57 !important; /* Color resaltado */
+}
+
+.footer-bg {
+    background-color: #f8f9fa; /* Color claro para el pie de página */
+}
+
+.main-content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.navbar-brand {
+    font-size: 1.6rem; /* Tamaño más pequeño para el título */
+}
+.navbar-nav .nav-link i {
+    margin-right: 0.1rem;
 }

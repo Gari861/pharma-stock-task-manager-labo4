@@ -12,10 +12,13 @@ namespace WebAppPharma.Controllers
     public class ProductosController : Controller
     {
         private readonly AppDBcontext _context;
+        private readonly IWebHostEnvironment _env;
 
-        public ProductosController(AppDBcontext context)
+        // inyección de dependencia SQL
+        public ProductosController(AppDBcontext context, IWebHostEnvironment env)
         {
             _context = context;
+            _env = env;
         }
 
         // GET: Productos
@@ -57,11 +60,34 @@ namespace WebAppPharma.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Manejo del archivo de foto
+                var archivos = HttpContext.Request.Form.Files;
+                if (archivos != null && archivos.Count > 0)
+                {
+                    var archivoFoto = archivos[0];
+                    if (archivoFoto.Length > 0)
+                    {
+                        var rutaDestino = Path.Combine(_env.WebRootPath, "fotografias");
+                        var extArch = Path.GetExtension(archivoFoto.FileName);
+                        // Generar un nombre único para el archivo
+                        var archivoDestino = Guid.NewGuid().ToString().Replace("-", "") + extArch;
+
+                        // Guardar el archivo en memoria
+                        using (var filestream = new FileStream(Path.Combine(rutaDestino, archivoDestino), FileMode.Create))
+                        {
+                            archivoFoto.CopyTo(filestream);
+                            producto.Foto = archivoDestino; 
+                        }
+                    }
+                }
+
+                // Guardar el libro en la base de datos
                 _context.Add(producto);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+
+                return View(producto);
             }
-            return View(producto);
+            return View(Index); // Este return es para cuando el modelo es válido
         }
 
         // GET: Productos/Edit/5
@@ -96,6 +122,39 @@ namespace WebAppPharma.Controllers
             {
                 try
                 {
+                    // Manejo de archivos (fotos)
+                    var archivos = HttpContext.Request.Form.Files;
+                    if (archivos != null && archivos.Count > 0)
+                    {
+                        var archivoFoto = archivos[0];
+                        if (archivoFoto.Length > 0)
+                        {
+                            var rutaDestino = Path.Combine(_env.WebRootPath, "fotografias");
+                            var extArch = Path.GetExtension(archivoFoto.FileName);
+                            var archivoDestino = Guid.NewGuid().ToString().Replace("-", "") + extArch;
+
+                            // Crear el archivo en memoria
+                            using (var filestream = new FileStream(Path.Combine(rutaDestino, archivoDestino), FileMode.Create))
+                            {
+                                archivoFoto.CopyTo(filestream);
+
+                                // Si existe una foto anterior, se elimina
+                                if (!string.IsNullOrEmpty(producto.Foto))
+                                {
+                                    string fotoAnterior = Path.Combine(rutaDestino, producto.Foto);
+                                    if (System.IO.File.Exists(fotoAnterior))
+                                    {
+                                        System.IO.File.Delete(fotoAnterior);
+                                    }
+                                }
+
+                                // Asignar la nueva foto
+                                producto.Foto = archivoDestino;
+                            }
+                        }
+                    }
+
+                    // Actualizar libro en la base de datos
                     _context.Update(producto);
                     await _context.SaveChangesAsync();
                 }

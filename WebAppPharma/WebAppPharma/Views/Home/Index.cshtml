@@ -1,8 +1,37 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Pharma Stock Task Manager - Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <!-- Título principal con una mejor tipografía -->
+    <h1 class="display-3 font-weight-bold" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #2c3e50;">
+        <strong>Pharma Stock Task Manager</strong>
+    </h1>
+    <p class="lead" style="font-size: 1.25rem; color: #34495e;">
+        Una solución integral para gestionar de forma eficiente el <strong>inventario</strong> y la <strong>asignación de tareas</strong> en tu farmacia.
+    </p>
+
+    <p style="color: #7f8c8d;">
+        Este sistema permite a los empleados controlar el stock de productos de manera eficiente, mientras que los administradores pueden delegar tareas específicas a cada empleado para garantizar el óptimo funcionamiento de la farmacia.
+    </p>
+
+    <hr class="my-4" style="border-top: 2px solid #2980b9;">
+
+    <div class="row">
+        <div class="col-md-4">
+            <h3 style="color: #27ae60;"><strong>Gestión de Productos</strong></h3>
+            <p style="font-size: 1.1rem;">Controla y actualiza el <strong>inventario de productos</strong>, supervisa las existencias y asegúrate de que el stock esté siempre al día.</p>
+            <a href="https://localhost:7213/Productos" class="btn btn-success btn-lg" style="background-color: #2ecc71; border: none;">Ir a Gestión de Productos</a>
+        </div>
+        <div class="col-md-4">
+            <h3 style="color: #2980b9;"><strong>Gestión de Tareas</strong></h3>
+            <p style="font-size: 1.1rem;">Administra y asigna <strong>tareas</strong> a empleados de forma eficiente, definiendo <strong>prioridades</strong>, <strong>fechas límites</strong> para la realización y controla el <strong>estado</strong> de las tareas. </p>
+            <a href="https://localhost:7213/Tareas" class="btn btn-primary btn-lg" style="background-color: #3498db; border: none;">Ir a Gestión de Tareas</a>
+        </div>
+        <div class="col-md-4">
+            <h3 style="color: #16a085;"><strong>Gestión de Empleados</strong></h3>
+            <p style="font-size: 1.1rem;">Visualiza la información clave de los empleados, incluyendo su <strong>cargo</strong>, <strong>número de teléfono</strong>, <strong>foto</strong> y el <strong>estado</strong> de actividad.</p>
+            <a href="https://localhost:7213/Empleados" class="btn btn-info btn-lg" style="background-color: #1abc9c; border: none;">Ir a Gestión de Empleados</a>
+        </div>
+    </div>
 </div>

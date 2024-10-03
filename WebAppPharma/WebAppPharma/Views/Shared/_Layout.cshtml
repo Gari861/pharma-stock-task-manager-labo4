@@ -7,66 +7,92 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebAppPharma.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebAppPharma</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+        <nav class="navbar navbar-expand-lg navbar-custom shadow-sm">
+            <div class="container">
+                <a class="navbar-brand text-light fw-bold" asp-area="" asp-controller="Home" asp-action="Index">
+                    <i class="fas fa-pills"></i> WebAppPharma
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i> <!-- Usando Font Awesome para el ícono -->
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" style="font-weight: bold;" asp-area="" asp-controller="Productos" asp-action="Index">| Productos</a>
+                            <a class="nav-link nav-highlight" asp-area="" asp-controller="Productos" asp-action="Index">
+                                <i class="fas fa-box"></i> Productos
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="UbicacionesProductos" asp-action="Index">P.Ubicaciones</a>
+                            <a class="nav-link" asp-area="" asp-controller="UbicacionesProductos" asp-action="Index">
+                                <i class="fas fa-map-marker-alt"></i> Ubicaciones
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Proveedores" asp-action="Index">P.Proveedores</a>
+                            <a class="nav-link" asp-area="" asp-controller="Proveedores" asp-action="Index">
+                                <i class="fas fa-truck"></i> Proveedores
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Categorias" asp-action="Index">P.Categorías</a>
+                            <a class="nav-link" asp-area="" asp-controller="Categorias" asp-action="Index">
+                                <i class="fas fa-tags"></i> Categorías
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" style="font-weight: bold;" asp-area="" asp-controller="Tareas" asp-action="Index">| Tareas</a>
+                            <a class="nav-link nav-highlight" asp-area="" asp-controller="Tareas" asp-action="Index">
+                                <i class="fas fa-tasks"></i> Tareas
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Prioridades" asp-action="Index">T.Prioridad</a>
+                            <a class="nav-link" asp-area="" asp-controller="Prioridades" asp-action="Index">
+                                <i class="fas fa-exclamation-circle"></i> Prioridades
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="EstadosdeTareas" asp-action="Index">T.Estados</a>
+                            <a class="nav-link" asp-area="" asp-controller="EstadosdeTareas" asp-action="Index">
+                                <i class="fas fa-clipboard-check"></i> Estados
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" style="font-weight: bold;" asp-area="" asp-controller="Empleados" asp-action="Index">| Empleados</a>
+                            <a class="nav-link nav-highlight" asp-area="" asp-controller="Empleados" asp-action="Index">
+                                <i class="fas fa-users"></i> Empleados
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cargos" asp-action="Index">E.Cargos</a>
-                        </li>                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="EstadosdeEmpleados" asp-action="Index">E.Estados</a>
+                            <a class="nav-link" asp-area="" asp-controller="Cargos" asp-action="Index">
+                                <i class="fas fa-briefcase"></i> Cargos
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="EstadosdeEmpleados" asp-action="Index">
+                                <i class="fas fa-user-check"></i> Estados Empleados
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+
+    <div class="container main-content">
+        <main role="main">
             @RenderBody()
         </main>
     </div>
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - WebAppPharma - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 - WebAppPharma - <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-decoration-none text-primary">Privacy Policy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+

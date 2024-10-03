@@ -1,34 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\pharma\\pharma-stock-task-manager-labo4\\WebAppPharma\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\crud\\pharma-stock-task-manager-labo4\\WebAppPharma\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|c:\\users\\user\\desktop\\pharma\\pharma-stock-task-manager-labo4\\webapppharma\\webapppharma\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|solutionrelative:webapppharma\\models\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|c:\\users\\user\\desktop\\crud\\pharma-stock-task-manager-labo4\\webapppharma\\webapppharma\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|solutionrelative:webapppharma\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|c:\\users\\user\\desktop\\pharma\\pharma-stock-task-manager-labo4\\webapppharma\\webapppharma\\models\\estadodeempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|solutionrelative:webapppharma\\models\\estadodeempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|c:\\users\\user\\desktop\\pharma\\pharma-stock-task-manager-labo4\\webapppharma\\webapppharma\\views\\proveedores\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|solutionrelative:webapppharma\\views\\proveedores\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|c:\\users\\user\\desktop\\pharma\\pharma-stock-task-manager-labo4\\webapppharma\\webapppharma\\views\\tareas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|solutionrelative:webapppharma\\views\\tareas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|c:\\users\\user\\desktop\\pharma\\pharma-stock-task-manager-labo4\\webapppharma\\webapppharma\\models\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|solutionrelative:webapppharma\\models\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|c:\\users\\user\\desktop\\pharma\\pharma-stock-task-manager-labo4\\webapppharma\\webapppharma\\models\\ubicacionproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|solutionrelative:webapppharma\\models\\ubicacionproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|c:\\users\\user\\desktop\\pharma\\pharma-stock-task-manager-labo4\\webapppharma\\webapppharma\\views\\ubicacionesproductos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|solutionrelative:webapppharma\\views\\ubicacionesproductos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|c:\\users\\user\\desktop\\crud\\pharma-stock-task-manager-labo4\\webapppharma\\webapppharma\\views\\productos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|solutionrelative:webapppharma\\views\\productos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,105 +34,36 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\crud\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Views\\Productos\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebAppPharma\\Views\\Productos\\Create.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\crud\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Views\\Productos\\Create.cshtml",
+              "RelativeToolTip": "WebAppPharma\\Views\\Productos\\Create.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-03T19:46:21.32Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Empleado.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\pharma\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Models\\Empleado.cs",
-              "RelativeDocumentMoniker": "WebAppPharma\\Models\\Empleado.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\pharma\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Models\\Empleado.cs",
-              "RelativeToolTip": "WebAppPharma\\Models\\Empleado.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Title": "ProductosController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\crud\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Controllers\\ProductosController.cs",
+              "RelativeDocumentMoniker": "WebAppPharma\\Controllers\\ProductosController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\crud\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Controllers\\ProductosController.cs*",
+              "RelativeToolTip": "WebAppPharma\\Controllers\\ProductosController.cs*",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAmwFcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T14:50:46.422Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EstadodeEmpleado.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\pharma\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Models\\EstadodeEmpleado.cs",
-              "RelativeDocumentMoniker": "WebAppPharma\\Models\\EstadodeEmpleado.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\pharma\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Models\\EstadodeEmpleado.cs",
-              "RelativeToolTip": "WebAppPharma\\Models\\EstadodeEmpleado.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T14:50:35.835Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\pharma\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Views\\Tareas\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebAppPharma\\Views\\Tareas\\Create.cshtml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\pharma\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Views\\Tareas\\Create.cshtml",
-              "RelativeToolTip": "WebAppPharma\\Views\\Tareas\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-03T14:48:47.99Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\pharma\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Views\\Proveedores\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebAppPharma\\Views\\Proveedores\\Create.cshtml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\pharma\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Views\\Proveedores\\Create.cshtml",
-              "RelativeToolTip": "WebAppPharma\\Views\\Proveedores\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-03T14:48:39.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Proveedor.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\pharma\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Models\\Proveedor.cs",
-              "RelativeDocumentMoniker": "WebAppPharma\\Models\\Proveedor.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\pharma\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Models\\Proveedor.cs",
-              "RelativeToolTip": "WebAppPharma\\Models\\Proveedor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T14:48:30.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UbicacionProducto.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\pharma\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Models\\UbicacionProducto.cs",
-              "RelativeDocumentMoniker": "WebAppPharma\\Models\\UbicacionProducto.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\pharma\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Models\\UbicacionProducto.cs",
-              "RelativeToolTip": "WebAppPharma\\Models\\UbicacionProducto.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBgAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T14:45:48.752Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\pharma\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Views\\UbicacionesProductos\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebAppPharma\\Views\\UbicacionesProductos\\Create.cshtml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\pharma\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Views\\UbicacionesProductos\\Create.cshtml",
-              "RelativeToolTip": "WebAppPharma\\Views\\UbicacionesProductos\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-03T14:45:36.963Z",
+              "WhenOpened": "2024-10-03T19:35:14.673Z",
               "EditorCaption": ""
             }
           ]

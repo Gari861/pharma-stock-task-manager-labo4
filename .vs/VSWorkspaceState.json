@@ -3,8 +3,9 @@
     "",
     "\\WebAppPharma",
     "\\WebAppPharma\\WebAppPharma",
+    "\\WebAppPharma\\WebAppPharma\\Controllers",
     "\\WebAppPharma\\WebAppPharma\\Models"
   ],
-  "SelectedNode": "\\WebAppPharma\\WebAppPharma.sln",
+  "SelectedNode": "\\WebAppPharma\\WebAppPharma\\Controllers\\ProductosController.cs",
   "PreviewInSolutionExplorer": false
 }
