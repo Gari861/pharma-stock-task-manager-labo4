@@ -35,7 +35,7 @@ namespace WebAppPharma.Models
 
         [Required(ErrorMessage = "El TELEFONO es obligatorio")]
         [Display(Name = "Telefono")]
-        public int Telefono { get; set; }
+        public long Telefono { get; set; }
 
         [Required(ErrorMessage = "La FECHA DE NACIMIENTO es obligatoria")]
         [Display(Name = "Fecha de Nacimiento ")]

@@ -18,7 +18,7 @@ namespace WebAppPharma.Models
 
         [Required(ErrorMessage = "El TELEFONO es obligatorio")]
         [Display(Name = "Telefono")]
-        public int Telefono { get; set; }
+        public long Telefono { get; set; }
 
         //Relación de MUCHOS A MUCHOS
         public List<ProductoProveedor>? ProductosProveedores { get; set; }

@@ -17,7 +17,7 @@ namespace WebAppPharma.Models
 
         [Required(ErrorMessage = "El PRECIO es obligatorio")]
         [Display(Name = "Precio")]
-        public int Precio { get; set; }
+        public decimal Precio { get; set; }
 
         [Required(ErrorMessage = "La CANTIDAD DE PRODUCTOS es obligatoria")]
         [Display(Name = "Cantidad en Stock")]

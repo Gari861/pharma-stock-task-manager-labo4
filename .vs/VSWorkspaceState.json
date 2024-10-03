@@ -5,6 +5,6 @@
     "\\WebAppPharma\\WebAppPharma",
     "\\WebAppPharma\\WebAppPharma\\Models"
   ],
-  "SelectedNode": "\\WebAppPharma\\WebAppPharma.sln",
+  "SelectedNode": "\\WebAppPharma\\WebAppPharma\\Models\\AppDbContext.cs",
   "PreviewInSolutionExplorer": false
 }
