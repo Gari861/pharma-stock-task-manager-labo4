@@ -22,28 +22,30 @@ body {
 }
 
 
+/* Estilos personalizados para la farmacia */
 
 .navbar-custom {
-    background-color: #007bff; /* Color principal */
+    background-color: #28a745; /* Verde confiable */
 }
 
     .navbar-custom .nav-link {
-        color: white; /* Color del texto */
-        font-size: 0.8rem; /* Tamaño de texto más pequeño */
-        padding: 0.4rem 0.6rem; /* Ajuste de padding */
+        color: white; /* Texto blanco */
+        font-size: 0.9rem; /* Tamaño de texto más cómodo */
+        padding: 0.5rem 0.8rem; /* Más espaciado */
     }
 
         .navbar-custom .nav-link:hover {
-            color: #ffdd57; /* Color al hacer hover */
+            color: #d4edda; /* Verde más claro en hover */
         }
 
 .nav-highlight {
     font-weight: bold;
-    color: #ffdd57 !important; /* Color resaltado */
+    color: #d4edda !important; /* Color resaltado en verde claro */
 }
 
 .footer-bg {
-    background-color: #f8f9fa; /* Color claro para el pie de página */
+    background-color: #f1f1f1; /* Color suave para el pie de página */
+    color: #28a745; /* Verde para el texto del footer */
 }
 
 .main-content {
@@ -52,8 +54,22 @@ body {
 }
 
 .navbar-brand {
-    font-size: 1.6rem; /* Tamaño más pequeño para el título */
+    font-size: 1.4rem; /* Tamaño de título más acorde */
+    color: white;
 }
+
 .navbar-nav .nav-link i {
-    margin-right: 0.1rem;
+    margin-right: 0.2rem;
 }
+
+body {
+    background-color: #f8f9fa; /* Fondo gris claro para limpieza */
+}
+
+footer {
+    background-color: #ffffff;
+    padding: 15px 0;
+    border-top: 6px solid #d4edda; /* Ligeramente marcado */
+}
+
+
