@@ -71,7 +71,8 @@ namespace WebAppPharma.Migrations
                     b.Property<long>("Dni")
                         .HasColumnType("bigint");
 
-                    b.Property<DateTime>("FechaNacimiento")
+                    b.Property<DateTime?>("FechaNacimiento")
+                        .IsRequired()
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Foto")
@@ -161,13 +162,13 @@ namespace WebAppPharma.Migrations
                     b.Property<int>("CantSock")
                         .HasColumnType("int");
 
-                    b.Property<long>("CodigoProducto")
+                    b.Property<long?>("CodigoProducto")
                         .HasColumnType("bigint");
 
-                    b.Property<DateTime>("FechaIngreso")
+                    b.Property<DateTime?>("FechaIngreso")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("FechaVencimiento")
+                    b.Property<DateTime?>("FechaVencimiento")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Foto")
@@ -177,7 +178,7 @@ namespace WebAppPharma.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Precio")
+                    b.Property<decimal?>("Precio")
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("IdProducto");
@@ -224,14 +225,13 @@ namespace WebAppPharma.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdProveedor"));
 
                     b.Property<string>("Apellido")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("Telefono")
+                    b.Property<long?>("Telefono")
                         .HasColumnType("bigint");
 
                     b.HasKey("IdProveedor");
@@ -248,10 +248,9 @@ namespace WebAppPharma.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdTarea"));
 
                     b.Property<string>("Descripcion")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("FechaCreacion")
+                    b.Property<DateTime?>("FechaCreacion")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("FechaLimite")
@@ -300,14 +299,12 @@ namespace WebAppPharma.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdUbicacion"));
 
                     b.Property<string>("Estante")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("IdProducto")
                         .HasColumnType("int");
 
                     b.Property<string>("Pasillo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Seccion")

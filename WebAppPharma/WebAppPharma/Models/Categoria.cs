@@ -9,7 +9,7 @@ namespace WebAppPharma.Models
 
         [Required(ErrorMessage = "La CATEGORIA es obligatoria")]
         [Display(Name = "Categoría del Producto")]
-        public string? Tipo { get; set; }
+        public string Tipo { get; set; }
 
         // Relación de MUCHOS A MUCHOS
         public List<ProductoCategoria>? ProductosCategorias { get; set; }

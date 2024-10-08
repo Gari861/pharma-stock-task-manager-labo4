@@ -1,56 +1,68 @@
 ﻿@model WebAppPharma.Models.Tarea
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Crear Tarea";
 }
 
-<h1>Create</h1>
+<div class="container mt-5">
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-primary text-white text-center">
+            <h2 class="mb-0" style="font-family: 'Segoe UI', sans-serif;">
+                <i class="fas fa-plus-circle"></i> Crear Nueva Tarea
+            </h2>
+        </div>
+        <div class="card-body p-5">
+            <form asp-action="Create" method="post">
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
 
-<h4>Tarea</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group mb-2">
-                <label asp-for="Nombre" style="font-weight: bold;" class="control-label"></label>
-                <input asp-for="Nombre" class="form-control" />
-                <span asp-validation-for="Nombre" class="text-danger"></span>
-            </div>
-            <div class="form-group mb-2">
-                <label asp-for="Descripcion" style="font-weight: bold;" class="control-label"></label>
-                <input asp-for="Descripcion" class="form-control" />
-                <span asp-validation-for="Descripcion" class="text-danger"></span>
-            </div>
-            <div class="form-group mb-2">
-                <label asp-for="IdPrioridad" style="font-weight: bold;" class="control-label"></label>
-                <select asp-for="IdPrioridad" class ="form-control" asp-items="ViewBag.IdPrioridad"></select>
-            </div>
-            <div class="form-group mb-2">
-                <label asp-for="IdEstadodeTarea" style="font-weight: bold;" class="control-label"></label>
-                <select asp-for="IdEstadodeTarea" class ="form-control" asp-items="ViewBag.IdEstadodeTarea"></select>
-            </div>
-            <div class="form-group mb-2">
-                <label asp-for="FechaCreacion" style="font-weight: bold;" class="control-label"></label>
-                <input asp-for="FechaCreacion" class="form-control" />
-                <span asp-validation-for="FechaCreacion" class="text-danger"></span>
-            </div>
-            <div class="form-group mb-2">
-                <label asp-for="FechaLimite" style="font-weight: bold;" class="control-label"></label>
-                <input asp-for="FechaLimite" class="form-control" />
-                <span asp-validation-for="FechaLimite" class="text-danger"></span>
-            </div>
-            <div class="form-group mb-2">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+                <div class="form-group mb-4">
+                    <label asp-for="Nombre" class="form-label font-weight-bold text-primary">Nombre de la Tarea</label>
+                    <input asp-for="Nombre" class="form-control form-control-lg" placeholder="Ingrese el nombre de la tarea" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label asp-for="Descripcion" class="form-label font-weight-bold text-primary">Descripción</label>
+                    <textarea asp-for="Descripcion" class="form-control form-control-lg" placeholder="Descripción de la tarea"></textarea>
+                    <span asp-validation-for="Descripcion" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label asp-for="IdPrioridad" class="form-label font-weight-bold text-primary">Prioridad</label>
+                    <select asp-for="IdPrioridad" class="form-control form-control-lg" asp-items="ViewBag.IdPrioridad"></select>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label asp-for="IdEstadodeTarea" class="form-label font-weight-bold text-primary">Estado de la Tarea</label>
+                    <select asp-for="IdEstadodeTarea" class="form-control form-control-lg" asp-items="ViewBag.IdEstadodeTarea"></select>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label asp-for="FechaCreacion" class="form-label font-weight-bold text-primary">Fecha de Creación</label>
+                    <input asp-for="FechaCreacion" class="form-control form-control-lg" />
+                    <span asp-validation-for="FechaCreacion" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label asp-for="FechaLimite" class="form-label font-weight-bold text-primary">Fecha Límite</label>
+                    <input asp-for="FechaLimite" class="form-control form-control-lg" />
+                    <span asp-validation-for="FechaLimite" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-4 text-center">
+                    <input type="submit" value="Guardar Tarea" class="btn btn-lg btn-success px-5 py-2" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <a asp-action="Index" class="btn btn-secondary btn-lg">
+            <i class="fas fa-arrow-left"></i> Volver al Listado
+        </a>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <partial name="_ValidationScriptsPartial" />
 }

@@ -1,24 +1,29 @@
 ﻿@model WebAppPharma.Models.EstadodeEmpleado
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles del Estado de Empleado";
 }
 
-<h1>Details</h1>
-
-<div>
-    <h4>EstadodeEmpleado</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Tipo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Tipo)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdEstadodeEmpleado">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+<div class="container mt-5">
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-info text-white text-center">
+            <h2 class="mb-0">
+                <i class="fas fa-info-circle"></i> Detalles del Estado de Empleado
+            </h2>
+        </div>
+        <div class="card-body p-5">
+            <dl class="row">
+                <dt class="col-sm-4 font-weight-bold text-primary">Tipo de Estado</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.Tipo)</dd>
+            </dl>
+            <div class="text-center">
+                <a asp-action="Edit" asp-route-id="@Model.IdEstadodeEmpleado" class="btn btn-lg btn-warning px-4 py-2">
+                    <i class="fas fa-edit"></i> Editar
+                </a>
+                <a asp-action="Index" class="btn btn-lg btn-secondary ms-3">
+                    <i class="fas fa-arrow-left"></i> Volver al Listado
+                </a>
+            </div>
+        </div>
+    </div>
 </div>

@@ -34,13 +34,13 @@ body {
         padding: 0.5rem 0.8rem; /* Más espaciado */
     }
 
-        .navbar-custom .nav-link:hover {
-            color: #d4edda; /* Verde más claro en hover */
+        .navbar-custom .nav-link:hover, .navbar-custom .nav-highlight:hover {
+            color: #00ff0a; /* Verde más claro en hover */
         }
 
 .nav-highlight {
     font-weight: bold;
-    color: #d4edda !important; /* Color resaltado en verde claro */
+    color: #f5ff00 !important; 
 }
 
 .footer-bg {

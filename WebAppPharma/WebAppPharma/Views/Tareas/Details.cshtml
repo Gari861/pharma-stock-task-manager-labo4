@@ -1,54 +1,45 @@
 ﻿@model WebAppPharma.Models.Tarea
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles de la Tarea";
 }
 
-<h1>Details</h1>
+<div class="container mt-5">
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-info text-white text-center">
+            <h2 class="mb-0">
+                <i class="fas fa-info-circle"></i> Detalles de la Tarea
+            </h2>
+        </div>
+        <div class="card-body p-5">
+            <dl class="row">
+                <dt class="col-sm-4 font-weight-bold text-primary">Nombre de la Tarea</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.Nombre)</dd>
 
-<div>
-    <h4>Tarea</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Descripcion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Descripcion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Prioridad)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Prioridad.Tipo)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.EstadodeTarea)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.EstadodeTarea.Tipo)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaCreacion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaCreacion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FechaLimite)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FechaLimite)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdTarea">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+                <dt class="col-sm-4 font-weight-bold text-primary">Descripción</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.Descripcion)</dd>
+
+                <dt class="col-sm-4 font-weight-bold text-primary">Prioridad</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.Prioridad.Tipo)</dd>
+
+                <dt class="col-sm-4 font-weight-bold text-primary">Estado de la Tarea</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.EstadodeTarea.Tipo)</dd>
+
+                <dt class="col-sm-4 font-weight-bold text-primary">Fecha de Creación</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.FechaCreacion)</dd>
+
+                <dt class="col-sm-4 font-weight-bold text-primary">Fecha Límite</dt>
+                <dd class="col-sm-8">@Html.DisplayFor(model => model.FechaLimite)</dd>
+            </dl>
+
+            <div class="text-center">
+                <a asp-action="Edit" asp-route-id="@Model.IdTarea" class="btn btn-lg btn-warning px-4 py-2">
+                    <i class="fas fa-edit"></i> Editar
+                </a>
+                <a asp-action="Index" class="btn btn-lg btn-secondary ms-3">
+                    <i class="fas fa-arrow-left"></i> Volver al Listado
+                </a>
+            </div>
+        </div>
+    </div>
 </div>

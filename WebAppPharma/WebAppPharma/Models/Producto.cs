@@ -7,17 +7,15 @@ namespace WebAppPharma.Models
         [Key]
         public int IdProducto { get; set; }
 
-        [Required(ErrorMessage = "El CODIGO DEL PRODUCTO es obligatorio")]
-        [Display(Name = "Codigo Producto")]
-        public long CodigoProducto { get; set; }
+        [Display(Name = "Cod Producto")]
+        public long? CodigoProducto { get; set; }
 
         [Required(ErrorMessage = "El TITULO es obligatorio")]
         [Display(Name = "Título")]
-        public string? Nombre { get; set; }
+        public string Nombre { get; set; }
 
-        [Required(ErrorMessage = "El PRECIO es obligatorio")]
         [Display(Name = "Precio")]
-        public decimal Precio { get; set; }
+        public decimal? Precio { get; set; }
 
         [Required(ErrorMessage = "La CANTIDAD DE PRODUCTOS es obligatoria")]
         [Display(Name = "Cantidad en Stock")]
@@ -33,15 +31,15 @@ namespace WebAppPharma.Models
         [Display(Name = "Foto")]
         public string? Foto { get; set; }
 
-        [Display(Name = "Fecha de Ingreso")]
-        public DateTime FechaIngreso { get; set; }
+        [Display(Name = "Fecha Ingreso")]
+        public DateTime? FechaIngreso { get; set; }
 
-        [Display(Name = "Fecha de Vencimiento")]
-        public DateTime FechaVencimiento { get; set; }
+        [Display(Name = "Fecha Vencimiento")]
+        public DateTime? FechaVencimiento { get; set; }
 
         //Relación de UNO A UNO
         [Display(Name = "Ubicación Producto")]
         public UbicacionProducto? UbicacionProducto { get; set; }
-        //LA CLAVE FORÁNEA ESTA EN LA CLASE UBICACIÓN
+        //LA CLAVE FORÁNEA ESTA EN EL MODELO UBICACIÓN
     }
 }

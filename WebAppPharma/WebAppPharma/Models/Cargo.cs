@@ -7,9 +7,9 @@ namespace WebAppPharma.Models
         [Key]
         public int IdCargo { get; set; }
 
-        [Required(ErrorMessage = "El CARGO es obligatoria")]
+        [Required(ErrorMessage = "El CARGO es obligatorio")]
         [Display(Name = "Cargo del Empleado")]
-        public string? Tipo { get; set; }
+        public string Tipo { get; set; }
 
         // Relación de UNO A MUCHOS
         public List<Empleado>? Empleados { get; set; }

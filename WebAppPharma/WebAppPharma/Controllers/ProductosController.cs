@@ -24,7 +24,10 @@ namespace WebAppPharma.Controllers
         // GET: Productos
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Productos.ToListAsync());
+            var appDBcontext = _context.Productos.Include(l => l.ProductosCategorias).ThenInclude(la => la.Categoria).Include(l => l.ProductosProveedores).ThenInclude(la => la.Proveedor);
+            //Agregando theninclude también se carga la información del
+            //categoria, no hay otra forma de hacerlo
+            return View(await appDBcontext.ToListAsync());
         }
 
         // GET: Productos/Details/5
@@ -36,7 +39,10 @@ namespace WebAppPharma.Controllers
             }
 
             var producto = await _context.Productos
+                .Include(l => l.ProductosCategorias).ThenInclude(la => la.Categoria)
+                .Include(l => l.ProductosProveedores).ThenInclude(la => la.Proveedor)
                 .FirstOrDefaultAsync(m => m.IdProducto == id);
+
             if (producto == null)
             {
                 return NotFound();
@@ -48,6 +54,8 @@ namespace WebAppPharma.Controllers
         // GET: Productos/Create
         public IActionResult Create()
         {
+            ViewBag.Categorias = new MultiSelectList(_context.Categorias, "IdCategoria", "Tipo");
+            ViewBag.Proveedores = new MultiSelectList(_context.Proveedores, "IdProveedor", "Nombre");
             return View();
         }
 
@@ -56,7 +64,7 @@ namespace WebAppPharma.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdProducto,CodigoProducto,Nombre,Precio,CantSock,Foto,FechaIngreso,FechaVencimiento")] Producto producto)
+        public async Task<IActionResult> Create([Bind("IdProducto,CodigoProducto,Nombre,Precio,CantSock,Foto,FechaIngreso,FechaVencimiento")] Producto producto, List<int> categoriasSeleccionadas, List<int> proveedoresSeleccionados)
         {
             if (ModelState.IsValid)
             {
@@ -76,42 +84,83 @@ namespace WebAppPharma.Controllers
                         using (var filestream = new FileStream(Path.Combine(rutaDestino, archivoDestino), FileMode.Create))
                         {
                             archivoFoto.CopyTo(filestream);
-                            producto.Foto = archivoDestino; 
+                            producto.Foto = archivoDestino;
                         }
                     }
                 }
-
-                // Guardar el libro en la base de datos
+                // Guardar el producto en la base de datos
                 _context.Add(producto);
                 await _context.SaveChangesAsync();
 
-                return View(producto);
+                // Relacionar las categorias seleccionadas con el producto
+                if (categoriasSeleccionadas != null && categoriasSeleccionadas.Count > 0)
+                {
+                    foreach (var idCategoria in categoriasSeleccionadas)
+                    {
+                        var productoCategoria = new ProductoCategoria
+                        {
+                            IdProducto = producto.IdProducto,
+                            IdCategoria = idCategoria
+                        };
+                        _context.ProductosCategorias.Add(productoCategoria);
+                    }
+                    await _context.SaveChangesAsync();
+                }
+
+                // Relacionar las proveedores seleccionados con el producto
+                if (proveedoresSeleccionados != null && proveedoresSeleccionados.Count > 0)
+                {
+                    foreach (var idProveedor in proveedoresSeleccionados)
+                    {
+                        var productoProveedor = new ProductoProveedor
+                        {
+                            IdProducto = producto.IdProducto,
+                            IdProveedor = idProveedor
+                        };
+                        _context.ProductosProveedores.Add(productoProveedor);
+                    }
+                    await _context.SaveChangesAsync();
+                }
+                return RedirectToAction(nameof(Index));
             }
-            return View(Index); // Este return es para cuando el modelo es válido
+            // Volver a cargar la lista
+            ViewBag.Categorias = new MultiSelectList(_context.Categorias, "IdCategoria", "Tipo");
+            ViewBag.Proveedores = new MultiSelectList(_context.Proveedores, "IdProveedor", "Nombre");
+            return View(producto);
         }
 
         // GET: Productos/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            var producto = await _context.Productos
+                .Include(p => p.ProductosCategorias)
+                .Include(p => p.ProductosProveedores)
+                .FirstOrDefaultAsync(m => m.IdProducto == id);
 
-            var producto = await _context.Productos.FindAsync(id);
             if (producto == null)
             {
                 return NotFound();
             }
+
+            // Obtener categorías seleccionadas
+            var categoriasSeleccionadas = producto.ProductosCategorias.Select(pc => pc.IdCategoria).ToList();
+
+            // Obtener proveedores seleccionados
+            var proveedoresSeleccionados = producto.ProductosProveedores.Select(pp => pp.IdProveedor).ToList();
+
+            ViewBag.Categorias = new MultiSelectList(_context.Categorias, "IdCategoria", "Tipo", categoriasSeleccionadas);
+            ViewBag.Proveedores = new MultiSelectList(_context.Proveedores, "IdProveedor", "Nombre", proveedoresSeleccionados);
+
             return View(producto);
         }
+
 
         // POST: Productos/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdProducto,CodigoProducto,Nombre,Precio,CantSock,Foto,FechaIngreso,FechaVencimiento")] Producto producto)
+        public async Task<IActionResult> Edit(int id, [Bind("IdProducto,CodigoProducto,Nombre,Precio,CantSock,Foto,FechaIngreso,FechaVencimiento")] Producto producto, List<int> categoriasSeleccionadas, List<int> proveedoresSeleccionados)
         {
             if (id != producto.IdProducto)
             {
@@ -153,10 +202,46 @@ namespace WebAppPharma.Controllers
                             }
                         }
                     }
-
-                    // Actualizar libro en la base de datos
                     _context.Update(producto);
                     await _context.SaveChangesAsync();
+
+                    // Eliminar relaciones antiguas en ProductoCategoria
+                    var categoriasAntiguas = _context.ProductosCategorias.Where(la => la.IdProducto == producto.IdProducto);
+                    _context.ProductosCategorias.RemoveRange(categoriasAntiguas);
+                    await _context.SaveChangesAsync();
+
+                    if (categoriasSeleccionadas != null && categoriasSeleccionadas.Count > 0)
+                    {
+                        foreach (var idCategoria in categoriasSeleccionadas)
+                        {
+                            var productoCategoria = new ProductoCategoria
+                            {
+                                IdProducto = producto.IdProducto,
+                                IdCategoria = idCategoria
+                            };
+                            _context.ProductosCategorias.Add(productoCategoria);
+                        }
+                        await _context.SaveChangesAsync();
+                    }
+
+                    // Eliminar relaciones antiguas en ProductoProveedor
+                    var proveedoresAntiguos = _context.ProductosProveedores.Where(lc => lc.IdProducto == producto.IdProducto);
+                    _context.ProductosProveedores.RemoveRange(proveedoresAntiguos);
+                    await _context.SaveChangesAsync();
+
+                    if (proveedoresSeleccionados != null && proveedoresSeleccionados.Count > 0)
+                    {
+                        foreach (var idProveedor in proveedoresSeleccionados)
+                        {
+                            var productoProveedor = new ProductoProveedor
+                            {
+                                IdProducto = producto.IdProducto,
+                                IdProveedor = idProveedor
+                            };
+                            _context.ProductosProveedores.Add(productoProveedor);
+                        }
+                        await _context.SaveChangesAsync();
+                    }
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -169,8 +254,12 @@ namespace WebAppPharma.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
+            // Volver a cargar la lista
+            ViewBag.Categorias = new MultiSelectList(_context.Categorias, "IdCategoria", "Tipo");
+            ViewBag.Proveedores = new MultiSelectList(_context.Proveedores, "IdProveedor", "Nombre");
             return View(producto);
         }
 
@@ -183,7 +272,10 @@ namespace WebAppPharma.Controllers
             }
 
             var producto = await _context.Productos
+                .Include(l => l.ProductosCategorias).ThenInclude(la => la.Categoria)
+                .Include(l => l.ProductosProveedores).ThenInclude(la => la.Proveedor)
                 .FirstOrDefaultAsync(m => m.IdProducto == id);
+
             if (producto == null)
             {
                 return NotFound();

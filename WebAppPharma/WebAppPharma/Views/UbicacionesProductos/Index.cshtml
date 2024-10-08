@@ -10,14 +10,14 @@
 
     <p class="text-center">
         <a asp-action="Create" class="btn btn-success btn-lg mb-3" style="background-color: #2ecc71; border: none;">
-            <i class="fas fa-plus"></i> Crear Nuevo Producto
+            <i class="fas fa-plus"></i> Ingresar Nueva Ubicacion Producto
         </a>
     </p>
 
     <div class="table-responsive">
         <table class="table table-hover table-bordered table-striped text-center align-middle">
             <thead class="thead-dark">
-                <tr>
+                <tr style="border: 1.3px solid black;">
                     <th>@Html.DisplayNameFor(model => model.Estante)</th>
                     <th>@Html.DisplayNameFor(model => model.Seccion)</th>
                     <th>@Html.DisplayNameFor(model => model.Pasillo)</th>
@@ -28,11 +28,22 @@
             <tbody>
                 @foreach (var item in Model)
                 {
-                    <tr>
+                    <tr style="border: 1px solid #ccc;">
                         <td>@Html.DisplayFor(modelItem => item.Estante)</td>
                         <td>@Html.DisplayFor(modelItem => item.Seccion)</td>
                         <td>@Html.DisplayFor(modelItem => item.Pasillo)</td>
                         <td>@Html.DisplayFor(modelItem => item.Producto.Nombre)</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.IdUbicacion" class="btn btn-warning btn-sm me-2">
+                                <i class="fas fa-edit"></i> Editar
+                            </a>
+                            <a asp-action="Details" asp-route-id="@item.IdUbicacion" class="btn btn-info btn-sm me-2">
+                                <i class="fas fa-info-circle"></i> Detalles
+                            </a>
+                            <a asp-action="Delete" asp-route-id="@item.IdUbicacion" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i> Eliminar
+                            </a>
+                        </td>
                     </tr>
                 }
             </tbody>

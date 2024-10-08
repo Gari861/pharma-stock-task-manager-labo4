@@ -10,11 +10,11 @@ namespace WebAppPharma.Models
 
         [Required(ErrorMessage = "El NOMBRE es obligatorio")]
         [Display(Name = "Nombre")]
-        public string? Nombre { get; set; }
+        public string Nombre { get; set; }
 
         [Required(ErrorMessage = "El APELLIDO es obligatorio")]
         [Display(Name = "Apellido")]
-        public string? Apellido { get; set; }
+        public string Apellido { get; set; }
 
         [Required(ErrorMessage = "El DNI es obligatorio")]
         [Display(Name = "DNI")]
@@ -27,10 +27,10 @@ namespace WebAppPharma.Models
         [ForeignKey(nameof(IdCargo))]
         public Cargo? Cargo { get; set; }
 
-        [Required(ErrorMessage = "El ESTADO es obligatorio")]
-        [Display(Name = "Estado")]
+        //Relación de UNO A MUCHOS
         public int IdEstadodeEmpleado { get; set; }
         [ForeignKey(nameof(IdEstadodeEmpleado))]
+        [Display(Name = "Estado de empleado")]
         public EstadodeEmpleado? EstadodeEmpleado { get; set; }
 
         [Required(ErrorMessage = "El TELEFONO es obligatorio")]
@@ -39,7 +39,7 @@ namespace WebAppPharma.Models
 
         [Required(ErrorMessage = "La FECHA DE NACIMIENTO es obligatoria")]
         [Display(Name = "Fecha de Nacimiento ")]
-        public DateTime FechaNacimiento { get; set; }
+        public DateTime? FechaNacimiento { get; set; }
 
         [Display(Name = "Foto")]
         public string? Foto { get; set; }

@@ -27,6 +27,30 @@
                 <dt class="col-sm-4 font-weight-bold text-primary">Cantidad en Stock</dt>
                 <dd class="col-sm-8">@Html.DisplayFor(model => model.CantSock)</dd>
 
+                <dt class="col-sm-4 font-weight-bold text-primary">Categorias</dt>
+                <dd class="col-sm-8">
+                    @if (Model.ProductosCategorias != null)
+                    {
+                        @foreach (var productoCategoria in Model.ProductosCategorias)
+                        {
+                            @(productoCategoria.Categoria.Tipo)
+                            ;
+                        }
+                    }
+                </dd>
+
+                <dt class="col-sm-4 font-weight-bold text-primary">Proveedores</dt>
+                <dd class="col-sm-8">
+                    @if (Model.ProductosProveedores != null)
+                    {
+                        @foreach (var productoProveedor in Model.ProductosProveedores)
+                        {
+                            @(productoProveedor.Proveedor.Nombre + " " + productoProveedor.Proveedor.Apellido)
+                            ;
+                        }
+                    }
+                </dd>
+
                 <dt class="col-sm-4 font-weight-bold text-primary">Fecha de Ingreso</dt>
                 <dd class="col-sm-8">@Html.DisplayFor(model => model.FechaIngreso)</dd>
 

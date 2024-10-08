@@ -9,7 +9,7 @@ namespace WebAppPharma.Models
 
         [Required(ErrorMessage = "La PRIORIDAD es obligatoria")]
         [Display(Name = "Prioridad de la Tarea")]
-        public string? Tipo { get; set; }
+        public string Tipo { get; set; }
 
         // Relación de UNO A MUCHOS
         public List<Tarea>? Tareas { get; set; }

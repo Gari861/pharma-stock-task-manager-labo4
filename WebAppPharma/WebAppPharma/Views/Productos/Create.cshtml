@@ -15,51 +15,69 @@
             <form asp-action="Create" method="post" enctype="multipart/form-data">
                 <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
 
-                <div class="mb-4">
+                <div class="form-group mb-4">
                     <label asp-for="CodigoProducto" class="form-label font-weight-bold text-primary">Código de Producto</label>
                     <input asp-for="CodigoProducto" class="form-control form-control-lg" placeholder="Ingrese el código del producto" />
                     <span asp-validation-for="CodigoProducto" class="text-danger"></span>
                 </div>
 
-                <div class="mb-4">
+                <div class="form-group mb-4">
                     <label asp-for="Nombre" class="form-label font-weight-bold text-primary">Nombre</label>
                     <input asp-for="Nombre" class="form-control form-control-lg" placeholder="Nombre del producto" style="text-transform: uppercase;" />
                     <span asp-validation-for="Nombre" class="text-danger"></span>
                 </div>
 
-                <div class="mb-4">
+                <div class="form-group mb-4">
                     <label asp-for="Precio" class="form-label font-weight-bold text-primary">Precio</label>
                     <input asp-for="Precio" class="form-control form-control-lg" placeholder="Precio del producto" />
                     <span asp-validation-for="Precio" class="text-danger"></span>
                 </div>
 
-                <div class="mb-4">
+                <div class="form-group mb-4">
                     <label asp-for="CantSock" class="form-label font-weight-bold text-primary">Cantidad en Stock</label>
                     <input asp-for="CantSock" class="form-control form-control-lg" placeholder="Cantidad disponible" />
                     <span asp-validation-for="CantSock" class="text-danger"></span>
                 </div>
 
-                <div class="mb-4">
+                <div class="form-group mb-4">
+                    <label class="form-label font-weight-bold text-primary">Seleccionar Categorias</label>
+                    @foreach (var categoria in ViewBag.Categorias)
+                    {
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="@categoria.Value" name="categoriasSeleccionadas[]" id="categoria_@categoria.Value">
+                            <label class="form-check-label" for="categoria_@categoria.Value">@categoria.Text</label>
+                        </div>
+                    }
+                </div>
+
+                <div class="form-group mb-4">
+                    <label class="form-label font-weight-bold text-primary">Seleccionar Proveedores</label>
+                    @foreach (var proveedor in ViewBag.Proveedores)
+                    {
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="@proveedor.Value" name="proveedoresSeleccionados[]" id="proveedor_@proveedor.Value">
+                            <label class="form-check-label" for="proveedor_@proveedor.Value">@proveedor.Text</label>
+                        </div>
+                    }
+                </div>
+
+                <div class="form-group mb-4">
                     <label asp-for="Foto" class="form-label font-weight-bold text-primary">Foto del Producto</label>
                     <input type="file" id="imagen" name="imagen" class="form-control form-control-lg" accept="image/*" />
                 </div>
 
-                <div class="mb-4">
+                <div class="form-group mb-4">
                     <label asp-for="FechaIngreso" class="form-label font-weight-bold text-primary">Fecha de Ingreso</label>
                     <input asp-for="FechaIngreso" class="form-control form-control-lg" />
-                    <span asp-validation-for="FechaIngreso" class="text-danger"></span>
                 </div>
 
-                <div class="mb-4">
+                <div class="form-group mb-4">
                     <label asp-for="FechaVencimiento" class="form-label font-weight-bold text-primary">Fecha de Vencimiento</label>
                     <input asp-for="FechaVencimiento" class="form-control form-control-lg" />
-                    <span asp-validation-for="FechaVencimiento" class="text-danger"></span>
                 </div>
 
-                <div class="text-center">
-                    <button type="submit" class="btn btn-lg btn-success px-5 py-2">
-                        <i class="fas fa-save"></i> Guardar Producto
-                    </button>
+                <div class="form-group mb-4 text-center">
+                    <input type="submit" value="Guardar Producto" class="btn btn-lg btn-success px-5 py-2 " />
                 </div>
             </form>
         </div>
