@@ -1,69 +1,95 @@
 ﻿@model WebAppPharma.Models.Empleado
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar Empleado";
 }
 
-<h1>Edit</h1>
+<div class="container mt-5">
+    <div class="card shadow-lg border-0">
+        <div class="card-header bg-warning text-white text-center">
+            <h2 class="mb-0">
+                <i class="fas fa-edit"></i> Editar Empleado
+            </h2>
+        </div>
+        <div class="card-body p-5">
+            <form asp-action="Edit" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                <input type="hidden" asp-for="IdEmpleado" />
 
-<h4>Empleado</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="IdEmpleado" />
-            <div class="form-group">
-                <label asp-for="Nombre" class="control-label"></label>
-                <input asp-for="Nombre" class="form-control" />
-                <span asp-validation-for="Nombre" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Apellido" class="control-label"></label>
-                <input asp-for="Apellido" class="form-control" />
-                <span asp-validation-for="Apellido" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Dni" class="control-label"></label>
-                <input asp-for="Dni" class="form-control" />
-                <span asp-validation-for="Dni" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IdCargo" class="control-label"></label>
-                <select asp-for="IdCargo" class="form-control" asp-items="ViewBag.IdCargo"></select>
-                <span asp-validation-for="IdCargo" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IdEstadodeEmpleado" class="control-label"></label>
-                <select asp-for="IdEstadodeEmpleado" class="form-control" asp-items="ViewBag.IdEstadodeEmpleado"></select>
-                <span asp-validation-for="IdEstadodeEmpleado" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Telefono" class="control-label"></label>
-                <input asp-for="Telefono" class="form-control" />
-                <span asp-validation-for="Telefono" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FechaNacimiento" class="control-label"></label>
-                <input asp-for="FechaNacimiento" class="form-control" />
-                <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Foto" class="control-label"></label>
-                <input asp-for="Foto" class="form-control" />
-                <span asp-validation-for="Foto" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+                <div class="mb-4">
+                    <label asp-for="Nombre" class="form-label font-weight-bold text-primary">Nombre</label>
+                    <input asp-for="Nombre" class="form-control form-control-lg" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label asp-for="Apellido" class="form-label font-weight-bold text-primary">Apellido</label>
+                    <input asp-for="Apellido" class="form-control form-control-lg" />
+                    <span asp-validation-for="Apellido" class="text-danger"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label asp-for="Dni" class="form-label font-weight-bold text-primary">DNI</label>
+                    <input asp-for="Dni" class="form-control form-control-lg" />
+                    <span asp-validation-for="Dni" class="text-danger"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label asp-for="Telefono" class="form-label font-weight-bold text-primary">Teléfono</label>
+                    <input asp-for="Telefono" class="form-control form-control-lg" />
+                    <span asp-validation-for="Telefono" class="text-danger"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label asp-for="FechaNacimiento" class="form-label font-weight-bold text-primary">Fecha de Nacimiento</label>
+                    <input asp-for="FechaNacimiento" class="form-control form-control-lg" />
+                    <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label asp-for="IdCargo" class="form-label font-weight-bold text-primary">Cargo</label>
+                    <select asp-for="IdCargo" class="form-control form-control-lg" asp-items="ViewBag.IdCargo"></select>
+                    <span asp-validation-for="IdCargo" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label asp-for="IdEstadodeEmpleado" class="form-label font-weight-bold text-primary">Estado del Empleado</label>
+                    <select asp-for="IdEstadodeEmpleado" class="form-control form-control-lg" asp-items="ViewBag.IdEstadodeEmpleado"></select>
+                    <span asp-validation-for="IdEstadodeEmpleado" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label asp-for="Foto" class="form-label font-weight-bold text-primary">Foto del Empleado</label>
+                    <input type="hidden" asp-for="Foto" />
+                    <div class="mb-4">
+                        <img id="imagen"
+                             src="@(String.IsNullOrEmpty(Model.Foto) ? "" : Url.Content("~/fotografias/" + Model.Foto))"
+                             class="rounded-circle img-thumbnail mb-4"
+                             style="width: 90px; height: 80px; @(String.IsNullOrEmpty(Model.Foto) ? "display:none;" : "display:block;")" />
+
+                        <img id="imagen" src="~/fotografias/@Model.Foto"
+                             class="rounded-circle img-thumbnail"
+                             style="width: 90px; height: 80px; display: none;"
+                             asp-append-version="true" />
+                    </div>
+                    <input type="file" id="seleccionImg" name="imagen" class="form-control" accept=".jpg,.jpeg,.png" />
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-lg btn-warning px-5 py-2">
+                        <i class="fas fa-save"></i> Guardar Cambios
+                    </button>
+                    <a asp-action="Index" class="btn btn-lg btn-secondary ms-3">
+                        <i class="fas fa-arrow-left"></i> Volver al Listado
+                    </a>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <partial name="_ValidationScriptsPartial" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="~/js//preview.js"></script>
 }

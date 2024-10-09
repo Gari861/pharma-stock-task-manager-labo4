@@ -10,9 +10,10 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDBcontext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("cadena")));
 
-var cultureInfo = new CultureInfo("en-US");
+var cultureInfo = new CultureInfo("es-ES");
 CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
 CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
+
 
 
 var app = builder.Build();
