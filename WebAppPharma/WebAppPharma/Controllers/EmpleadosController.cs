@@ -12,11 +12,13 @@ namespace WebAppPharma.Controllers
     public class EmpleadosController : Controller
     {
         private readonly AppDBcontext _context;
-
-        public EmpleadosController(AppDBcontext context)
+        private readonly IWebHostEnvironment _env;
+        public EmpleadosController(AppDBcontext context, IWebHostEnvironment env)
         {
             _context = context;
+            _env = env;
         }
+
 
         // GET: Empleados
         public async Task<IActionResult> Index()
@@ -62,6 +64,26 @@ namespace WebAppPharma.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Manejo del archivo de foto
+                var archivos = HttpContext.Request.Form.Files;
+                if (archivos != null && archivos.Count > 0)
+                {
+                    var archivoFoto = archivos[0];
+                    if (archivoFoto.Length > 0)
+                    {
+                        var rutaDestino = Path.Combine(_env.WebRootPath, "fotografias");
+                        var extArch = Path.GetExtension(archivoFoto.FileName);
+                        // Generar un nombre único para el archivo
+                        var archivoDestino = Guid.NewGuid().ToString().Replace("-", "") + extArch;
+
+                        // Guardar el archivo en memoria
+                        using (var filestream = new FileStream(Path.Combine(rutaDestino, archivoDestino), FileMode.Create))
+                        {
+                            archivoFoto.CopyTo(filestream);
+                            empleado.Foto = archivoDestino;
+                        }
+                    }
+                }
                 _context.Add(empleado);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -105,6 +127,39 @@ namespace WebAppPharma.Controllers
             {
                 try
                 {
+                    // Manejo de archivos (fotos)
+                    var archivos = HttpContext.Request.Form.Files;
+                    if (archivos != null && archivos.Count > 0)
+                    {
+                        var archivoFoto = archivos[0];
+                        if (archivoFoto.Length > 0)
+                        {
+                            var rutaDestino = Path.Combine(_env.WebRootPath, "fotografias");
+                            var extArch = Path.GetExtension(archivoFoto.FileName);
+                            var archivoDestino = Guid.NewGuid().ToString().Replace("-", "") + extArch;
+
+                            // Crear el archivo en memoria
+                            using (var filestream = new FileStream(Path.Combine(rutaDestino, archivoDestino), FileMode.Create))
+                            {
+                                archivoFoto.CopyTo(filestream);
+
+                                // Si existe una foto anterior, se elimina
+                                if (!string.IsNullOrEmpty(empleado.Foto))
+                                {
+                                    string fotoAnterior = Path.Combine(rutaDestino, empleado.Foto);
+                                    if (System.IO.File.Exists(fotoAnterior))
+                                    {
+                                        System.IO.File.Delete(fotoAnterior);
+                                    }
+                                }
+
+                                // Asignar la nueva foto
+                                empleado.Foto = archivoDestino;
+                            }
+                        }
+                    }
+
+                    // Actualizar libro en la base de datos
                     _context.Update(empleado);
                     await _context.SaveChangesAsync();
                 }
@@ -119,6 +174,7 @@ namespace WebAppPharma.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdCargo"] = new SelectList(_context.Cargos, "IdCargo", "Tipo", empleado.IdCargo);

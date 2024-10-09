@@ -31,7 +31,7 @@
                     {
                         @foreach (var productoCategoria in Model.ProductosCategorias)
                         {
-                            @(productoCategoria.Categoria.Tipo);
+                            @("-" + productoCategoria.Categoria.Tipo + " ");
                         }
                     }
                 </dd>
@@ -49,8 +49,12 @@
 
                 <dt class="col-sm-4 font-weight-bold text-primary">Foto del Producto</dt>
                 <dd class="col-sm-8">
-                    <img src="@Model.Foto" alt="Foto del producto" class="img-fluid img-thumbnail" style="max-width: 150px;" />
+                    @if (!string.IsNullOrEmpty(Model.Foto))
+                    {
+                        <img src="~/fotografias/@Model.Foto" class="img-fluid rounded-circle img-thumbnail mb-4" style="width: 90px; height: 80px;" />
+                    }
                 </dd>
+
 
                 <dt class="col-sm-4 font-weight-bold text-primary">Fecha de Ingreso</dt>
                 <dd class="col-sm-8">@Html.DisplayFor(model => model.FechaIngreso)</dd>

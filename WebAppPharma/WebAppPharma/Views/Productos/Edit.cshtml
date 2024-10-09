@@ -64,11 +64,21 @@
                     }
                 </div>
 
-
-                <div class="mb-4">
+                <div class="form-group mb-4">
                     <label asp-for="Foto" class="form-label font-weight-bold text-primary">Foto del Producto</label>
-                    <input type="file" asp-for="Foto" class="form-control form-control-lg" accept="image/*" />
-                    <span asp-validation-for="Foto" class="text-danger"></span>
+                    <input type="hidden" asp-for="Foto" />
+                    <div class="mb-4">
+                        <img id="imagen"
+                             src="@(String.IsNullOrEmpty(Model.Foto) ? "" : Url.Content("~/fotografias/" + Model.Foto))"
+                             class="rounded-circle img-thumbnail mb-4"
+                             style="width: 90px; height: 80px; @(String.IsNullOrEmpty(Model.Foto) ? "display:none;" : "display:block;")" />
+
+                        <img id="imagen" src="~/fotografias/@Model.Foto"
+                             class="rounded-circle img-thumbnail"
+                             style="width: 90px; height: 80px; display: none;"
+                             asp-append-version="true" />
+                    </div>
+                    <input type="file" id="seleccionImg" name="imagen" class="form-control" accept=".jpg,.jpeg,.png" />
                 </div>
 
                 <div class="mb-4">
@@ -98,4 +108,6 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="~/js//preview.js"></script>
 }
