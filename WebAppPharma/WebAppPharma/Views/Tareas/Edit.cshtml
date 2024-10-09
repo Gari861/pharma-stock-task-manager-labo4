@@ -30,15 +30,28 @@
 
                 <div class="mb-4">
                     <label asp-for="IdPrioridad" class="form-label font-weight-bold text-primary">Prioridad</label>
+
+                    @if (ViewData["PrioridadesVacias"] != null && (bool)ViewData["PrioridadesVacias"])
+                    {
+                        <label class="form-label font-weight-bold text-danger"> *Dirígete a Prioridades para llenarlo</label>
+                    }
+
                     <select asp-for="IdPrioridad" class="form-control form-control-lg" asp-items="ViewBag.IdPrioridad"></select>
                     <span asp-validation-for="IdPrioridad" class="text-danger"></span>
                 </div>
 
                 <div class="mb-4">
                     <label asp-for="IdEstadodeTarea" class="form-label font-weight-bold text-primary">Estado de la Tarea</label>
+
+                    @if (ViewData["EstadosDeTareasVacios"] != null && (bool)ViewData["EstadosDeTareasVacios"])
+                    {
+                        <label class="form-label font-weight-bold text-danger"> *Dirígete a Estados Tareas para llenarlo</label>
+                    }
+
                     <select asp-for="IdEstadodeTarea" class="form-control form-control-lg" asp-items="ViewBag.IdEstadodeTarea"></select>
                     <span asp-validation-for="IdEstadodeTarea" class="text-danger"></span>
                 </div>
+
 
                 <div class="mb-4">
                     <label asp-for="FechaCreacion" class="form-label font-weight-bold text-primary">Fecha de Creación</label>

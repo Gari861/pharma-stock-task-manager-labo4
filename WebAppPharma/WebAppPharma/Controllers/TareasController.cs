@@ -48,10 +48,18 @@ namespace WebAppPharma.Controllers
         // GET: Tareas/Create
         public IActionResult Create()
         {
-            ViewData["IdEstadodeTarea"] = new SelectList(_context.EstadosdeTareas, "IdEstadodeTarea", "Tipo");
-            ViewData["IdPrioridad"] = new SelectList(_context.Prioridades, "IdPrioridad", "Tipo");
+            var prioridades = _context.Prioridades.ToList();
+            var estadosdetareas = _context.EstadosdeTareas.ToList();
+            ViewData["IdEstadodeTarea"] = new SelectList(estadosdetareas, "IdEstadodeTarea", "Tipo", null)
+                      .Prepend(new SelectListItem { Text = " ", Value = "" });
+            ViewData["IdPrioridad"] = new SelectList(prioridades, "IdPrioridad", "Tipo", null)
+                      .Prepend(new SelectListItem { Text = " ", Value = "" });
+            // Verifica si no hay cargadas y pasa esa información a la vista
+            ViewData["PrioridadesVacias"] = !prioridades.Any();
+            ViewData["EstadosDeTareasVacios"] = !estadosdetareas.Any();
             return View();
         }
+
 
         // POST: Tareas/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -84,8 +92,18 @@ namespace WebAppPharma.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdEstadodeTarea"] = new SelectList(_context.EstadosdeTareas, "IdEstadodeTarea", "Tipo", tarea.IdEstadodeTarea);
-            ViewData["IdPrioridad"] = new SelectList(_context.Prioridades, "IdPrioridad", "Tipo", tarea.IdPrioridad);
+            var prioridades = _context.Prioridades.ToList();
+            var estadosdetareas = _context.EstadosdeTareas.ToList();
+
+            ViewData["IdEstadodeTarea"] = new SelectList(_context.EstadosdeTareas, "IdEstadodeTarea", "Tipo", null)
+                                  .Prepend(new SelectListItem { Text = " ", Value = "" });
+            ViewData["IdPrioridad"] = new SelectList(_context.Prioridades, "IdPrioridad", "Tipo", null)
+                                  .Prepend(new SelectListItem { Text = " ", Value = "" });
+
+            // Verifica si no hay cargadas y pasa esa información a la vista
+            ViewData["PrioridadesVacias"] = !prioridades.Any();
+            ViewData["EstadosDeTareasVacios"] = !estadosdetareas.Any();
+
             return View(tarea);
         }
 
