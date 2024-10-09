@@ -47,9 +47,22 @@ namespace WebAppPharma.Controllers
         // GET: UbicacionesProductos/Create
         public IActionResult Create()
         {
-            ViewData["IdProducto"] = new SelectList(_context.Productos, "IdProducto", "Nombre");
+            // Obtener todos los IdProducto de los productos que ya tienen ubicación asignada
+            var productosConUbicacion = _context.UbicacionesProductos
+                .Select(up => up.IdProducto)
+                .ToList();
+
+            // Obtener todos los productos que no tienen ubicación asignada
+            var productosSinUbicacion = _context.Productos
+                .Where(p => !productosConUbicacion.Contains(p.IdProducto)) // Filtra los productos
+                .ToList();
+
+            // Crear el SelectList solo con productos sin ubicación
+            ViewData["IdProducto"] = new SelectList(productosSinUbicacion, "IdProducto", "Nombre");
+
             return View();
         }
+
 
         // POST: UbicacionesProductos/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -81,9 +94,23 @@ namespace WebAppPharma.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdProducto"] = new SelectList(_context.Productos, "IdProducto", "Nombre", ubicacionProducto.IdProducto);
+
+            // Obtener todos los IdProducto de los productos que ya tienen ubicación asignada
+            var productosConUbicacion = _context.UbicacionesProductos
+                .Select(up => up.IdProducto)
+                .ToList();
+
+            // Obtener todos los productos que no tienen ubicación asignada
+            var productosSinUbicacion = _context.Productos
+                .Where(p => !productosConUbicacion.Contains(p.IdProducto) || p.IdProducto == ubicacionProducto.IdProducto) // Filtra los productos
+                .ToList();
+
+            // Crear el SelectList solo con productos sin ubicación, incluyendo el producto actual
+            ViewData["IdProducto"] = new SelectList(productosSinUbicacion, "IdProducto", "Nombre", ubicacionProducto.IdProducto);
+
             return View(ubicacionProducto);
         }
+
 
         // POST: UbicacionesProductos/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.

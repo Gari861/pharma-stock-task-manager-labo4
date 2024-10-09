@@ -9,6 +9,6 @@
     "\\WebAppPharma\\WebAppPharma\\Views\\Prioridades",
     "\\WebAppPharma\\WebAppPharma\\Views\\Productos"
   ],
-  "SelectedNode": "\\WebAppPharma\\WebAppPharma\\Views\\Prioridades\\Edit.cshtml",
+  "SelectedNode": "\\WebAppPharma\\WebAppPharma\\Controllers\\EmpleadosController.cs",
   "PreviewInSolutionExplorer": false
 }
