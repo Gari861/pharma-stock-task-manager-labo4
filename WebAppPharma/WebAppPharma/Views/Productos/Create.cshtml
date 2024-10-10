@@ -14,7 +14,7 @@
         <div class="card-body p-5">
             <form asp-action="Create" method="post" enctype="multipart/form-data">
                 <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
-
+                <p><small class="text-muted">Los campos marcados con <span class="text-danger">*</span> son obligatorios.</small></p>
                 <div class="form-group mb-4">
                     <label asp-for="CodigoProducto" class="form-label font-weight-bold text-primary">Código de Producto</label>
                     <input asp-for="CodigoProducto" class="form-control form-control-lg" placeholder="Ingrese el código del producto" />
@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="form-group mb-4">
-                    <label asp-for="Nombre" class="form-label font-weight-bold text-primary">Nombre</label>
+                    <label asp-for="Nombre" class="form-label font-weight-bold text-primary">Nombre<span class="text-danger">*</span></label>
                     <input asp-for="Nombre" class="form-control form-control-lg" placeholder="Nombre del producto" style="text-transform: uppercase;" />
                     <span asp-validation-for="Nombre" class="text-danger"></span>
                 </div>
@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="form-group mb-4">
-                    <label asp-for="CantSock" class="form-label font-weight-bold text-primary">Cantidad en Stock</label>
+                    <label asp-for="CantSock" class="form-label font-weight-bold text-primary">Cantidad en Stock<span class="text-danger">*</span></label>
                     <input asp-for="CantSock" class="form-control form-control-lg" placeholder="Cantidad disponible" />
                     <span asp-validation-for="CantSock" class="text-danger"></span>
                 </div>

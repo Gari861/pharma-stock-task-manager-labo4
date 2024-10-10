@@ -14,9 +14,9 @@
         <div class="card-body p-5">
             <form asp-action="Create" method="post">
                 <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
-
+                <p><small class="text-muted">Los campos marcados con <span class="text-danger">*</span> son obligatorios.</small></p>
                 <div class="form-group mb-4">
-                    <label asp-for="Tipo" class="form-label font-weight-bold text-primary">Tipo de Categoría</label>
+                    <label asp-for="Tipo" class="form-label font-weight-bold text-primary">Tipo de Categoría<span class="text-danger">*</span></label>
                     <input asp-for="Tipo" class="form-control form-control-lg" placeholder="Ingrese la categoría" />
                     <span asp-validation-for="Tipo" class="text-danger"></span>
                 </div>

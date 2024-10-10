@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DrzgdUD38fPlrE5XnW7Cgwpenrx24EGtVdLa5HJoTXE=",
+  "Hash": "/u3Pe+j0SYK3bxAqhv+1MJ2IEfTL21W2pfG3ReLy5GU=",
   "Source": "WebAppPharma",
   "BasePath": "_content/WebAppPharma",
   "Mode": "Default",
@@ -319,6 +319,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\fotografias\\87f0e3e5b3b94524bc0e1220cb5498b3.png"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\b124744b74f84785905c253db77392f1.png",
+      "SourceId": "WebAppPharma",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\",
+      "BasePath": "_content/WebAppPharma",
+      "RelativePath": "fotografias/b124744b74f84785905c253db77392f1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\fotografias\\b124744b74f84785905c253db77392f1.png"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\bd7397b1e5bc4641a41d5cae07f1b2e0.png",

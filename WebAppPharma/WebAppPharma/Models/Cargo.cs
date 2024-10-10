@@ -9,6 +9,7 @@ namespace WebAppPharma.Models
 
         [Required(ErrorMessage = "El CARGO es obligatorio")]
         [Display(Name = "Cargo del Empleado")]
+        [StringLength(30, ErrorMessage = "El cargo no puede exceder los 30 caracteres.")]
         public string Tipo { get; set; }
 
         // Relación de UNO A MUCHOS

@@ -9,6 +9,7 @@ namespace WebAppPharma.Models
 
         [Required(ErrorMessage = "El ESTADO es obligatorio")]
         [Display(Name = "Estado de la Tarea")]
+        [StringLength(20, ErrorMessage = "El estado de la tarea no puede exceder los 20 caracteres.")]
         public string Tipo { get; set; }
 
         //Relación de UNO A MUCHOS

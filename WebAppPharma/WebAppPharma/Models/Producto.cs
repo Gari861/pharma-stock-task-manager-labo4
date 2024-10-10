@@ -8,13 +8,15 @@ namespace WebAppPharma.Models
         public int IdProducto { get; set; }
 
         [Display(Name = "Cod Producto")]
-        public long? CodigoProducto { get; set; }
+        public string? CodigoProducto { get; set; }
 
         [Required(ErrorMessage = "El TITULO es obligatorio")]
         [Display(Name = "Título")]
+        [StringLength(50, ErrorMessage = "El título no puede exceder los 50 caracteres.")]
         public string Nombre { get; set; }
 
         [Display(Name = "Precio")]
+        [RegularExpression(@"^\d+(\.\d+)?$", ErrorMessage = "El campo Precio debe ser un número positivo válido.")]
         public decimal? Precio { get; set; }
 
         [Required(ErrorMessage = "La CANTIDAD DE PRODUCTOS es obligatoria")]
