@@ -47,14 +47,22 @@
 
                 <div class="form-group mb-4">
                     <label asp-for="IdCargo" class="form-label font-weight-bold text-primary">Cargo</label>
+
+                    @if (ViewData["CargosVacios"] != null && (bool)ViewData["CargosVacios"])
+                    {
+                        <label class="form-label font-weight-bold text-danger"> *Dirígete a Cargos para llenarlo</label>
+                    }
                     <select asp-for="IdCargo" class="form-control form-control-lg" asp-items="ViewBag.IdCargo"></select>
-                    <span asp-validation-for="IdCargo" class="text-danger"></span>
                 </div>
 
                 <div class="form-group mb-4">
                     <label asp-for="IdEstadodeEmpleado" class="form-label font-weight-bold text-primary">Estado del Empleado</label>
+
+                    @if (ViewData["EstadosDeEmpleadosVacios"] != null && (bool)ViewData["EstadosDeEmpleadosVacios"])
+                    {
+                        <label class="form-label font-weight-bold text-danger"> *Dirígete a Estados Empleados para llenarlo</label>
+                    }
                     <select asp-for="IdEstadodeEmpleado" class="form-control form-control-lg" asp-items="ViewBag.IdEstadodeEmpleado"></select>
-                    <span asp-validation-for="IdEstadodeEmpleado" class="text-danger"></span>
                 </div>
 
                 <div class="form-group mb-4">

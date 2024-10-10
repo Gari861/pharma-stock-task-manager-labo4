@@ -21,14 +21,11 @@ namespace WebAppPharma.Models
         public long Dni { get; set; }
 
         //Relación de UNO A MUCHOS
-        [Required(ErrorMessage = "El CARGO es obligatorio")]
         [Display(Name = "Cargo")]
-        public int IdCargo { get; set; }
+        public int? IdCargo { get; set; }
         [ForeignKey(nameof(IdCargo))]
         public Cargo? Cargo { get; set; }
-
-        //Relación de UNO A MUCHOS
-        public int IdEstadodeEmpleado { get; set; }
+        public int? IdEstadodeEmpleado { get; set; }
         [ForeignKey(nameof(IdEstadodeEmpleado))]
         [Display(Name = "Estado de empleado")]
         public EstadodeEmpleado? EstadodeEmpleado { get; set; }

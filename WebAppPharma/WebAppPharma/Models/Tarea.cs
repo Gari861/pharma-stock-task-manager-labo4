@@ -16,15 +16,13 @@ namespace WebAppPharma.Models
         public string? Descripcion { get; set; }
 
         //Relación de UNO A MUCHOS
-        [Required(ErrorMessage = "La PRIORIDAD es obligatoria")]
         [Display(Name = "Prioridad")]
-        public int IdPrioridad { get; set; }
+        public int? IdPrioridad { get; set; }
         [ForeignKey(nameof(IdPrioridad))]
         public Prioridad? Prioridad { get; set; }
 
-        [Required(ErrorMessage = "El ESTADO es obligatorio")]
         [Display(Name = "Estado de la tarea")]
-        public int IdEstadodeTarea { get; set; }
+        public int? IdEstadodeTarea { get; set; }
         [ForeignKey(nameof(IdEstadodeTarea))]
         [Display(Name = "Estado")]
         public EstadodeTarea? EstadodeTarea { get; set; }

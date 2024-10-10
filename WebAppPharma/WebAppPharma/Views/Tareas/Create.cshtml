@@ -29,11 +29,23 @@
 
                 <div class="form-group mb-4">
                     <label asp-for="IdPrioridad" class="form-label font-weight-bold text-primary">Prioridad</label>
+
+                    @if (ViewData["PrioridadesVacias"] != null && (bool)ViewData["PrioridadesVacias"])
+                    {
+                        <label class="form-label font-weight-bold text-danger"> *Dirígete a Prioridades para llenarlo</label>
+                    }
+
                     <select asp-for="IdPrioridad" class="form-control form-control-lg" asp-items="ViewBag.IdPrioridad"></select>
                 </div>
 
                 <div class="form-group mb-4">
                     <label asp-for="IdEstadodeTarea" class="form-label font-weight-bold text-primary">Estado de la Tarea</label>
+
+                    @if (ViewData["EstadosDeTareasVacios"] != null && (bool)ViewData["EstadosDeTareasVacios"])
+                    {
+                        <label class="form-label font-weight-bold text-danger"> *Dirígete a Estados Tareas para llenarlo</label>
+                    }
+
                     <select asp-for="IdEstadodeTarea" class="form-control form-control-lg" asp-items="ViewBag.IdEstadodeTarea"></select>
                 </div>
 
@@ -47,6 +59,18 @@
                     <label asp-for="FechaLimite" class="form-label font-weight-bold text-primary">Fecha Límite</label>
                     <input asp-for="FechaLimite" class="form-control form-control-lg" />
                     <span asp-validation-for="FechaLimite" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label class="form-label font-weight-bold text-primary">Seleccionar Asignación</label>
+                    @foreach(var empleado in ViewBag.Empleados)
+                    {
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="@empleado.Value" 
+                            name="empleadosSeleccionados[]" id="emplado_@empleado.Value"/>
+                            <label class="form-check-label" for="empleado_@empleado.Value">@empleado.Text</label>
+                        </div>
+                    }
                 </div>
 
                 <div class="form-group mb-4 text-center">

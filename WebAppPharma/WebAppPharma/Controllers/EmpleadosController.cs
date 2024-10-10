@@ -50,10 +50,20 @@ namespace WebAppPharma.Controllers
         // GET: Empleados/Create
         public IActionResult Create()
         {
-            ViewData["IdCargo"] = new SelectList(_context.Cargos, "IdCargo", "Tipo");
-            ViewData["IdEstadodeEmpleado"] = new SelectList(_context.EstadosdeEmpleados, "IdEstadodeEmpleado", "Tipo");
+            var cargos = _context.Cargos.ToList();
+            var estadodeEmpleados = _context.EstadosdeEmpleados.ToList();
+            ViewData["IdCargo"] = new SelectList(cargos, "IdCargo", "Tipo", null)
+                                  .Prepend(new SelectListItem { Text = " ", Value = "" });
+            ViewData["IdEstadodeEmpleado"] = new SelectList(estadodeEmpleados, "IdEstadodeEmpleado", "Tipo", null)
+                                  .Prepend(new SelectListItem { Text = " ", Value = "" });
+
+            // Verifica si no hay cargadas y pasa esa información a la vista
+            ViewData["CargosVacios"] = !cargos.Any();
+            ViewData["EstadosDeEmpleadosVacios"] = !estadodeEmpleados.Any();
+
             return View();
         }
+
 
         // POST: Empleados/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -106,8 +116,17 @@ namespace WebAppPharma.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdCargo"] = new SelectList(_context.Cargos, "IdCargo", "Tipo", empleado.IdCargo);
-            ViewData["IdEstadodeEmpleado"] = new SelectList(_context.EstadosdeEmpleados, "IdEstadodeEmpleado", "Tipo", empleado.IdEstadodeEmpleado);
+            var cargos = _context.Cargos.ToList();
+            var estadodeEmpleados = _context.EstadosdeEmpleados.ToList();
+
+            ViewData["IdCargo"] = new SelectList(_context.Cargos, "IdCargo", "Tipo", null)
+                                  .Prepend(new SelectListItem { Text = " ", Value = "" });
+            ViewData["IdEstadodeEmpleado"] = new SelectList(_context.EstadosdeEmpleados, "IdEstadodeEmpleado", "Tipo", null)
+                                  .Prepend(new SelectListItem { Text = " ", Value = "" });
+            // Verifica si no hay cargadas y pasa esa información a la vista
+            ViewData["CargosVacios"] = !cargos.Any();
+            ViewData["EstadosDeEmpleadosVacios"] = !estadodeEmpleados.Any();
+
             return View(empleado);
         }
 
@@ -159,7 +178,7 @@ namespace WebAppPharma.Controllers
                         }
                     }
 
-                    // Actualizar libro en la base de datos
+                    // Actualizar empleado en la base de datos
                     _context.Update(empleado);
                     await _context.SaveChangesAsync();
                 }
@@ -174,7 +193,6 @@ namespace WebAppPharma.Controllers
                         throw;
                     }
                 }
-
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdCargo"] = new SelectList(_context.Cargos, "IdCargo", "Tipo", empleado.IdCargo);
