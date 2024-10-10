@@ -30,6 +30,18 @@
 
                 <dt class="col-sm-4 font-weight-bold text-primary">Fecha Límite</dt>
                 <dd class="col-sm-8">@Html.DisplayFor(model => model.FechaLimite)</dd>
+
+                <dt class="col-sm-4 font-weight-bold text-primary">Asignación</dt>
+                <dd class="col-sm-8">
+                    @if (Model.TareasEmpleados != null)
+                    {
+                        @foreach (var tareasEmpleados in Model.TareasEmpleados)
+                        {
+                            @("-" + tareasEmpleados.Empleado.Nombre + " " + tareasEmpleados.Empleado.Apellido + " ")
+                            ;
+                        }
+                    }
+                </dd>
             </dl>
 
             <div class="text-center">

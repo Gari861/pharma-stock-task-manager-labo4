@@ -24,6 +24,7 @@
                     <th>@Html.DisplayNameFor(model => model.EstadodeTarea)</th>
                     <th>@Html.DisplayNameFor(model => model.FechaCreacion)</th>
                     <th>@Html.DisplayNameFor(model => model.FechaLimite)</th>
+                    <th>@Html.DisplayNameFor(model => model.TareasEmpleados)</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -37,6 +38,17 @@
                         <td>@Html.DisplayFor(modelItem => item.EstadodeTarea.Tipo)</td>
                         <td>@Html.DisplayFor(modelItem => item.FechaCreacion)</td>
                         <td>@Html.DisplayFor(modelItem => item.FechaLimite)</td>
+                        <td>
+                            @if(item.TareasEmpleados != null)
+                            {
+                                @foreach(var tareaEmpleado in item.TareasEmpleados)
+                                {
+                                    <p>
+                                        @("-" + tareaEmpleado.Empleado.Nombre + " " + tareaEmpleado.Empleado.Apellido + " ")
+                                    </p>
+                                }
+                            }
+                        </td>
                         <td>
                             <a asp-action="Edit" asp-route-id="@item.IdTarea" class="btn btn-warning btn-sm me-2">
                                 <i class="fas fa-edit"></i> Editar

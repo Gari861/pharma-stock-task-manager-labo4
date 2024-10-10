@@ -21,7 +21,7 @@ namespace WebAppPharma.Controllers
         // GET: Tareas
         public async Task<IActionResult> Index()
         {
-            var appDBcontext = _context.Tareas.Include(t => t.EstadodeTarea).Include(t => t.Prioridad);
+            var appDBcontext = _context.Tareas.Include(t => t.EstadodeTarea).Include(t => t.Prioridad).Include(t => t.TareasEmpleados).ThenInclude(ta => ta.Empleado);
             return View(await appDBcontext.ToListAsync());
         }
 
@@ -36,7 +36,10 @@ namespace WebAppPharma.Controllers
             var tarea = await _context.Tareas
                 .Include(t => t.EstadodeTarea)
                 .Include(t => t.Prioridad)
+                .Include(t => t.TareasEmpleados)
+                .ThenInclude(ta => ta.Empleado)
                 .FirstOrDefaultAsync(m => m.IdTarea == id);
+
             if (tarea == null)
             {
                 return NotFound();
@@ -57,6 +60,7 @@ namespace WebAppPharma.Controllers
             // Verifica si no hay cargadas y pasa esa información a la vista
             ViewData["PrioridadesVacias"] = !prioridades.Any();
             ViewData["EstadosDeTareasVacios"] = !estadosdetareas.Any();
+            ViewBag.Empleados = new MultiSelectList(_context.Empleados, "IdEmpleado", "Nombre");
             return View();
         }
 
@@ -66,32 +70,52 @@ namespace WebAppPharma.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdTarea,Nombre,Descripcion,IdPrioridad,IdEstadodeTarea,FechaCreacion,FechaLimite")] Tarea tarea)
+        public async Task<IActionResult> Create([Bind("IdTarea,Nombre,Descripcion,IdPrioridad,IdEstadodeTarea,FechaCreacion,FechaLimite")] Tarea tarea, List<int> empleadosSeleccionados)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(tarea);
                 await _context.SaveChangesAsync();
+
+                //Relacionar empleados con Tareas
+                if (empleadosSeleccionados != null && empleadosSeleccionados.Count > 0)
+                {
+                    foreach (var idEmpleado in empleadosSeleccionados)
+                    {
+                        var tareaEmpleado = new TareaEmpleado
+                        {
+                            IdTarea = tarea.IdTarea,
+                            IdEmpleado = idEmpleado
+                        };
+                        _context.TareasEmpleados.Add(tareaEmpleado);
+                    }
+                    await _context.SaveChangesAsync();
+                }
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdEstadodeTarea"] = new SelectList(_context.EstadosdeTareas, "IdEstadodeTarea", "Tipo", tarea.IdEstadodeTarea);
             ViewData["IdPrioridad"] = new SelectList(_context.Prioridades, "IdPrioridad", "Tipo", tarea.IdPrioridad);
+            ViewBag.Empleados = new MultiSelectList(_context.Empleados, "IdEmpleado", "Nombre");
             return View(tarea);
         }
 
         // GET: Tareas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            var tarea = await _context.Tareas
+                .Include(p => p.TareasEmpleados)
+                .FirstOrDefaultAsync(m => m.IdTarea == id);
+
             if (id == null)
             {
                 return NotFound();
             }
 
-            var tarea = await _context.Tareas.FindAsync(id);
             if (tarea == null)
             {
                 return NotFound();
             }
+
             var prioridades = _context.Prioridades.ToList();
             var estadosdetareas = _context.EstadosdeTareas.ToList();
 
@@ -104,6 +128,11 @@ namespace WebAppPharma.Controllers
             ViewData["PrioridadesVacias"] = !prioridades.Any();
             ViewData["EstadosDeTareasVacios"] = !estadosdetareas.Any();
 
+            //Hacer que al traer el edit las marcadas sigan estando marcadas
+            var empleadosSeleccionados = tarea.TareasEmpleados.Select(pc => pc.IdEmpleado).ToList();
+
+            ViewBag.Empleados = new MultiSelectList(_context.Empleados, "IdEmpleado", "Nombre", empleadosSeleccionados);
+
             return View(tarea);
         }
 
@@ -112,7 +141,7 @@ namespace WebAppPharma.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdTarea,Nombre,Descripcion,IdPrioridad,IdEstadodeTarea,FechaCreacion,FechaLimite")] Tarea tarea)
+        public async Task<IActionResult> Edit(int id, [Bind("IdTarea,Nombre,Descripcion,IdPrioridad,IdEstadodeTarea,FechaCreacion,FechaLimite")] Tarea tarea, List<int> empleadosSeleccionados)
         {
             if (id != tarea.IdTarea)
             {
@@ -123,8 +152,24 @@ namespace WebAppPharma.Controllers
             {
                 try
                 {
-                    _context.Update(tarea);
+                    //Eliminar relaciones antiguas de TareasEmpleados
+                    var empleadosAntiguos = _context.TareasEmpleados.Where(pc => pc.IdTarea == tarea.IdTarea);
+                    _context.TareasEmpleados.RemoveRange(empleadosAntiguos);
                     await _context.SaveChangesAsync();
+
+                    if (empleadosSeleccionados != null && empleadosSeleccionados.Count > 0)
+                    {
+                        foreach (var idEmpleado in empleadosSeleccionados)
+                        {
+                            var tareaEmpleado = new TareaEmpleado
+                            {
+                                IdTarea = tarea.IdTarea,
+                                IdEmpleado = idEmpleado
+                            };
+                            _context.TareasEmpleados.Add(tareaEmpleado);
+                        }
+                        await _context.SaveChangesAsync();
+                    }
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -137,10 +182,13 @@ namespace WebAppPharma.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
+
             ViewData["IdEstadodeTarea"] = new SelectList(_context.EstadosdeTareas, "IdEstadodeTarea", "Tipo", tarea.IdEstadodeTarea);
             ViewData["IdPrioridad"] = new SelectList(_context.Prioridades, "IdPrioridad", "Tipo", tarea.IdPrioridad);
+            ViewBag.Empleados = new MultiSelectList(_context.Empleados, "IdEmpleado", "Nombre", empleadosSeleccionados);
             return View(tarea);
         }
 
@@ -155,6 +203,7 @@ namespace WebAppPharma.Controllers
             var tarea = await _context.Tareas
                 .Include(t => t.EstadodeTarea)
                 .Include(t => t.Prioridad)
+                .Include(l => l.TareasEmpleados).ThenInclude(la => la.Empleado)
                 .FirstOrDefaultAsync(m => m.IdTarea == id);
             if (tarea == null)
             {
@@ -172,6 +221,11 @@ namespace WebAppPharma.Controllers
             var tarea = await _context.Tareas.FindAsync(id);
             if (tarea != null)
             {
+                var tareaEmpleados = _context.TareasEmpleados.Where(te => te.IdTarea == id).ToList();
+                if (tareaEmpleados.Any())
+                {
+                    _context.TareasEmpleados.RemoveRange(tareaEmpleados);
+                }
                 _context.Tareas.Remove(tarea);
             }
 
