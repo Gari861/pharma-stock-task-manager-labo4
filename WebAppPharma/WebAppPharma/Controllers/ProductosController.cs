@@ -66,6 +66,13 @@ namespace WebAppPharma.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdProducto,CodigoProducto,Nombre,Precio,CantSock,Foto,FechaIngreso,FechaVencimiento")] Producto producto, List<int> categoriasSeleccionadas, List<int> proveedoresSeleccionados)
         {
+            // Normalizar el precio para que acepte tanto comas como puntos
+            if (!string.IsNullOrEmpty(producto.Precio.ToString()))
+            {
+                // Reemplaza la coma con el punto en caso de que el usuario la haya ingresado
+                producto.Precio = Convert.ToDecimal(producto.Precio.ToString().Replace(',', '.'));
+            }
+
             if (ModelState.IsValid)
             {
                 // Manejo del archivo de foto
@@ -166,6 +173,12 @@ namespace WebAppPharma.Controllers
             {
                 return NotFound();
             }
+
+                // Normalizar el precio para que acepte tanto comas como puntos
+    if (!string.IsNullOrEmpty(producto.Precio.ToString()))
+    {
+        producto.Precio = Convert.ToDecimal(producto.Precio.ToString().Replace(',', '.'));
+    }
 
             if (ModelState.IsValid)
             {

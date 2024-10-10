@@ -102,14 +102,14 @@ namespace WebAppPharma.Controllers
         // GET: Tareas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            var tarea = await _context.Tareas
-                .Include(p => p.TareasEmpleados)
-                .FirstOrDefaultAsync(m => m.IdTarea == id);
-
             if (id == null)
             {
                 return NotFound();
             }
+
+            var tarea = await _context.Tareas
+                .Include(p => p.TareasEmpleados)
+                .FirstOrDefaultAsync(m => m.IdTarea == id);
 
             if (tarea == null)
             {
@@ -119,16 +119,17 @@ namespace WebAppPharma.Controllers
             var prioridades = _context.Prioridades.ToList();
             var estadosdetareas = _context.EstadosdeTareas.ToList();
 
-            ViewData["IdEstadodeTarea"] = new SelectList(_context.EstadosdeTareas, "IdEstadodeTarea", "Tipo", null)
-                                  .Prepend(new SelectListItem { Text = " ", Value = "" });
-            ViewData["IdPrioridad"] = new SelectList(_context.Prioridades, "IdPrioridad", "Tipo", null)
-                                  .Prepend(new SelectListItem { Text = " ", Value = "" });
+            // Establece el valor seleccionado para Prioridad y Estado de Tarea
+            ViewData["IdEstadodeTarea"] = new SelectList(_context.EstadosdeTareas, "IdEstadodeTarea", "Tipo", tarea.IdEstadodeTarea)
+                .Prepend(new SelectListItem { Text = " ", Value = "" });
+            ViewData["IdPrioridad"] = new SelectList(_context.Prioridades, "IdPrioridad", "Tipo", tarea.IdPrioridad)
+                .Prepend(new SelectListItem { Text = " ", Value = "" });
 
             // Verifica si no hay cargadas y pasa esa información a la vista
             ViewData["PrioridadesVacias"] = !prioridades.Any();
             ViewData["EstadosDeTareasVacios"] = !estadosdetareas.Any();
 
-            //Hacer que al traer el edit las marcadas sigan estando marcadas
+            // Hacer que al traer el edit las marcadas sigan estando marcadas
             var empleadosSeleccionados = tarea.TareasEmpleados.Select(pc => pc.IdEmpleado).ToList();
 
             ViewBag.Empleados = new MultiSelectList(_context.Empleados, "IdEmpleado", "Nombre", empleadosSeleccionados);
@@ -152,11 +153,16 @@ namespace WebAppPharma.Controllers
             {
                 try
                 {
-                    //Eliminar relaciones antiguas de TareasEmpleados
+                    // Indica al contexto que el objeto 'tarea' ha sido modificado
+                    _context.Update(tarea);
+                    await _context.SaveChangesAsync();
+
+                    // Eliminar relaciones antiguas de TareasEmpleados
                     var empleadosAntiguos = _context.TareasEmpleados.Where(pc => pc.IdTarea == tarea.IdTarea);
                     _context.TareasEmpleados.RemoveRange(empleadosAntiguos);
                     await _context.SaveChangesAsync();
 
+                    // Agregar nuevas relaciones de TareasEmpleados
                     if (empleadosSeleccionados != null && empleadosSeleccionados.Count > 0)
                     {
                         foreach (var idEmpleado in empleadosSeleccionados)
@@ -186,11 +192,15 @@ namespace WebAppPharma.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            ViewData["IdEstadodeTarea"] = new SelectList(_context.EstadosdeTareas, "IdEstadodeTarea", "Tipo", tarea.IdEstadodeTarea);
-            ViewData["IdPrioridad"] = new SelectList(_context.Prioridades, "IdPrioridad", "Tipo", tarea.IdPrioridad);
+            // Si ModelState no es válido, repopular las listas desplegables
+            ViewData["IdEstadodeTarea"] = new SelectList(_context.EstadosdeTareas, "IdEstadodeTarea", "Tipo", tarea.IdEstadodeTarea)
+                .Prepend(new SelectListItem { Text = " ", Value = "" });
+            ViewData["IdPrioridad"] = new SelectList(_context.Prioridades, "IdPrioridad", "Tipo", tarea.IdPrioridad)
+                .Prepend(new SelectListItem { Text = " ", Value = "" });
             ViewBag.Empleados = new MultiSelectList(_context.Empleados, "IdEmpleado", "Nombre", empleadosSeleccionados);
             return View(tarea);
         }
+
 
         // GET: Tareas/Delete/5
         public async Task<IActionResult> Delete(int? id)

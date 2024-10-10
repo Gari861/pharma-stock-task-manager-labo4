@@ -9,6 +9,7 @@ namespace WebAppPharma.Models
 
         [Required(ErrorMessage = "La PRIORIDAD es obligatoria")]
         [Display(Name = "Prioridad de la Tarea")]
+        [StringLength(20, ErrorMessage = "La prioridad no puede exceder los 20 caracteres.")]
         public string Tipo { get; set; }
 
         // Relación de UNO A MUCHOS

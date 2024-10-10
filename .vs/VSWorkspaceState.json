@@ -7,8 +7,9 @@
     "\\WebAppPharma\\WebAppPharma\\Models",
     "\\WebAppPharma\\WebAppPharma\\Views",
     "\\WebAppPharma\\WebAppPharma\\Views\\Prioridades",
-    "\\WebAppPharma\\WebAppPharma\\Views\\Productos"
+    "\\WebAppPharma\\WebAppPharma\\Views\\Productos",
+    "\\WebAppPharma\\WebAppPharma\\Views\\Tareas"
   ],
-  "SelectedNode": "\\WebAppPharma\\WebAppPharma.sln",
+  "SelectedNode": "\\WebAppPharma\\WebAppPharma\\Views\\Tareas\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

@@ -10,15 +10,18 @@ namespace WebAppPharma.Models
 
         [Required(ErrorMessage = "El NOMBRE es obligatorio")]
         [Display(Name = "Nombre")]
+        [StringLength(20, ErrorMessage = "El nombre no puede exceder los 20 caracteres.")]
         public string Nombre { get; set; }
 
         [Required(ErrorMessage = "El APELLIDO es obligatorio")]
         [Display(Name = "Apellido")]
+        [StringLength(20, ErrorMessage = "El apellido no puede exceder los 20 caracteres.")]
         public string Apellido { get; set; }
 
         [Required(ErrorMessage = "El DNI es obligatorio")]
         [Display(Name = "DNI")]
-        public long Dni { get; set; }
+        [RegularExpression(@"^[0-9.-]+$", ErrorMessage = "El DNI solo puede contener números, puntos y guiones.")]
+        public string Dni { get; set; }
 
         //Relación de UNO A MUCHOS
         [Display(Name = "Cargo")]
@@ -32,7 +35,8 @@ namespace WebAppPharma.Models
 
         [Required(ErrorMessage = "El TELEFONO es obligatorio")]
         [Display(Name = "Telefono")]
-        public long Telefono { get; set; }
+        [RegularExpression(@"^[\d\s\+\-\(\)]+$", ErrorMessage = "El campo Teléfono solo puede contener números y los caracteres +, -, ()")]
+        public string Telefono { get; set; }
 
         [Display(Name = "Fecha de Nacimiento ")]
         public DateTime? FechaNacimiento { get; set; }

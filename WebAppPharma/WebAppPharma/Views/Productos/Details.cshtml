@@ -42,7 +42,8 @@
                     {
                         @foreach (var productoProveedor in Model.ProductosProveedores)
                         {
-                            @(productoProveedor.Proveedor.Nombre + " " + productoProveedor.Proveedor.Apellido);
+                            @("-" + productoProveedor.Proveedor.Nombre)
+                            ;
                         }
                     }
                 </dd>

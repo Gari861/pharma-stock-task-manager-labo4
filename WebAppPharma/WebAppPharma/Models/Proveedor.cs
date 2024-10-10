@@ -9,14 +9,13 @@ namespace WebAppPharma.Models
         public int IdProveedor { get; set; }
 
         [Required(ErrorMessage = "El NOMBRE es obligatorio")]
+        [StringLength(30, ErrorMessage = "El nombre no puede exceder los 30 caracteres.")]
         [Display(Name = "Nombre")]
         public string Nombre { get; set; }
 
-        [Display(Name = "Apellido")]
-        public string? Apellido { get; set; }
-
-        [Display(Name = "Telefono")]
-        public long? Telefono { get; set; }
+        [Display(Name = "Teléfono")]
+        [RegularExpression(@"^[\d\s\+\-\(\)]+$", ErrorMessage = "El campo Teléfono solo puede contener números y los caracteres +, -, ()")]
+        public string? Telefono { get; set; }
 
         //Relación de MUCHOS A MUCHOS
         public List<ProductoProveedor>? ProductosProveedores { get; set; }

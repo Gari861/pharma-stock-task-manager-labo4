@@ -9,6 +9,7 @@ namespace WebAppPharma.Models
 
         [Required(ErrorMessage = "La CATEGORIA es obligatoria")]
         [Display(Name = "Categoría del Producto")]
+        [StringLength(30, ErrorMessage = "La categoría no puede exceder los 30 caracteres.")]
         public string Tipo { get; set; }
 
         // Relación de MUCHOS A MUCHOS
