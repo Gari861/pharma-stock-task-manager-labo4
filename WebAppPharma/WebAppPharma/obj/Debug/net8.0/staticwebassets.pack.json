@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\fotografias\\03c2f781296346a58be4fa63119d17f7.jpg"
     },
     {
+      "Id": "C:\\Users\\User\\Desktop\\final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\095c14a407794ba1b50ff69dabb0221b.jpeg",
+      "PackagePath": "staticwebassets\\fotografias\\095c14a407794ba1b50ff69dabb0221b.jpeg"
+    },
+    {
       "Id": "C:\\Users\\User\\Desktop\\final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\0d9d3e7f9be6477b99f9dd82fe480ff2.png",
       "PackagePath": "staticwebassets\\fotografias\\0d9d3e7f9be6477b99f9dd82fe480ff2.png"
     },
@@ -77,8 +81,28 @@
       "PackagePath": "staticwebassets\\fotografias\\e3118e523bcb4ad893cf3a39bdbb3a89.jpg"
     },
     {
+      "Id": "C:\\Users\\User\\Desktop\\final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\f1fe33e485df4182a7754bc5eda0a78c.jpeg",
+      "PackagePath": "staticwebassets\\fotografias\\f1fe33e485df4182a7754bc5eda0a78c.jpeg"
+    },
+    {
       "Id": "C:\\Users\\User\\Desktop\\final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\f330038c8d1c44c0bed77ab8f90f3fd5.jpg",
       "PackagePath": "staticwebassets\\fotografias\\f330038c8d1c44c0bed77ab8f90f3fd5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\importaciones\\271688404f8c483a90dcf5ea84ce3fd2.xlsx",
+      "PackagePath": "staticwebassets\\importaciones\\271688404f8c483a90dcf5ea84ce3fd2.xlsx"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\importaciones\\3904f408b53c4bdb8b5e79874807d178.xlsx",
+      "PackagePath": "staticwebassets\\importaciones\\3904f408b53c4bdb8b5e79874807d178.xlsx"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\importaciones\\8839225e54c54a81bddd4c4281a0f3cc.xlsx",
+      "PackagePath": "staticwebassets\\importaciones\\8839225e54c54a81bddd4c4281a0f3cc.xlsx"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\importaciones\\fb9e9f61e64446419f271bdc2e3b4cf5.xlsx",
+      "PackagePath": "staticwebassets\\importaciones\\fb9e9f61e64446419f271bdc2e3b4cf5.xlsx"
     },
     {
       "Id": "C:\\Users\\User\\Desktop\\final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\js\\preview.js",

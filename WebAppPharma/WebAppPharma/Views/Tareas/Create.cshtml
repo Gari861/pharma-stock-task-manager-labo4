@@ -14,9 +14,9 @@
         <div class="card-body p-5">
             <form asp-action="Create" method="post">
                 <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
-
+                                <p><small class="text-muted">Los campos marcados con <span class="text-danger">*</span> son obligatorios.</small></p>
                 <div class="form-group mb-4">
-                    <label asp-for="Nombre" class="form-label font-weight-bold text-primary">Nombre de la Tarea</label>
+                    <label asp-for="Nombre" class="form-label font-weight-bold text-primary">Nombre de la Tarea<span class="text-danger">*</span></label>
                     <input asp-for="Nombre" class="form-control form-control-lg" placeholder="Ingrese el nombre de la tarea" />
                     <span asp-validation-for="Nombre" class="text-danger"></span>
                 </div>
@@ -56,7 +56,7 @@
                 </div>
 
                 <div class="form-group mb-4">
-                    <label asp-for="FechaLimite" class="form-label font-weight-bold text-primary">Fecha Límite</label>
+                    <label asp-for="FechaLimite" class="form-label font-weight-bold text-primary">Fecha Límite<span class="text-danger">*</span></label>
                     <input asp-for="FechaLimite" class="form-control form-control-lg" />
                     <span asp-validation-for="FechaLimite" class="text-danger"></span>
                 </div>

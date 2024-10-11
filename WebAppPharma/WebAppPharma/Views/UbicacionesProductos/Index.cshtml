@@ -29,9 +29,9 @@
                 @foreach (var item in Model)
                 {
                     <tr style="border: 1px solid #ccc;">
-                        <td>@Html.DisplayFor(modelItem => item.Estante)</td>
+                        <td>@(item.Estante ?? "---")</td>
                         <td>@Html.DisplayFor(modelItem => item.Seccion)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Pasillo)</td>
+                        <td>@(item.Pasillo ?? "---")</td>
                         <td>@Html.DisplayFor(modelItem => item.Producto.Nombre)</td>
                         <td>
                             <a asp-action="Edit" asp-route-id="@item.IdUbicacion" class="btn btn-warning btn-sm me-2">

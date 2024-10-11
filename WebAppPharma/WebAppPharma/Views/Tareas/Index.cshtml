@@ -33,13 +33,13 @@
                 {
                     <tr style="border: 1px solid #ccc;">
                         <td style="text-transform: uppercase;">@Html.DisplayFor(modelItem => item.Nombre)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Descripcion)</td>
-                        <td style="text-transform: uppercase;">@Html.DisplayFor(modelItem => item.Prioridad.Tipo)</td>
-                        <td>@Html.DisplayFor(modelItem => item.EstadodeTarea.Tipo)</td>
-                        <td>@Html.DisplayFor(modelItem => item.FechaCreacion)</td>
+                        <td>@(item.Descripcion ?? "---")</td>
+                        <td>@(item.Prioridad?.Tipo ?? "---")</td>
+                        <td>@(item.EstadodeTarea?.Tipo ?? "---")</td>
+                        <td>@(item.FechaCreacion.HasValue ? item.FechaCreacion.Value.ToString("dd/MM/yyyy") : "---")</td>
                         <td>@Html.DisplayFor(modelItem => item.FechaLimite)</td>
                         <td>
-                            @if(item.TareasEmpleados != null)
+                            @if(item.TareasEmpleados != null && item.TareasEmpleados.Any())
                             {
                                 @foreach(var tareaEmpleado in item.TareasEmpleados)
                                 {
@@ -47,6 +47,10 @@
                                         @("-" + tareaEmpleado.Empleado.Nombre + " " + tareaEmpleado.Empleado.Apellido + " ")
                                     </p>
                                 }
+                            }
+                            else
+                            {
+                                <p>---</p>
                             }
                         </td>
                         <td>
