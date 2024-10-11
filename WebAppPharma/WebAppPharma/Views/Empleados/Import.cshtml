@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Importar Empleado";
+}
+<div class="container mt-5">
+    <div class="card shadow-lg border-0">
+
+        <div class="card-header bg-primary text-white text-center">
+            <h2 class="mb-0" style="font-family: 'Segoe UI', sans-serif;">
+                <i class="fas fa-file-excel"></i> Importar Empleados desde Excel
+            </h2>
+        </div>
+        <div class="card-body p-5">
+            <form asp-action="ImportarDatos" enctype="multipart/form-data" method="post">
+                <h3 class="text-primary text-center">Importar Datos</h3>
+                <h4 class="text-secondary text-center">Seguir en Excel la siguiente estructura:</h4>
+                <table class="table table-bordered">
+                    <thead class="thead-dark" style="border: 10px;">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Dni</th>
+                            <th>Teléfono</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Matías</td>
+                            <td>Cabrera</td>
+                            <td>45.702.425</td>
+                            <td>+54-3564-582699</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="form-group mb-3">
+                    <label class="form-label font-weight-bold text-primary" for="exceldatos">Seleccione archivo Excel</label>
+                    <input type="file" id="exceldatos" name="excelFile" accept=".xlsx, .xls" class="form-control" />
+                </div>
+                <div class="form-group mb-4 text-center">
+                    <input type="submit" value="Importar Datos" class="btn btn-success btn-lg" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <a asp-action="Index" class="btn btn-secondary btn-lg">
+            <i class="fas fa-arrow-left"></i> Volver al Listado
+        </a>
+    </div>
+</div>
+

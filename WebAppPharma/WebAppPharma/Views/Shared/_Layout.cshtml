@@ -84,10 +84,28 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container text-center">
-            &copy; 2024 - WebAppPharma - <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-decoration-none text-primary">Privacy Policy</a>
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Botón alineado a la izquierda -->
+                <div class="col-auto text-start">
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-primary">
+                        <i class="fas fa-arrow-left"></i> Inicio
+                    </a>
+                </div>
+                <div class="col text-center">
+                    &copy; 2024 - WebAppPharma -
+                    <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-decoration-none text-primary">
+                        Privacy Policy
+                    </a>
+                </div>
+                <div class="col-auto">
+                </div>
+            </div>
         </div>
     </footer>
+
+
+
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

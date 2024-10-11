@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using SpreadsheetLight;
 using WebAppPharma.Models;
 
 namespace WebAppPharma.Controllers
@@ -25,6 +26,73 @@ namespace WebAppPharma.Controllers
         {
             var appDBcontext = _context.Empleados.Include(e => e.Cargo).Include(e => e.EstadodeEmpleado);
             return View(await appDBcontext.ToListAsync());
+        }
+
+        // GET: /Productos/Import
+        [HttpGet]
+        public IActionResult Import()
+        {
+            return View();
+        }
+
+        // POST: /Productos/ImportarDatos
+        [HttpPost]
+        public async Task<IActionResult> ImportarDatos(IFormFile excelFile)
+        {
+            if (excelFile != null && excelFile.Length > 0)
+            {
+                var rutaDestino = Path.Combine(_env.WebRootPath, "importaciones");
+                var extArch = Path.GetExtension(excelFile.FileName);
+                if (extArch == ".xlsx" || extArch == ".xls")
+                {
+                    var archivoDestino = Guid.NewGuid().ToString().Replace("-", "") + extArch;
+                    var rutaCompleta = Path.Combine(rutaDestino, archivoDestino);
+
+                    using (var filestream = new FileStream(rutaCompleta, FileMode.Create))
+                    {
+                        await excelFile.CopyToAsync(filestream);
+                    }
+
+                    SLDocument archXls = new SLDocument(rutaCompleta);
+                    if (archXls != null)
+                    {
+                        List<Empleado> ListaEmpleados = new List<Empleado>();
+                        int fila = 1;
+                        while (!string.IsNullOrEmpty(archXls.GetCellValueAsString(fila, 1)))
+                        {
+                            try
+                            {
+                                Empleado empleado = new Empleado
+                                {
+                                    Nombre = archXls.GetCellValueAsString(fila, 1),
+                                    Apellido = archXls.GetCellValueAsString(fila, 2),
+                                    Dni = archXls.GetCellValueAsString(fila, 3),
+                                    Telefono = archXls.GetCellValueAsString(fila, 4),
+                                };
+
+                                ListaEmpleados.Add(empleado);
+                            }
+                            catch (Exception ex)
+                            {
+                                ViewData["Error"] = $"Error al procesar la fila {fila}: {ex.Message}";
+                                return View("Error");
+                            }
+                            fila++;
+                        }
+
+                        if (ListaEmpleados.Count > 0)
+                        {
+                            _context.Empleados.AddRange(ListaEmpleados);
+                            await _context.SaveChangesAsync();
+                        }
+                        else
+                        {
+                            ViewData["Error"] = "No se encontraron datos válidos en el archivo Excel.";
+                        }
+                    }
+                }
+            }
+            return RedirectToAction("Index", "Empleados");
         }
 
         // GET: Empleados/Details/5

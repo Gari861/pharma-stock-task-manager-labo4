@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using SpreadsheetLight;
 using WebAppPharma.Models;
 
 namespace WebAppPharma.Controllers
@@ -28,6 +29,131 @@ namespace WebAppPharma.Controllers
             //Agregando theninclude también se carga la información del
             //categoria, no hay otra forma de hacerlo
             return View(await appDBcontext.ToListAsync());
+        }
+
+        // GET: /Productos/Import
+        [HttpGet]
+        public IActionResult Import()
+        {
+            return View();
+        }
+
+        // POST: /Productos/ImportarDatosEsenciales
+        [HttpPost]
+        public async Task<IActionResult> ImportarDatosEsenciales(IFormFile excelFile)
+        {
+            if (excelFile != null && excelFile.Length > 0)
+            {
+                var rutaDestino = Path.Combine(_env.WebRootPath, "importaciones");
+                var extArch = Path.GetExtension(excelFile.FileName);
+                if (extArch == ".xlsx" || extArch == ".xls")
+                {
+                    var archivoDestino = Guid.NewGuid().ToString().Replace("-", "") + extArch;
+                    var rutaCompleta = Path.Combine(rutaDestino, archivoDestino);
+
+                    using (var filestream = new FileStream(rutaCompleta, FileMode.Create))
+                    {
+                        await excelFile.CopyToAsync(filestream);
+                    }
+
+                    SLDocument archXls = new SLDocument(rutaCompleta);
+                    if (archXls != null)
+                    {
+                        List<Producto> ListaProductos = new List<Producto>();
+                        int fila = 1;
+                        while (!string.IsNullOrEmpty(archXls.GetCellValueAsString(fila, 1)))
+                        {
+                            try
+                            {
+                                Producto producto = new Producto
+                                {
+                                    Nombre = archXls.GetCellValueAsString(fila, 1),
+                                    CantSock = int.Parse(archXls.GetCellValueAsString(fila, 2))
+                                };
+
+                                ListaProductos.Add(producto);
+                            }
+                            catch (Exception ex)
+                            {
+                                ViewData["Error"] = $"Error al procesar la fila {fila}: {ex.Message}";
+                                return View("Error");
+                            }
+                            fila++;
+                        }
+
+                        if (ListaProductos.Count > 0)
+                        {
+                            _context.Productos.AddRange(ListaProductos);
+                            await _context.SaveChangesAsync();
+                        }
+                        else
+                        {
+                            ViewData["Error"] = "No se encontraron datos válidos en el archivo Excel.";
+                        }
+                    }
+                }
+            }
+            return RedirectToAction("Index", "Productos");
+        }
+
+        // POST: /Productos/ImportarDatosAdicionales
+        [HttpPost]
+        public async Task<IActionResult> ImportarDatosAdicionales(IFormFile excelFile)
+        {
+            if (excelFile != null && excelFile.Length > 0)
+            {
+                var rutaDestino = Path.Combine(_env.WebRootPath, "importaciones");
+                var extArch = Path.GetExtension(excelFile.FileName);
+                if (extArch == ".xlsx" || extArch == ".xls")
+                {
+                    var archivoDestino = Guid.NewGuid().ToString().Replace("-", "") + extArch;
+                    var rutaCompleta = Path.Combine(rutaDestino, archivoDestino);
+
+                    using (var filestream = new FileStream(rutaCompleta, FileMode.Create))
+                    {
+                        await excelFile.CopyToAsync(filestream);
+                    }
+
+                    SLDocument archXls = new SLDocument(rutaCompleta);
+                    if (archXls != null)
+                    {
+                        List<Producto> ListaProductos = new List<Producto>();
+
+                        int fila = 1;
+                        while (!string.IsNullOrEmpty(archXls.GetCellValueAsString(fila, 2))) // Nombre del producto está en la columna 2
+                        {
+                            try
+                            {
+                                Producto producto = new Producto
+                                {
+                                    CodigoProducto = archXls.GetCellValueAsString(fila, 1),  // Opcional
+                                    Nombre = archXls.GetCellValueAsString(fila, 2),         // Nombre
+                                    Precio = decimal.Parse(archXls.GetCellValueAsString(fila, 3)),  // Opcional
+                                    CantSock = int.Parse(archXls.GetCellValueAsString(fila, 4))  // Stock
+                                };
+                                ListaProductos.Add(producto);
+                            }
+                            catch (Exception ex)
+                            {
+                                ViewData["Error"] = $"Error al procesar la fila {fila}: {ex.Message}";
+                                return View("Error");
+                            }
+                            fila++;
+                        }
+
+                        if (ListaProductos.Count > 0)
+                        {
+                            _context.Productos.AddRange(ListaProductos);
+                            await _context.SaveChangesAsync();
+                        }
+                        else
+                        {
+                            ViewData["Error"] = "No se encontraron datos válidos en el archivo Excel.";
+                        }
+                    }
+                }
+            }
+            return RedirectToAction("Index", "Productos");
         }
 
         // GET: Productos/Details/5
@@ -174,11 +300,11 @@ namespace WebAppPharma.Controllers
                 return NotFound();
             }
 
-                // Normalizar el precio para que acepte tanto comas como puntos
-    if (!string.IsNullOrEmpty(producto.Precio.ToString()))
-    {
-        producto.Precio = Convert.ToDecimal(producto.Precio.ToString().Replace(',', '.'));
-    }
+            // Normalizar el precio para que acepte tanto comas como puntos
+            if (!string.IsNullOrEmpty(producto.Precio.ToString()))
+            {
+                producto.Precio = Convert.ToDecimal(producto.Precio.ToString().Replace(',', '.'));
+            }
 
             if (ModelState.IsValid)
             {

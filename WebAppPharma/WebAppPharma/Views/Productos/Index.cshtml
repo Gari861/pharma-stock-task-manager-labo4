@@ -12,6 +12,9 @@
         <a asp-action="Create" class="btn btn-success btn-lg mb-3" style="background-color: #2ecc71; border: none;">
             <i class="fas fa-plus"></i> Ingresar Nuevo Producto
         </a>
+        <a asp-action="Import" class="btn btn-success btn-lg mb-3" style="background-color: light-blue; border: none;">
+            <i class="fas fa-plus"></i> Importar Nuevos Productos
+        </a>
     </p>
 
     <div class="table-responsive">
@@ -31,54 +34,75 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in Model)
+                @if (Model.Any())
                 {
-                    <tr style="border: 1px solid #ccc;">
-                        <td>@Html.DisplayFor(modelItem => item.CodigoProducto)</td>
-                        <td style="text-transform: uppercase;">@Html.DisplayFor(modelItem => item.Nombre)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Precio)</td>
-                        <td>@Html.DisplayFor(modelItem => item.CantSock)</td>
-                        <td>
-                            @if (!string.IsNullOrEmpty(item.Foto))
-                            {
-                                <img src="~/fotografias/@item.Foto" class="img-fluid img-thumbnail" style="width: 100px; height: 70px;" />
-                            }
-                        </td>
-                        <td>@Html.DisplayFor(modelItem => item.FechaIngreso)</td>
-                        <td>@Html.DisplayFor(modelItem => item.FechaVencimiento)</td>
-                        <td>
-                            @if (item.ProductosCategorias != null)
-                            {
-                                @foreach (var productoCategoria in item.ProductosCategorias)
+                    @foreach (var item in Model)
+                    {
+                        <tr style="border: 1px solid #ccc;">
+                            <td>@(item.CodigoProducto ?? "---")</td>
+                            <td style="text-transform: uppercase;">@Html.DisplayFor(modelItem => item.Nombre)</td>
+                            <td>@(item.Precio.HasValue ? item.Precio.Value.ToString() : "---")</td>
+                            <td>@Html.DisplayFor(modelItem => item.CantSock)</td>
+                            <td>
+                                @if (!string.IsNullOrEmpty(item.Foto))
                                 {
-                                    <p>
-                                        -@(productoCategoria.Categoria.Tipo)
-                                    </p>
+                                    <img src="~/fotografias/@item.Foto" class="img-fluid img-thumbnail" style="width: 100px; height: 70px;" />
                                 }
-                            }
-                        </td>
-                        <td>
-                            @if (item.ProductosProveedores != null)
-                            {
-                                @foreach (var productoProveedor in item.ProductosProveedores)
+                                else
                                 {
-                                    <p>
-                                        -@(productoProveedor.Proveedor.Nombre)
-                                    </p>
+                                    <p>---</p>
                                 }
-                            }
-                        </td>
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.IdProducto" class="btn btn-warning btn-sm me-2">
-                                <i class="fas fa-edit"></i> Editar
-                            </a>
-                            <a asp-action="Details" asp-route-id="@item.IdProducto" class="btn btn-info btn-sm me-2">
-                                <i class="fas fa-info-circle"></i> Detalles
-                            </a>
-                            <a asp-action="Delete" asp-route-id="@item.IdProducto" class="btn btn-danger btn-sm">
-                                <i class="fas fa-trash-alt"></i> Eliminar
-                            </a>
-                        </td>
+                            </td>
+                            <td>@(item.FechaIngreso.HasValue ? item.FechaIngreso.Value.ToString("dd/MM/yyyy") : "---")</td>
+                            <td>@(item.FechaVencimiento.HasValue ? item.FechaVencimiento.Value.ToString("dd/MM/yyyy") : "---")</td>
+                            <td>
+                                @if (item.ProductosCategorias != null && item.ProductosCategorias.Any())
+                                {
+                                    @foreach (var productoCategoria in item.ProductosCategorias)
+                                    {
+                                        <p>
+                                            -@(productoCategoria.Categoria.Tipo)
+                                        </p>
+                                    }
+                                }
+                                else
+                                {
+                                    <p>---</p>
+                                }
+                            </td>
+                            <td>
+                                @if (item.ProductosProveedores != null && item.ProductosProveedores.Any())
+                                {
+                                    @foreach (var productoProveedor in item.ProductosProveedores)
+                                    {
+                                        <p>
+                                            -@(productoProveedor.Proveedor.Nombre)
+                                        </p>
+                                    }
+                                }
+                                else
+                                {
+                                    <p>---</p>
+                                }
+                            </td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.IdProducto" class="btn btn-warning btn-sm me-2">
+                                    <i class="fas fa-edit"></i> Editar
+                                </a>
+                                <a asp-action="Details" asp-route-id="@item.IdProducto" class="btn btn-info btn-sm me-2">
+                                    <i class="fas fa-info-circle"></i> Detalles
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@item.IdProducto" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-trash-alt"></i> Eliminar
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="10">No hay productos disponibles</td>
                     </tr>
                 }
             </tbody>

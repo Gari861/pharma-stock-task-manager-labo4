@@ -13,6 +13,9 @@
         <a asp-action="Create" class="btn btn-success btn-lg mb-3" style="background-color: #2ecc71; border: none;">
             <i class="fas fa-plus"></i> Ingresar Nuevo Empleado
         </a>
+        <a asp-action="Import" class="btn btn-success btn-lg mb-3" style="background-color: light-blue; border: none;">
+            <i class="fas fa-plus"></i> Importar Nuevos Empleados
+        </a>
     </p>
 
     <div class="table-responsive">
@@ -37,14 +40,18 @@
                         <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
                         <td>@Html.DisplayFor(modelItem => item.Apellido)</td>
                         <td>@Html.DisplayFor(modelItem => item.Dni)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Cargo.Tipo)</td>
-                        <td>@Html.DisplayFor(modelItem => item.EstadodeEmpleado.Tipo)</td>
+                        <td>@(item.Cargo?.Tipo ?? "---")</td>
+                        <td>@(item.EstadodeEmpleado?.Tipo ?? "---")</td>
                         <td>@Html.DisplayFor(modelItem => item.Telefono)</td>
-                        <td>@Html.DisplayFor(modelItem => item.FechaNacimiento)</td>
+                        <td>@(item.FechaNacimiento.HasValue ? item.FechaNacimiento.Value.ToString("dd/MM/yyyy") : "---")</td>
                         <td>
                             @if (!string.IsNullOrEmpty(item.Foto))
                             {
                                 <img src="~/fotografias/@item.Foto" class="img-fluid img-thumbnail" style="width: 100px; height: 70px;" />
+                            }
+                            else
+                            {
+                                <p>---</p>
                             }
                         </td>
                         <td>
