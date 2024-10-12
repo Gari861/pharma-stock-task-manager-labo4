@@ -10,7 +10,7 @@ namespace WebAppPharma.Models
 
         [Required(ErrorMessage = "El NOMBRE es obligatorio")]
         [Display(Name = "Nombre")]
-        [StringLength(30, ErrorMessage = "El nombre no puede exceder los 30 caracteres.")]
+        [StringLength(50, ErrorMessage = "El nombre no puede exceder los 50 caracteres.")]
         public string Nombre { get; set; }
 
         [Display(Name = "Descripcion")]

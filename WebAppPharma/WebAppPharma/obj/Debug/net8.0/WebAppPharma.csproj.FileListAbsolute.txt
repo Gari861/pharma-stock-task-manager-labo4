@@ -1693,3 +1693,5 @@ C:\Users\User\Desktop\final\pharma-stock-task-manager-labo4\WebAppPharma\WebAppP
 C:\Users\User\Desktop\final\pharma-stock-task-manager-labo4\WebAppPharma\WebAppPharma\bin\Debug\net8.0\System.IO.Packaging.dll
 C:\Users\User\Desktop\final\pharma-stock-task-manager-labo4\WebAppPharma\WebAppPharma\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\User\Desktop\final\pharma-stock-task-manager-labo4\WebAppPharma\WebAppPharma\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\User\Desktop\final\pharma-stock-task-manager-labo4\WebAppPharma\WebAppPharma\bin\Debug\net8.0\refs\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\User\Desktop\final\pharma-stock-task-manager-labo4\WebAppPharma\WebAppPharma\bin\Debug\net8.0\refs\Microsoft.Extensions.DependencyInjection.dll

@@ -60,7 +60,15 @@ namespace WebAppPharma.Controllers
             // Verifica si no hay cargadas y pasa esa información a la vista
             ViewData["PrioridadesVacias"] = !prioridades.Any();
             ViewData["EstadosDeTareasVacios"] = !estadosdetareas.Any();
-            ViewBag.Empleados = new MultiSelectList(_context.Empleados, "IdEmpleado", "Nombre");
+            // Incluir y ordenar los empleados por el Cargo
+            ViewBag.Empleados = _context.Empleados
+                .Include(e => e.Cargo)
+                .OrderBy(e => e.Cargo.Tipo)
+                .Select(e => new SelectListItem
+                {
+                    Value = e.IdEmpleado.ToString(),
+                    Text = e.Nombre + " " + e.Apellido + " - " + e.Cargo.Tipo
+                }).ToList();
             return View();
         }
 
@@ -95,7 +103,14 @@ namespace WebAppPharma.Controllers
             }
             ViewData["IdEstadodeTarea"] = new SelectList(_context.EstadosdeTareas, "IdEstadodeTarea", "Tipo", tarea.IdEstadodeTarea);
             ViewData["IdPrioridad"] = new SelectList(_context.Prioridades, "IdPrioridad", "Tipo", tarea.IdPrioridad);
-            ViewBag.Empleados = new MultiSelectList(_context.Empleados, "IdEmpleado", "Nombre");
+            ViewBag.Empleados = _context.Empleados
+                .Include(e => e.Cargo)
+                .OrderBy(e => e.Cargo.Tipo)
+                .Select(e => new SelectListItem
+                {
+                    Value = e.IdEmpleado.ToString(),
+                    Text = e.Nombre + " " + e.Apellido + " - " + e.Cargo.Tipo
+                }).ToList();
             return View(tarea);
         }
 
@@ -132,7 +147,15 @@ namespace WebAppPharma.Controllers
             // Hacer que al traer el edit las marcadas sigan estando marcadas
             var empleadosSeleccionados = tarea.TareasEmpleados.Select(pc => pc.IdEmpleado).ToList();
 
-            ViewBag.Empleados = new MultiSelectList(_context.Empleados, "IdEmpleado", "Nombre", empleadosSeleccionados);
+            ViewBag.Empleados = _context.Empleados
+                            .Include(e => e.Cargo)
+                            .OrderBy(e => e.Cargo.Tipo)
+                            .Select(e => new SelectListItem
+                            {
+                                Value = e.IdEmpleado.ToString(),
+                                Text = e.Nombre + " " + e.Apellido + " - " + e.Cargo.Tipo,
+                                Selected = empleadosSeleccionados.Contains(e.IdEmpleado)
+                            }).ToList();
 
             return View(tarea);
         }
@@ -197,7 +220,15 @@ namespace WebAppPharma.Controllers
                 .Prepend(new SelectListItem { Text = " ", Value = "" });
             ViewData["IdPrioridad"] = new SelectList(_context.Prioridades, "IdPrioridad", "Tipo", tarea.IdPrioridad)
                 .Prepend(new SelectListItem { Text = " ", Value = "" });
-            ViewBag.Empleados = new MultiSelectList(_context.Empleados, "IdEmpleado", "Nombre", empleadosSeleccionados);
+            ViewBag.Empleados = _context.Empleados
+                            .Include(e => e.Cargo)
+                            .OrderBy(e => e.Cargo.Tipo)
+                            .Select(e => new SelectListItem
+                            {
+                                Value = e.IdEmpleado.ToString(),
+                                Text = e.Nombre + " " + e.Apellido + " - " + e.Cargo.Tipo,
+                                Selected = empleadosSeleccionados.Contains(e.IdEmpleado)
+                            }).ToList();
             return View(tarea);
         }
 

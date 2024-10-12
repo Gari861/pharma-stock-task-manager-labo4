@@ -63,11 +63,11 @@
 
                 <div class="form-group mb-4">
                     <label class="form-label font-weight-bold text-primary">Seleccionar Asignación</label>
-                    @foreach(var empleado in ViewBag.Empleados)
+                    @foreach (var empleado in ViewBag.Empleados)
                     {
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="@empleado.Value" 
-                            name="empleadosSeleccionados[]" id="emplado_@empleado.Value"/>
+                            <input class="form-check-input" type="checkbox" value="@empleado.Value"
+                                   name="empleadosSeleccionados[]" id="empleado_@empleado.Value" />
                             <label class="form-check-label" for="empleado_@empleado.Value">@empleado.Text</label>
                         </div>
                     }

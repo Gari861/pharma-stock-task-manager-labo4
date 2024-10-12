@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Index";
 }
+
 <div class="container mt-5">
     <h1 class="text-center mb-4" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
         <i class="fas fa-map-marker-alt"></i> UBICACIONES DE PRODUCTOS
@@ -14,42 +15,30 @@
         </a>
     </p>
 
-    <div class="table-responsive">
-        <table class="table table-hover table-bordered table-striped text-center align-middle">
-            <thead class="thead-dark">
-                <tr style="border: 1.3px solid black;">
-                    <th>@Html.DisplayNameFor(model => model.Estante)</th>
-                    <th>@Html.DisplayNameFor(model => model.Seccion)</th>
-                    <th>@Html.DisplayNameFor(model => model.Pasillo)</th>
-                    <th>@Html.DisplayNameFor(model => model.Producto)</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
-                    <tr style="border: 1px solid #ccc;">
-                        <td>@(item.Estante ?? "---")</td>
-                        <td>@Html.DisplayFor(modelItem => item.Seccion)</td>
-                        <td>@(item.Pasillo ?? "---")</td>
-                        <td>@Html.DisplayFor(modelItem => item.Producto.Nombre)</td>
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.IdUbicacion" class="btn btn-warning btn-sm me-2">
-                                <i class="fas fa-edit"></i> Editar
-                            </a>
-                            <a asp-action="Details" asp-route-id="@item.IdUbicacion" class="btn btn-info btn-sm me-2">
-                                <i class="fas fa-info-circle"></i> Detalles
-                            </a>
-                            <a asp-action="Delete" asp-route-id="@item.IdUbicacion" class="btn btn-danger btn-sm">
-                                <i class="fas fa-trash-alt"></i> Eliminar
-                            </a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto: @item.Producto.Nombre</h5>
+                        <p class="card-text">
+                            <strong>Estante:</strong> @(item.Estante ?? "---")<br />
+                            <strong>Sección:</strong> @Html.DisplayFor(modelItem => item.Seccion)<br />
+                            <strong>Pasillo:</strong> @(item.Pasillo ?? "---")
+                        </p>
+                        <a asp-action="Edit" asp-route-id="@item.IdUbicacion" class="btn btn-warning btn-sm me-2">
+                            <i class="fas fa-edit"></i> Editar
+                        </a>
+                        <a asp-action="Details" asp-route-id="@item.IdUbicacion" class="btn btn-info btn-sm me-2">
+                            <i class="fas fa-info-circle"></i> Detalles
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@item.IdUbicacion" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i> Eliminar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
     </div>
 </div>
-
-
-
