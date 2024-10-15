@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WebAppPharma.Models.Empleado>
+﻿@model WebAppPharma.ViewModels.EmpleadosViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -13,28 +13,58 @@
         <a asp-action="Create" class="btn btn-success btn-lg mb-3" style="background-color: #2ecc71; border: none;">
             <i class="fas fa-plus"></i> Ingresar Nuevo Empleado
         </a>
-        <a asp-action="Import" class="btn btn-success btn-lg mb-3" style="background-color: light-blue; border: none;">
-            <i class="fas fa-plus"></i> Importar Nuevos Empleados
+        <a asp-action="Import" class="btn btn-info btn-lg mb-3" style="border: none;">
+            <i class="fas fa-file-import"></i> Importar Nuevos Empleados
         </a>
     </p>
 
+    <form asp-action="Index" method="get" class="mb-4">
+        <div class="row g-3">
+            <div class="col-md-3">
+                <label for="BusquedaNombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" asp-for="BusquedaNombre" />
+            </div>
+            <div class="col-md-3">
+                <label for="BusquedaApellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" asp-for="BusquedaApellido" />
+            </div>
+            <div class="col-md-2">
+                <label for="BusquedaDNI" class="form-label">DNI</label>
+                <input type="text" class="form-control" asp-for="BusquedaDNI" />
+            </div>
+            <div class="col-md-2">
+                <label for="BusquedaIdCargo" class="form-label">Cargo</label>
+                <select class="form-select" asp-for="BusquedaIdCargo" asp-items="Model.ListaCargos">
+                    <option value="">Todo</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label></label>
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="fas fa-filter"></i> Filtrar
+                </button>
+            </div>
+        </div>
+    </form>
+        @if (Model.Empleados != null && Model.Empleados.Any())
+    {
     <div class="table-responsive">
         <table class="table table-hover table-bordered table-striped text-center align-middle">
             <thead class="thead-dark">
                 <tr style="border: 1.3px solid black;">
-                    <th>@Html.DisplayNameFor(model => model.Nombre)</th>
-                    <th>@Html.DisplayNameFor(model => model.Apellido)</th>
-                    <th>@Html.DisplayNameFor(model => model.Dni)</th>
-                    <th>@Html.DisplayNameFor(model => model.Cargo.Tipo)</th>
-                    <th>@Html.DisplayNameFor(model => model.EstadodeEmpleado.Tipo)</th>
-                    <th>@Html.DisplayNameFor(model => model.Telefono)</th>
-                    <th>@Html.DisplayNameFor(model => model.FechaNacimiento)</th>
-                    <th>@Html.DisplayNameFor(model => model.Foto)</th>
+                        <th>@Html.DisplayNameFor(model => model.Empleados[0].Nombre)</th>
+                        <th>@Html.DisplayNameFor(model => model.Empleados[0].Apellido)</th>
+                        <th>@Html.DisplayNameFor(model => model.Empleados[0].Dni)</th>
+                        <th>@Html.DisplayNameFor(model => model.Empleados[0].Cargo.Tipo)</th>
+                        <th>@Html.DisplayNameFor(model => model.Empleados[0].EstadodeEmpleado.Tipo)</th>
+                        <th>@Html.DisplayNameFor(model => model.Empleados[0].Telefono)</th>
+                        <th>@Html.DisplayNameFor(model => model.Empleados[0].FechaNacimiento)</th>
+                        <th>@Html.DisplayNameFor(model => model.Empleados[0].Foto)</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in Model)
+                @foreach (var item in Model.Empleados)
                 {
                     <tr style="border: 1px solid #ccc;">
                         <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
@@ -70,4 +100,9 @@
             </tbody>
         </table>
     </div>
+    }
+    else
+    {
+        <p class="text-center text-muted">No se encontraron empleados para mostrar.</p>
+    }
 </div>

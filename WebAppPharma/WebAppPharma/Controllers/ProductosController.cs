@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SpreadsheetLight;
 using WebAppPharma.Models;
+using WebAppPharma.ViewModels;
 
 namespace WebAppPharma.Controllers
 {
@@ -23,12 +24,36 @@ namespace WebAppPharma.Controllers
         }
 
         // GET: Productos
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(ProductosViewModel modelo)
         {
-            var appDBcontext = _context.Productos.Include(l => l.ProductosCategorias).ThenInclude(la => la.Categoria).Include(l => l.ProductosProveedores).ThenInclude(la => la.Proveedor);
-            //Agregando theninclude también se carga la información del
-            //categoria, no hay otra forma de hacerlo
-            return View(await appDBcontext.ToListAsync());
+            //var appDBcontext = _context.Productos.Include(l => l.ProductosCategorias).ThenInclude(la => la.Categoria).Include(l => l.ProductosProveedores).ThenInclude(la => la.Proveedor);
+
+            var productosQuery = _context.Productos
+                             .Include(e => e.ProductosCategorias)
+                             .ThenInclude(la => la.Categoria)
+                             .Include(e => e.ProductosProveedores)
+                             .ThenInclude(la => la.Proveedor)
+                             .AsQueryable();
+            if (!string.IsNullOrEmpty(modelo.BusquedaCod))
+            {
+                productosQuery = productosQuery.Where(e => e.CodigoProducto.Contains(modelo.BusquedaCod));
+            }
+            if (!string.IsNullOrEmpty(modelo.BusquedaNombre))
+            {
+                productosQuery = productosQuery.Where(e => e.Nombre.Contains(modelo.BusquedaNombre));
+            }
+            if (modelo.BusquedaFechaVencimiento != null)
+            {
+                var fecha = modelo.BusquedaFechaVencimiento.Value.Date;
+                var fechaFin = fecha.AddDays(1).Date; // El día siguiente para definir el final del rango
+                productosQuery = productosQuery.Where(e => e.FechaVencimiento >= fecha && e.FechaVencimiento < fechaFin);
+            }
+
+            // Ejecutar la consulta y asignar los resultados al modelo
+            modelo.Productos = await productosQuery.ToListAsync();
+
+            //return View(await appDBcontext.ToListAsync());
+            return View(modelo);
         }
 
         // GET: /Productos/Import

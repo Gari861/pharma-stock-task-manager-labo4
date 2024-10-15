@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebAppPharma.Models;
+using WebAppPharma.ViewModels;
 
 namespace WebAppPharma.Controllers
 {
@@ -19,10 +20,59 @@ namespace WebAppPharma.Controllers
         }
 
         // GET: Tareas
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(TareasViewModel modelo)
         {
-            var appDBcontext = _context.Tareas.Include(t => t.EstadodeTarea).Include(t => t.Prioridad).Include(t => t.TareasEmpleados).ThenInclude(ta => ta.Empleado);
-            return View(await appDBcontext.ToListAsync());
+            // Asegurarse de que el modelo no sea nulo
+            if (modelo == null)
+            {
+                modelo = new TareasViewModel();
+            }
+
+            // Obtener la lista de cargos para el dropdown
+            modelo.ListaPrioridades = new SelectList(await _context.Prioridades.ToListAsync(), "IdPrioridad", "Tipo");
+
+            // Generar consulta inicial de tareas, incluyendo Propiedad y EstadodeTarea
+            var tareasQuery = _context.Tareas
+                                         .Include(e => e.Prioridad)
+                                         .Include(e => e.EstadodeTarea)
+                                         .Include(e => e.TareasEmpleados)
+                                         .ThenInclude(te => te.Empleado)
+                                         .AsQueryable();
+
+            modelo.ListaEmpleados = await _context.Empleados
+                                        .Select(e => new SelectListItem
+                                        {
+                                            Value = e.IdEmpleado.ToString(),
+                                            Text = e.Nombre + " " + e.Apellido
+                                        }).ToListAsync();
+
+            // Aplicar filtros si se proporcionan
+            if (!string.IsNullOrEmpty(modelo.BusquedaNombre))
+            {
+                tareasQuery = tareasQuery.Where(e => e.Nombre.Contains(modelo.BusquedaNombre));
+            }
+            if (modelo.BusquedaFechaLimite != null)
+            {
+                var fecha = modelo.BusquedaFechaLimite.Value.Date;
+                tareasQuery = tareasQuery.Where(e => e.FechaLimite.Date == fecha);
+            }
+            if (modelo.BusquedaIdPrioridad.HasValue)
+            {
+                tareasQuery = tareasQuery.Where(e => e.IdPrioridad == modelo.BusquedaIdPrioridad.Value);
+            }
+            if (modelo.BusquedaEmpleadoId.HasValue)
+            {
+                tareasQuery = tareasQuery.Where(e => e.TareasEmpleados.Any(te => te.IdEmpleado == modelo.BusquedaEmpleadoId));
+            }
+
+            //var appDBcontext = _context.Tareas.Include(t => t.EstadodeTarea).Include(t => t.Prioridad).Include(t => t.TareasEmpleados).ThenInclude(ta => ta.Empleado);
+            //return View(await appDBcontext.ToListAsync());
+
+            // Ejecutar la consulta y asignar los resultados al modelo
+            modelo.Tareas = await tareasQuery.ToListAsync();
+
+            // Pasar el modelo a la vista
+            return View(modelo);
         }
 
         // GET: Tareas/Details/5

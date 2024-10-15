@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WebAppPharma.Models.Tarea>
+﻿@model WebAppPharma.ViewModels.TareasViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -14,22 +14,54 @@
         </a>
     </p>
 
+    <form asp-action="Index" method="get" class="mb-4">
+        <div class="row g-3">
+            <div class="col-md-3">
+                <label for="BusquedaNombre" class="form-label">Nombre de Tarea</label>
+                <input type="text" class="form-control" asp-for="BusquedaNombre" />
+            </div>
+            <div class="col-md-3">
+                <label for="BusquedaFechaLimite" class="form-label">Fecha Límite</label>
+                <input type="date" class="form-control" asp-for="BusquedaFechaLimite" />
+            </div>
+            <div class="col-md-2">
+                <label for="BusquedaIdPrioridad" class="form-label">Prioridad</label>
+                <select class="form-select" asp-for="BusquedaIdPrioridad" asp-items="Model.ListaPrioridades">
+                    <option value="">Todo</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label for="BusquedaEmpleadoId" class="form-label">Ásignación</label>
+                <select class="form-select" asp-for="BusquedaEmpleadoId" asp-items="Model.ListaEmpleados">
+                    <option value="">Todo</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label></label>
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="fas fa-filter"></i> Filtrar
+                </button>
+            </div>
+        </div>
+    </form>
+        @if (Model.Tareas != null && Model.Tareas.Any())
+    {
     <div class="table-responsive">
         <table class="table table-hover table-bordered table-striped text-center align-middle">
             <thead class="thead-dark">
                 <tr style="border: 1.3px solid black;">
-                    <th>@Html.DisplayNameFor(model => model.Nombre)</th>
-                    <th>@Html.DisplayNameFor(model => model.Descripcion)</th>
-                    <th>@Html.DisplayNameFor(model => model.Prioridad)</th>
-                    <th>@Html.DisplayNameFor(model => model.EstadodeTarea)</th>
-                    <th>@Html.DisplayNameFor(model => model.FechaCreacion)</th>
-                    <th>@Html.DisplayNameFor(model => model.FechaLimite)</th>
-                    <th>@Html.DisplayNameFor(model => model.TareasEmpleados)</th>
+                        <th>@Html.DisplayNameFor(model => model.Tareas[0].Nombre)</th>
+                        <th>@Html.DisplayNameFor(model => model.Tareas[0].Descripcion)</th>
+                        <th>@Html.DisplayNameFor(model => model.Tareas[0].Prioridad)</th>
+                        <th>@Html.DisplayNameFor(model => model.Tareas[0].EstadodeTarea)</th>
+                        <th>@Html.DisplayNameFor(model => model.Tareas[0].FechaCreacion)</th>
+                        <th>@Html.DisplayNameFor(model => model.Tareas[0].FechaLimite)</th>
+                        <th>@Html.DisplayNameFor(model => model.Tareas[0].TareasEmpleados)</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in Model)
+                @foreach (var item in Model.Tareas)
                 {
                     <tr style="border: 1px solid #ccc;">
                         <td style="text-transform: uppercase;">@Html.DisplayFor(modelItem => item.Nombre)</td>
@@ -69,6 +101,11 @@
             </tbody>
         </table>
     </div>
+    }
+    else
+    {
+        <p class="text-center text-muted">No se encontraron tareas para mostrar.</p>
+    }
 </div>
 
 

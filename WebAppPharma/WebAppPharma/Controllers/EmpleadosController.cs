@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SpreadsheetLight;
 using WebAppPharma.Models;
+using WebAppPharma.ViewModels;
 
 namespace WebAppPharma.Controllers
 {
@@ -20,12 +21,54 @@ namespace WebAppPharma.Controllers
             _env = env;
         }
 
-
         // GET: Empleados
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(EmpleadosViewModel modelo)
         {
-            var appDBcontext = _context.Empleados.Include(e => e.Cargo).Include(e => e.EstadodeEmpleado);
-            return View(await appDBcontext.ToListAsync());
+            // Asegurarse de que el modelo no sea nulo
+            if (modelo == null)
+            {
+                modelo = new EmpleadosViewModel();
+            }
+
+            // Obtener la lista de cargos para el dropdown
+            modelo.ListaCargos = new SelectList(await _context.Cargos.ToListAsync(), "IdCargo", "Tipo");
+
+            //var appDBcontext = _context.Empleados.Include(e => e.Cargo).Include(e => e.EstadodeEmpleado);
+
+            // Generar consulta inicial de empleados, incluyendo Cargo y EstadodeEmpleado
+            var empleadosQuery = _context.Empleados
+                                         .Include(e => e.Cargo)
+                                         .Include(e => e.EstadodeEmpleado)
+                                         .AsQueryable();
+
+            // Aplicar filtros si se proporcionan
+            if (!string.IsNullOrEmpty(modelo.BusquedaNombre))
+            {
+                empleadosQuery = empleadosQuery.Where(e => e.Nombre.Contains(modelo.BusquedaNombre));
+            }
+
+            if (!string.IsNullOrEmpty(modelo.BusquedaApellido))
+            {
+                empleadosQuery = empleadosQuery.Where(e => e.Apellido.Contains(modelo.BusquedaApellido));
+            }
+
+            if (!string.IsNullOrEmpty(modelo.BusquedaDNI))
+            {
+                empleadosQuery = empleadosQuery.Where(e => e.Dni.Contains(modelo.BusquedaDNI));
+            }
+
+            if (modelo.BusquedaIdCargo.HasValue)
+            {
+                empleadosQuery = empleadosQuery.Where(e => e.IdCargo == modelo.BusquedaIdCargo.Value);
+            }
+
+            // Ejecutar la consulta y asignar los resultados al modelo
+            modelo.Empleados = await empleadosQuery.ToListAsync();
+
+            //return View(await appDBcontext.ToListAsync());
+
+            // Pasar el modelo a la vista
+            return View(modelo);
         }
 
         // GET: /Productos/Import
