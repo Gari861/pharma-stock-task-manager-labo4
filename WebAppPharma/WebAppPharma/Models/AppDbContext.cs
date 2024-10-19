@@ -1,10 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using WebAppPharma.Models;
 
 namespace WebAppPharma.Models
 {
-    public class AppDBcontext : DbContext
+    public class AppDBcontext : IdentityDbContext<IdentityUser>
     {
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
@@ -19,6 +21,7 @@ namespace WebAppPharma.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             // Relación UNO A UNO 
             modelBuilder.Entity<Producto>()
                 .HasOne(l => l.UbicacionProducto)

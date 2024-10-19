@@ -10,6 +10,6 @@
     "\\WebAppPharma\\WebAppPharma\\Views\\Productos",
     "\\WebAppPharma\\WebAppPharma\\Views\\Tareas"
   ],
-  "SelectedNode": "\\WebAppPharma\\WebAppPharma\\Views\\Tareas\\Edit.cshtml",
+  "SelectedNode": "\\WebAppPharma\\WebAppPharma\\Controllers\\TareasController.cs",
   "PreviewInSolutionExplorer": false
 }
