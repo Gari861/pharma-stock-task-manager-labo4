@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WebAppPharma.Models.UbicacionProducto>
+﻿@model WebAppPharma.ViewModels.UbicacionesProductosViewModel;
 
 @{
     ViewData["Title"] = "Index";
@@ -14,31 +14,35 @@
             <i class="fas fa-plus"></i> Ingresar Nueva Ubicacion Producto
         </a>
     </p>
-
-    <div class="row">
-        @foreach (var item in Model)
-        {
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto: @item.Producto.Nombre</h5>
-                        <p class="card-text">
-                            <strong>Estante:</strong> @(item.Estante ?? "---")<br />
-                            <strong>Sección:</strong> @Html.DisplayFor(modelItem => item.Seccion)<br />
-                            <strong>Pasillo:</strong> @(item.Pasillo ?? "---")
-                        </p>
-                        <a asp-action="Edit" asp-route-id="@item.IdUbicacion" class="btn btn-warning btn-sm me-2">
-                            <i class="fas fa-edit"></i> Editar
-                        </a>
-                        <a asp-action="Details" asp-route-id="@item.IdUbicacion" class="btn btn-info btn-sm me-2">
-                            <i class="fas fa-info-circle"></i> Detalles
-                        </a>
-                        <a asp-action="Delete" asp-route-id="@item.IdUbicacion" class="btn btn-danger btn-sm">
-                            <i class="fas fa-trash-alt"></i> Eliminar
-                        </a>
+    @if (Model.Ubicaciones != null && Model.Ubicaciones.Any())
+    {
+        <div class="row">
+            @foreach (var item in Model.Ubicaciones)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.Producto.Nombre)</h5>
+                            <p class="card-text">
+                                <strong>Estante:</strong> @(item.Estante ?? "---")<br />
+                                <strong>Sección:</strong> @Html.DisplayFor(modelItem => item.Seccion)<br />
+                                <strong>Pasillo:</strong> @(item.Pasillo ?? "---")
+                            </p>
+                            <a asp-action="Edit" asp-route-id="@item.IdUbicacion" class="btn btn-warning btn-sm me-2">
+                                <i class="fas fa-edit"></i> Editar
+                            </a>
+                            <a asp-action="Details" asp-route-id="@item.IdUbicacion" class="btn btn-info btn-sm me-2">
+                                <i class="fas fa-info-circle"></i> Detalles
+                            </a>
+                            <a asp-action="Delete" asp-route-id="@item.IdUbicacion" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i> Eliminar
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        }
-    </div>
+            }
+        </div>
+    }
 </div>
+
+<partial name="_Paginator" for="@Model.Paginador" />

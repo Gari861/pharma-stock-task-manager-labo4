@@ -15,5 +15,6 @@ namespace WebAppPharma.ViewModels
         public string? BusquedaApellido { get; set; }
         public string? BusquedaDNI { get; set; }
         public int? BusquedaIdCargo { get; set; }
+        public Paginador Paginador { get; set; } = new Paginador();
     }
 }

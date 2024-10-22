@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebAppPharma.Models;
+using WebAppPharma.ViewModels;
 
 namespace WebAppPharma.Controllers
 {
@@ -19,9 +20,21 @@ namespace WebAppPharma.Controllers
         }
 
         // GET: EstadosdeTareas
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(EstadosdeTareasViewModel modelo, int pagina = 1)
         {
-            return View(await _context.EstadosdeTareas.ToListAsync());
+            int RegistrosPorPagina = 3;
+
+            var registros = _context.EstadosdeTareas
+                .Skip((pagina - 1) * RegistrosPorPagina)
+                                .Take(RegistrosPorPagina);
+
+            // Asignar los registros paginados al modelo
+            modelo.EstadosdeTareas = await registros.ToListAsync();
+            modelo.Paginador.PaginaActual = pagina;
+            modelo.Paginador.RegistrosPorPagina = RegistrosPorPagina;
+            modelo.Paginador.TotalRegistros = await _context.EstadosdeTareas.CountAsync();
+
+            return View(modelo);
         }
 
         // GET: EstadosdeTareas/Details/5

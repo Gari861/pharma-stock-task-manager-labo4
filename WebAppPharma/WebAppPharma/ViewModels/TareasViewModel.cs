@@ -15,5 +15,6 @@ namespace WebAppPharma.ViewModels
         // Filtro para empleados asignados a tareas
         public int? BusquedaEmpleadoId { get; set; }
         public IEnumerable<SelectListItem>? ListaEmpleados { get; set; }
+        public Paginador? Paginador { get; set; } = new Paginador();
     }
 }

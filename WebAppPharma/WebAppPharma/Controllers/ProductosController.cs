@@ -24,16 +24,18 @@ namespace WebAppPharma.Controllers
         }
 
         // GET: Productos
-        public async Task<IActionResult> Index(ProductosViewModel modelo)
+        public async Task<IActionResult> Index(ProductosViewModel modelo, int pagina = 1)
         {
-            //var appDBcontext = _context.Productos.Include(l => l.ProductosCategorias).ThenInclude(la => la.Categoria).Include(l => l.ProductosProveedores).ThenInclude(la => la.Proveedor);
+            int RegistrosPorPagina = 3;
 
             var productosQuery = _context.Productos
-                             .Include(e => e.ProductosCategorias)
-                             .ThenInclude(la => la.Categoria)
-                             .Include(e => e.ProductosProveedores)
-                             .ThenInclude(la => la.Proveedor)
-                             .AsQueryable();
+                                .Include(e => e.ProductosCategorias)
+                                .ThenInclude(la => la.Categoria)
+                                .Include(e => e.ProductosProveedores)
+                                .ThenInclude(la => la.Proveedor)
+                                .AsQueryable();
+
+            // Filtros de búsqueda
             if (!string.IsNullOrEmpty(modelo.BusquedaCod))
             {
                 productosQuery = productosQuery.Where(e => e.CodigoProducto.Contains(modelo.BusquedaCod));
@@ -49,10 +51,20 @@ namespace WebAppPharma.Controllers
                 productosQuery = productosQuery.Where(e => e.FechaVencimiento >= fecha && e.FechaVencimiento < fechaFin);
             }
 
-            // Ejecutar la consulta y asignar los resultados al modelo
-            modelo.Productos = await productosQuery.ToListAsync();
+            // Paginación: Obtener los registros paginados
+            var registros = await productosQuery
+                                .Skip((pagina - 1) * RegistrosPorPagina)
+                                .Take(RegistrosPorPagina)
+                                .ToListAsync();
 
-            //return View(await appDBcontext.ToListAsync());
+            // Asignar los registros al modelo
+            modelo.Productos = registros;
+
+            // Configurar el paginador
+            modelo.Paginador.PaginaActual = pagina;
+            modelo.Paginador.RegistrosPorPagina = RegistrosPorPagina;
+            modelo.Paginador.TotalRegistros = await productosQuery.CountAsync();
+
             return View(modelo);
         }
 

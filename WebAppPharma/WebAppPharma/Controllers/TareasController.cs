@@ -20,25 +20,22 @@ namespace WebAppPharma.Controllers
         }
 
         // GET: Tareas
-        public async Task<IActionResult> Index(TareasViewModel modelo)
+        public async Task<IActionResult> Index(TareasViewModel modelo, int pagina = 1)
         {
-            // Asegurarse de que el modelo no sea nulo
-            if (modelo == null)
-            {
-                modelo = new TareasViewModel();
-            }
+            int RegistrosPorPagina = 3;
 
-            // Obtener la lista de cargos para el dropdown
+            // Obtener la lista de prioridades para el dropdown
             modelo.ListaPrioridades = new SelectList(await _context.Prioridades.ToListAsync(), "IdPrioridad", "Tipo");
 
             // Generar consulta inicial de tareas, incluyendo Propiedad y EstadodeTarea
             var tareasQuery = _context.Tareas
-                                         .Include(e => e.Prioridad)
-                                         .Include(e => e.EstadodeTarea)
-                                         .Include(e => e.TareasEmpleados)
-                                         .ThenInclude(te => te.Empleado)
-                                         .AsQueryable();
+                                             .Include(e => e.Prioridad)
+                                             .Include(e => e.EstadodeTarea)
+                                             .Include(e => e.TareasEmpleados)
+                                             .ThenInclude(te => te.Empleado)
+                                             .AsQueryable();
 
+            // Obtener la lista de empleados para el dropdown
             modelo.ListaEmpleados = await _context.Empleados
                                         .Select(e => new SelectListItem
                                         {
@@ -65,15 +62,24 @@ namespace WebAppPharma.Controllers
                 tareasQuery = tareasQuery.Where(e => e.TareasEmpleados.Any(te => te.IdEmpleado == modelo.BusquedaEmpleadoId));
             }
 
-            //var appDBcontext = _context.Tareas.Include(t => t.EstadodeTarea).Include(t => t.Prioridad).Include(t => t.TareasEmpleados).ThenInclude(ta => ta.Empleado);
-            //return View(await appDBcontext.ToListAsync());
+            // Paginación: Obtener los registros paginados
+            var registros = await tareasQuery
+                                    .Skip((pagina - 1) * RegistrosPorPagina)
+                                    .Take(RegistrosPorPagina)
+                                    .ToListAsync();
 
-            // Ejecutar la consulta y asignar los resultados al modelo
-            modelo.Tareas = await tareasQuery.ToListAsync();
+            // Asignar los registros al modelo
+            modelo.Tareas = registros;
+
+            // Configurar el paginador
+            modelo.Paginador.PaginaActual = pagina;
+            modelo.Paginador.RegistrosPorPagina = RegistrosPorPagina;
+            modelo.Paginador.TotalRegistros = await tareasQuery.CountAsync();
 
             // Pasar el modelo a la vista
             return View(modelo);
         }
+
 
         // GET: Tareas/Details/5
         public async Task<IActionResult> Details(int? id)

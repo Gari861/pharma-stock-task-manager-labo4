@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WebAppPharma.Models.Proveedor>
+﻿@model WebAppPharma.ViewModels.ProveedoresViewModel;
 @{
     ViewData["Title"] = "Index";
 }
@@ -17,13 +17,13 @@
         <table class="table table-hover table-bordered table-striped text-center align-middle">
             <thead class="thead-dark">
                 <tr style="border: 1.3px solid black;">
-                    <th>@Html.DisplayNameFor(model => model.Nombre)</th>
-                    <th>@Html.DisplayNameFor(model => model.Telefono)</th>
+                    <th>@Html.DisplayNameFor(model => model.Proveedores[0].Nombre)</th>
+                    <th>@Html.DisplayNameFor(model => model.Proveedores[0].Telefono)</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in Model)
+                @foreach (var item in Model.Proveedores)
                 {
                     <tr style="border: 1px solid #ccc;">
                         <td style="text-transform: uppercase;">@Html.DisplayFor(modelItem => item.Nombre)</td>
@@ -45,6 +45,9 @@
         </table>
     </div>
 </div>
+
+<partial name="_Paginator" for="@Model.Paginador" />
+
 
 
 

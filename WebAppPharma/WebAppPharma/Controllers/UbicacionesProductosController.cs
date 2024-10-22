@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebAppPharma.Models;
+using WebAppPharma.ViewModels;
 
 namespace WebAppPharma.Controllers
 {
@@ -18,12 +19,28 @@ namespace WebAppPharma.Controllers
             _context = context;
         }
 
-        // GET: UbicacionesProductos
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(UbicacionesProductosViewModel modelo, int pagina = 1)
         {
-            var appDBcontext = _context.UbicacionesProductos.Include(u => u.Producto);
-            return View(await appDBcontext.ToListAsync());
+            int RegistrosPorPagina = 3;
+
+            // Obtener los registros paginados de la base de datos, incluyendo el producto
+            var registros = await _context.UbicacionesProductos
+                .Include(u => u.Producto)  // Incluir la relación con Producto
+                .Skip((pagina - 1) * RegistrosPorPagina)
+                .Take(RegistrosPorPagina)
+                .ToListAsync();
+
+            // Asignar los registros a la propiedad Ubicaciones del modelo
+            modelo.Ubicaciones = registros;
+
+            // Configurar el paginador
+            modelo.Paginador.PaginaActual = pagina;
+            modelo.Paginador.RegistrosPorPagina = RegistrosPorPagina;
+            modelo.Paginador.TotalRegistros = await _context.UbicacionesProductos.CountAsync();
+
+            return View(modelo);
         }
+
 
         // GET: UbicacionesProductos/Details/5
         public async Task<IActionResult> Details(int? id)

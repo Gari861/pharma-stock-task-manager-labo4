@@ -1,0 +1,66 @@
+﻿@* # Paginador en Razor
+
+Este código implementa una funcionalidad de paginación en una vista de Razor para ASP.NET Core MVC. La paginación divide un conjunto grande de resultados en páginas más pequeñas, y proporciona botones para navegar entre ellas.
+
+## Funcionalidad
+- **Botón "Anterior"**: Permite navegar a la página anterior, se desactiva cuando estás en la primera página.
+- **Enlaces de páginas**: Muestra el número de la página actual como activa, y permite navegar a las páginas adyacentes. Si hay más de dos páginas anteriores o siguientes, muestra enlaces a la primera y última página.
+- **Botón "Siguiente"**: Permite navegar a la página siguiente, se desactiva cuando estás en la última página. *@
+
+@model WebAppPharma.ViewModels.Paginador
+
+<nav aria-label="Paginación de Cargos">
+    <ul class="pagination justify-content-center">
+        <li class="page-item @(Model.PaginaActual == 1 ? "disabled" : "")">
+            <a class="page-link" asp-all-route-data="@Model.ValoresQueryString"
+               asp-route-pagina="@(Model.PaginaActual - 1)" tabindex="-1" aria-label="Anterior">
+                <i class="fas fa-angle-left"></i> Anterior
+            </a>
+        </li>
+
+        @if (Model.PaginaActual > 2)
+        {
+            <li class="page-item">
+                <a class="page-link" asp-all-route-data="@Model.ValoresQueryString"
+                   asp-route-pagina="1" aria-label="Primera página">1</a>
+            </li>
+            <li class="page-item disabled"><span class="page-link">...</span></li>
+        }
+
+        @if (Model.PaginaActual > 1)
+        {
+            <li class="page-item">
+                <a class="page-link" asp-all-route-data="@Model.ValoresQueryString"
+                   asp-route-pagina="@(Model.PaginaActual - 1)">@(Model.PaginaActual - 1)</a>
+            </li>
+        }
+
+        <li class="page-item active">
+            <span class="page-link">@Model.PaginaActual</span>
+        </li>
+
+        @if (Model.PaginaActual < Model.TotalPagina)
+        {
+            <li class="page-item">
+                <a class="page-link" asp-all-route-data="@Model.ValoresQueryString"
+                   asp-route-pagina="@(Model.PaginaActual + 1)">@(Model.PaginaActual + 1)</a>
+            </li>
+        }
+
+        @if (Model.PaginaActual < (Model.TotalPagina - 1))
+        {
+            <li class="page-item disabled"><span class="page-link">...</span></li>
+            <li class="page-item">
+                <a class="page-link" asp-all-route-data="@Model.ValoresQueryString"
+                   asp-route-pagina="@(Model.TotalPagina)" aria-label="Última página">@Model.TotalPagina</a>
+            </li>
+        }
+
+        <li class="page-item @(Model.PaginaActual == Model.TotalPagina ? "disabled" : "")">
+            <a class="page-link" asp-all-route-data="@Model.ValoresQueryString"
+               asp-route-pagina="@(Model.PaginaActual + 1)" aria-label="Siguiente">
+                Siguiente <i class="fas fa-angle-right"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
