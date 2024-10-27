@@ -21,7 +21,8 @@ namespace WebAppPharma.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            base.OnModelCreating(modelBuilder); //para identity
+            
             // Relación UNO A UNO 
             modelBuilder.Entity<Producto>()
                 .HasOne(l => l.UbicacionProducto)

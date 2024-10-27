@@ -1,4 +1,6 @@
 ﻿$("#seleccionImg").change(function () {
+    {
+    // Obtiene el nombre y el tamaño del archivo seleccionado
     var fileName = this.files[0].name;
     var fileSize = this.files[0].size;
     var esArchValido = 0;
@@ -32,10 +34,12 @@
     }
 });
 
+// Función para leer el archivo y mostrar la vista previa
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
 
+        // Evento que se dispara cuando el archivo ha sido leído
         reader.onload = function (e) {
             $("#imagen").attr("src", e.target.result).css("display", "block");
         }

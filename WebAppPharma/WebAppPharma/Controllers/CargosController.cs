@@ -26,16 +26,33 @@ namespace WebAppPharma.Controllers
         // GET: Cargos
         public async Task<IActionResult> Index(CargosViewModel modelo, int pagina = 1)
         {
+            // Define que se mostrarán 3 registros por página.
             int RegistrosPorPagina = 3;
 
-            var registros = _context.Cargos 
+            // Aplica paginación a los datos obtenidos de entidad Cargo
+            // La combinación permite cargar solo los datos necesarios para la página 
+            // que seestá visualizando, para evitar cargar todos los registros a la vez.
+            var registros = _context.Cargos
                 .Skip((pagina - 1) * RegistrosPorPagina)
-                                .Take(RegistrosPorPagina);
+                //Skip se asegura de que solo veas los registros correspondientes a la página actual.
+                .Take(RegistrosPorPagina);
+            //Take limita la cantidad de registros obtenidos, evitando cargar todos los datos a la vez.
 
-            // Asignar los registros paginados al modelo
-            modelo.Cargos = await registros.ToListAsync(); 
-            modelo.Paginador.PaginaActual = pagina;
-            modelo.Paginador.RegistrosPorPagina = RegistrosPorPagina;
+            /* Skip:
+             * Si estás en página 1: (1 - 1) * 3 = 0 (no omite registros, muestra los primeros).
+            Si estás en página 2: (2 - 1) * 3 = 3 (omite los primeros 3 registros y muestra los siguientes).
+            Si estás en página 3: (3 - 1) * 3 = 6 (omite los primeros 6 registros y muestra los siguientes).
+            */
+
+            /*  Omitirá los registros de páginas anteriores con Skip.
+                Seleccionará los registros de la página actual con Take.*/
+
+            // Asigna los registros paginados al modelo
+            modelo.Cargos = await registros.ToListAsync();
+
+            // Configura la paginación: página actual, cantidad por página y total de registros.
+            modelo.Paginador.PaginaActual = pagina; //1
+            modelo.Paginador.RegistrosPorPagina = RegistrosPorPagina; //3
             modelo.Paginador.TotalRegistros = await _context.Cargos.CountAsync(); 
 
             return View(modelo);

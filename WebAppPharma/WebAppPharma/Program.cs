@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
-// Configuraci�n de Entity Framework con SQL Server
+// Configuración de Entity Framework con SQL Server
 var connectionString = builder.Configuration.GetConnectionString("cadena");
 if (string.IsNullOrEmpty(connectionString))
 {
@@ -30,7 +30,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
 })
     .AddEntityFrameworkStores<AppDBcontext>();
 
-// Configurar la cultura predeterminada a "es-ES" (España)
+// Configurar la cultura predeterminada a "es-ES" (España) para los precios
 var defaultCulture = new CultureInfo("es-ES")
 {
     NumberFormat = new NumberFormatInfo
@@ -46,7 +46,7 @@ CultureInfo.DefaultThreadCurrentUICulture = defaultCulture;
 
 var app = builder.Build();
 
-// Establecer la cultura para cada solicitud
+// Establecer la cultura para cada solicitud para los precios
 var supportedCultures = new[] { defaultCulture };
 app.UseRequestLocalization(new RequestLocalizationOptions
 {
@@ -70,6 +70,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+//esto permite el identity
 app.UseAuthentication();
 app.UseAuthorization();
 

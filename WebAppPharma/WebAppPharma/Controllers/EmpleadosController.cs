@@ -27,24 +27,22 @@ namespace WebAppPharma.Controllers
         // GET: Empleados
         public async Task<IActionResult> Index(EmpleadosViewModel modelo)
         {
-            // Asegurarse de que el modelo no sea nulo
+            // Verifica que el modelo no sea nulo; si lo es, crea una nueva instancia de EmpleadosViewModel.
             if (modelo == null)
             {
                 modelo = new EmpleadosViewModel();
             }
 
-            // Obtener la lista de cargos para el dropdown
+            // Carga la lista de cargos para el dropdown en la vista.
             modelo.ListaCargos = new SelectList(await _context.Cargos.ToListAsync(), "IdCargo", "Tipo");
 
-            //var appDBcontext = _context.Empleados.Include(e => e.Cargo).Include(e => e.EstadodeEmpleado);
-
-            // Generar consulta inicial de empleados, incluyendo Cargo y EstadodeEmpleado
+            // Crea una consulta inicial para obtener empleados, incluyendo sus relaciones con Cargo y Estado de Empleado.
             var empleadosQuery = _context.Empleados
                                          .Include(e => e.Cargo)
                                          .Include(e => e.EstadodeEmpleado)
                                          .AsQueryable();
 
-            // Aplicar filtros si se proporcionan
+            // Aplica filtros de búsqueda si los valores se proporcionaron en el modelo.
             if (!string.IsNullOrEmpty(modelo.BusquedaNombre))
             {
                 empleadosQuery = empleadosQuery.Where(e => e.Nombre.Contains(modelo.BusquedaNombre));
@@ -65,12 +63,10 @@ namespace WebAppPharma.Controllers
                 empleadosQuery = empleadosQuery.Where(e => e.IdCargo == modelo.BusquedaIdCargo.Value);
             }
 
-            // Ejecutar la consulta y asignar los resultados al modelo
+            // Ejecuta la consulta y asigna los resultados filtrados al modelo.
             modelo.Empleados = await empleadosQuery.ToListAsync();
 
-            //return View(await appDBcontext.ToListAsync());
-
-            // Pasar el modelo a la vista
+            // Devuelve la vista con el modelo actualizado.
             return View(modelo);
         }
 
@@ -192,17 +188,23 @@ namespace WebAppPharma.Controllers
             {
                 // Manejo del archivo de foto
                 var archivos = HttpContext.Request.Form.Files;
+
+                // Verifica si hay archivos subidos
                 if (archivos != null && archivos.Count > 0)
                 {
                     var archivoFoto = archivos[0];
+
+                    // Verifica si el archivo subido tiene contenido
                     if (archivoFoto.Length > 0)
                     {
+                        // Define la ruta de destino donde se guardará la foto
                         var rutaDestino = Path.Combine(_env.WebRootPath, "fotografias");
                         var extArch = Path.GetExtension(archivoFoto.FileName);
-                        // Generar un nombre único para el archivo
+
+                        // Genera un nombre único para el archivo para evitar colisiones
                         var archivoDestino = Guid.NewGuid().ToString().Replace("-", "") + extArch;
 
-                        // Guardar el archivo en memoria
+                        // Guarda el archivo en el servidor
                         using (var filestream = new FileStream(Path.Combine(rutaDestino, archivoDestino), FileMode.Create))
                         {
                             archivoFoto.CopyTo(filestream);
@@ -210,6 +212,7 @@ namespace WebAppPharma.Controllers
                         }
                     }
                 }
+                // Guarda los cambios en la base de datos
                 _context.Add(empleado);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -253,6 +256,7 @@ namespace WebAppPharma.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("IdEmpleado,Nombre,Apellido,Dni,IdCargo,IdEstadodeEmpleado,Telefono,FechaNacimiento,Foto")] Empleado empleado)
         {
+            // Verifica si el ID del empleado proporcionado coincide con el ID del empleado que se está editando
             if (id != empleado.IdEmpleado)
             {
                 return NotFound();
@@ -264,11 +268,15 @@ namespace WebAppPharma.Controllers
                 {
                     // Manejo de archivos (fotos)
                     var archivos = HttpContext.Request.Form.Files;
+
+                    // Verifica si se ha subido algún archivo
                     if (archivos != null && archivos.Count > 0)
                     {
                         var archivoFoto = archivos[0];
+                        // Verifica si el archivo subido tiene contenido
                         if (archivoFoto.Length > 0)
                         {
+                            // Define la ruta de destino donde se guardará la nueva foto
                             var rutaDestino = Path.Combine(_env.WebRootPath, "fotografias");
                             var extArch = Path.GetExtension(archivoFoto.FileName);
                             var archivoDestino = Guid.NewGuid().ToString().Replace("-", "") + extArch;
@@ -288,7 +296,7 @@ namespace WebAppPharma.Controllers
                                     }
                                 }
 
-                                // Asignar la nueva foto
+                                // Asigna la nueva foto al empleado
                                 empleado.Foto = archivoDestino;
                             }
                         }

@@ -1,359 +1,359 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebAppPharma.bundle.scp.css",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebAppPharma.bundle.scp.css",
       "PackagePath": "staticwebassets\\WebAppPharma.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\03c2f781296346a58be4fa63119d17f7.jpg",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\03c2f781296346a58be4fa63119d17f7.jpg",
       "PackagePath": "staticwebassets\\fotografias\\03c2f781296346a58be4fa63119d17f7.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\095c14a407794ba1b50ff69dabb0221b.jpeg",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\095c14a407794ba1b50ff69dabb0221b.jpeg",
       "PackagePath": "staticwebassets\\fotografias\\095c14a407794ba1b50ff69dabb0221b.jpeg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\0d9d3e7f9be6477b99f9dd82fe480ff2.png",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\0d9d3e7f9be6477b99f9dd82fe480ff2.png",
       "PackagePath": "staticwebassets\\fotografias\\0d9d3e7f9be6477b99f9dd82fe480ff2.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\1f7e769772d84f5caab2e81a63be385d.png",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\1f7e769772d84f5caab2e81a63be385d.png",
       "PackagePath": "staticwebassets\\fotografias\\1f7e769772d84f5caab2e81a63be385d.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\2ba6441fa3234ec2b8649ff37e723505.png",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\2ba6441fa3234ec2b8649ff37e723505.png",
       "PackagePath": "staticwebassets\\fotografias\\2ba6441fa3234ec2b8649ff37e723505.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\38de58809f7943e787f7b0a84eb70a69.jpg",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\38de58809f7943e787f7b0a84eb70a69.jpg",
       "PackagePath": "staticwebassets\\fotografias\\38de58809f7943e787f7b0a84eb70a69.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\5a6d73efe10b45e7ace8dc4e650d65d1.jpeg",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\5a6d73efe10b45e7ace8dc4e650d65d1.jpeg",
       "PackagePath": "staticwebassets\\fotografias\\5a6d73efe10b45e7ace8dc4e650d65d1.jpeg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\6e7bb396d35c4058b562b5ba1fd3aec1.jpg",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\6e7bb396d35c4058b562b5ba1fd3aec1.jpg",
       "PackagePath": "staticwebassets\\fotografias\\6e7bb396d35c4058b562b5ba1fd3aec1.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\6f5a000d6bdd4a9194c6d240eeab56f1.jpg",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\6f5a000d6bdd4a9194c6d240eeab56f1.jpg",
       "PackagePath": "staticwebassets\\fotografias\\6f5a000d6bdd4a9194c6d240eeab56f1.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\7319de356ab1448195fd48fd1f50ab55.png",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\7319de356ab1448195fd48fd1f50ab55.png",
       "PackagePath": "staticwebassets\\fotografias\\7319de356ab1448195fd48fd1f50ab55.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\82e551d026604702a9a458f0bb42c235.png",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\82e551d026604702a9a458f0bb42c235.png",
       "PackagePath": "staticwebassets\\fotografias\\82e551d026604702a9a458f0bb42c235.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\835e1a9b7b984542b0b9cbb0e011a7a8.jpeg",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\835e1a9b7b984542b0b9cbb0e011a7a8.jpeg",
       "PackagePath": "staticwebassets\\fotografias\\835e1a9b7b984542b0b9cbb0e011a7a8.jpeg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\83e9a334d98f49ffb846166f2d5d10ba.jpg",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\83e9a334d98f49ffb846166f2d5d10ba.jpg",
       "PackagePath": "staticwebassets\\fotografias\\83e9a334d98f49ffb846166f2d5d10ba.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\87f0e3e5b3b94524bc0e1220cb5498b3.png",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\87f0e3e5b3b94524bc0e1220cb5498b3.png",
       "PackagePath": "staticwebassets\\fotografias\\87f0e3e5b3b94524bc0e1220cb5498b3.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\b124744b74f84785905c253db77392f1.png",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\b124744b74f84785905c253db77392f1.png",
       "PackagePath": "staticwebassets\\fotografias\\b124744b74f84785905c253db77392f1.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\bd7397b1e5bc4641a41d5cae07f1b2e0.png",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\bd7397b1e5bc4641a41d5cae07f1b2e0.png",
       "PackagePath": "staticwebassets\\fotografias\\bd7397b1e5bc4641a41d5cae07f1b2e0.png"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\e26eac59cc054180a2d350031e16e06f.jpeg",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\e26eac59cc054180a2d350031e16e06f.jpeg",
       "PackagePath": "staticwebassets\\fotografias\\e26eac59cc054180a2d350031e16e06f.jpeg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\e3118e523bcb4ad893cf3a39bdbb3a89.jpg",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\e3118e523bcb4ad893cf3a39bdbb3a89.jpg",
       "PackagePath": "staticwebassets\\fotografias\\e3118e523bcb4ad893cf3a39bdbb3a89.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\f1fe33e485df4182a7754bc5eda0a78c.jpeg",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\f1fe33e485df4182a7754bc5eda0a78c.jpeg",
       "PackagePath": "staticwebassets\\fotografias\\f1fe33e485df4182a7754bc5eda0a78c.jpeg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\f330038c8d1c44c0bed77ab8f90f3fd5.jpg",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\fotografias\\f330038c8d1c44c0bed77ab8f90f3fd5.jpg",
       "PackagePath": "staticwebassets\\fotografias\\f330038c8d1c44c0bed77ab8f90f3fd5.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\importaciones\\271688404f8c483a90dcf5ea84ce3fd2.xlsx",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\importaciones\\271688404f8c483a90dcf5ea84ce3fd2.xlsx",
       "PackagePath": "staticwebassets\\importaciones\\271688404f8c483a90dcf5ea84ce3fd2.xlsx"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\importaciones\\3904f408b53c4bdb8b5e79874807d178.xlsx",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\importaciones\\3904f408b53c4bdb8b5e79874807d178.xlsx",
       "PackagePath": "staticwebassets\\importaciones\\3904f408b53c4bdb8b5e79874807d178.xlsx"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\importaciones\\4fc89ae76ebb4bbb8a6dc15a6580696f.xlsx",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\importaciones\\4fc89ae76ebb4bbb8a6dc15a6580696f.xlsx",
       "PackagePath": "staticwebassets\\importaciones\\4fc89ae76ebb4bbb8a6dc15a6580696f.xlsx"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\importaciones\\8839225e54c54a81bddd4c4281a0f3cc.xlsx",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\importaciones\\8839225e54c54a81bddd4c4281a0f3cc.xlsx",
       "PackagePath": "staticwebassets\\importaciones\\8839225e54c54a81bddd4c4281a0f3cc.xlsx"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\importaciones\\942b88997cf14a79b134d7d6c5b1cfb1.xlsx",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\importaciones\\942b88997cf14a79b134d7d6c5b1cfb1.xlsx",
       "PackagePath": "staticwebassets\\importaciones\\942b88997cf14a79b134d7d6c5b1cfb1.xlsx"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\importaciones\\c1ed8cb0e1df4fb7a9db78cbc99fa353.xlsx",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\importaciones\\c1ed8cb0e1df4fb7a9db78cbc99fa353.xlsx",
       "PackagePath": "staticwebassets\\importaciones\\c1ed8cb0e1df4fb7a9db78cbc99fa353.xlsx"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\importaciones\\fb9e9f61e64446419f271bdc2e3b4cf5.xlsx",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\importaciones\\fb9e9f61e64446419f271bdc2e3b4cf5.xlsx",
       "PackagePath": "staticwebassets\\importaciones\\fb9e9f61e64446419f271bdc2e3b4cf5.xlsx"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\js\\preview.js",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\js\\preview.js",
       "PackagePath": "staticwebassets\\js\\preview.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

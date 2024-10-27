@@ -8769,11 +8769,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\WebAppPharma.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\WebAppPharma.csproj",
       "projectName": "WebAppPharma",
-      "projectPath": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\WebAppPharma.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\WebAppPharma.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

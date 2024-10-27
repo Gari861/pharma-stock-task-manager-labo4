@@ -111,16 +111,22 @@ namespace WebAppPharma.Controllers
         // GET: Tareas/Create
         public IActionResult Create()
         {
+            // Obtiene las listas desde el contexto de datos y la almacena en una variable
             var prioridades = _context.Prioridades.ToList();
             var estadosdetareas = _context.EstadosdeTareas.ToList();
+
+            // prepend es un SelectListItem vacío para permitir que el usuario seleccione un estado vacío.
             ViewData["IdEstadodeTarea"] = new SelectList(estadosdetareas, "IdEstadodeTarea", "Tipo", null)
                       .Prepend(new SelectListItem { Text = " ", Value = "" });
             ViewData["IdPrioridad"] = new SelectList(prioridades, "IdPrioridad", "Tipo", null)
                       .Prepend(new SelectListItem { Text = " ", Value = "" });
+
             // Verifica si no hay cargadas y pasa esa información a la vista
             ViewData["PrioridadesVacias"] = !prioridades.Any();
             ViewData["EstadosDeTareasVacios"] = !estadosdetareas.Any();
-            // Incluir y ordenar los empleados por el Cargo
+
+            // Carga la lista de empleados desde el contexto de datos, incluyendo su Cargo.
+            // Los empleados son ordenados por tipo de cargo para que aparezcan en un orden lógico en el dropdown.
             ViewBag.Empleados = _context.Empleados
                 .Include(e => e.Cargo)
                 .OrderBy(e => e.Cargo.Tipo)
@@ -139,28 +145,42 @@ namespace WebAppPharma.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdTarea,Nombre,Descripcion,IdPrioridad,IdEstadodeTarea,FechaCreacion,FechaLimite")] Tarea tarea, List<int> empleadosSeleccionados)
+        // Lista de IDs de empleados seleccionados en el formulario
         {
             if (ModelState.IsValid)
             {
+                // Agrega la nueva tarea al contexto
                 _context.Add(tarea);
+                // Guarda los cambios en la base de datos
                 await _context.SaveChangesAsync();
 
-                //Relacionar empleados con Tareas
+                /*Verificación de empleados seleccionados: Si hay empleados seleccionados, 
+                el método crea una relación TareaEmpleado entre la tarea y cada empleado seleccionado. 
+                */
+
+                // Verifica si hay empleados seleccionados en la lista (puede estar vacía si no se seleccionaron)
                 if (empleadosSeleccionados != null && empleadosSeleccionados.Count > 0)
                 {
+                    // Recorre cada empleado seleccionado en el formulario de creación
                     foreach (var idEmpleado in empleadosSeleccionados)
                     {
+                        // Crea una nueva instancia de TareaEmpleado para relacionar el empleado con la tarea
                         var tareaEmpleado = new TareaEmpleado
                         {
                             IdTarea = tarea.IdTarea,
                             IdEmpleado = idEmpleado
                         };
+                        // Agrega la relación tarea-empleado al contexto (marca para inserción en la base de datos)
                         _context.TareasEmpleados.Add(tareaEmpleado);
                     }
+                    // Agrega la relación tarea-empleado al contexto (marca para inserción en la base de datos)
                     await _context.SaveChangesAsync();
                 }
+                // Redirige al índice después de crear la tarea y, si corresponde, asociarla con los empleados seleccionados
                 return RedirectToAction(nameof(Index));
             }
+            // Si el estado del modelo no es válido, carga datos necesarios y vuelve a mostrar el formulario
+
             ViewData["IdEstadodeTarea"] = new SelectList(_context.EstadosdeTareas, "IdEstadodeTarea", "Tipo", tarea.IdEstadodeTarea);
             ViewData["IdPrioridad"] = new SelectList(_context.Prioridades, "IdPrioridad", "Tipo", tarea.IdPrioridad);
             ViewBag.Empleados = _context.Empleados

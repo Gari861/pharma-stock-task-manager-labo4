@@ -82,8 +82,10 @@ namespace WebAppPharma.Controllers
         [HttpPost]
         public async Task<IActionResult> ImportarDatosEsenciales(IFormFile excelFile)
         {
+            // Recepción del Archivo
             if (excelFile != null && excelFile.Length > 0)
             {
+                // Preparación del Archivo
                 var rutaDestino = Path.Combine(_env.WebRootPath, "importaciones");
                 var extArch = Path.GetExtension(excelFile.FileName);
                 if (extArch == ".xlsx" || extArch == ".xls")
@@ -91,11 +93,13 @@ namespace WebAppPharma.Controllers
                     var archivoDestino = Guid.NewGuid().ToString().Replace("-", "") + extArch;
                     var rutaCompleta = Path.Combine(rutaDestino, archivoDestino);
 
+                    // Guardar el Archivo en el Servidor
                     using (var filestream = new FileStream(rutaCompleta, FileMode.Create))
                     {
                         await excelFile.CopyToAsync(filestream);
                     }
 
+                    // Procesamiento del Archivo Excel
                     SLDocument archXls = new SLDocument(rutaCompleta);
                     if (archXls != null)
                     {
@@ -120,7 +124,8 @@ namespace WebAppPharma.Controllers
                             }
                             fila++;
                         }
-
+                        
+                        // Guardar Datos en la Base de Datos
                         if (ListaProductos.Count > 0)
                         {
                             _context.Productos.AddRange(ListaProductos);
@@ -133,6 +138,7 @@ namespace WebAppPharma.Controllers
                     }
                 }
             }
+            //Redireccionar al Índice
             return RedirectToAction("Index", "Productos");
         }
 
@@ -140,8 +146,10 @@ namespace WebAppPharma.Controllers
         [HttpPost]
         public async Task<IActionResult> ImportarDatosAdicionales(IFormFile excelFile)
         {
+            //Recepción del Archivo
             if (excelFile != null && excelFile.Length > 0)
             {
+                //Preparación del Archivo
                 var rutaDestino = Path.Combine(_env.WebRootPath, "importaciones");
                 var extArch = Path.GetExtension(excelFile.FileName);
                 if (extArch == ".xlsx" || extArch == ".xls")
@@ -149,11 +157,13 @@ namespace WebAppPharma.Controllers
                     var archivoDestino = Guid.NewGuid().ToString().Replace("-", "") + extArch;
                     var rutaCompleta = Path.Combine(rutaDestino, archivoDestino);
 
+                    //Guardar el Archivo en el Servidor
                     using (var filestream = new FileStream(rutaCompleta, FileMode.Create))
                     {
                         await excelFile.CopyToAsync(filestream);
                     }
 
+                    //Procesamiento del Archivo Excel:
                     SLDocument archXls = new SLDocument(rutaCompleta);
                     if (archXls != null)
                     {
@@ -181,6 +191,7 @@ namespace WebAppPharma.Controllers
                             fila++;
                         }
 
+                        //Guardar Datos en la Base de Datos
                         if (ListaProductos.Count > 0)
                         {
                             _context.Productos.AddRange(ListaProductos);
@@ -193,6 +204,7 @@ namespace WebAppPharma.Controllers
                     }
                 }
             }
+            //Redireccionar al Índice
             return RedirectToAction("Index", "Productos");
         }
 

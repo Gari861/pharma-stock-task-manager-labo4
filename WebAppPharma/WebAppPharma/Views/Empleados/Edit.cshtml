@@ -72,8 +72,10 @@
 
                 <div class="form-group mb-4">
                     <label asp-for="Foto" class="form-label font-weight-bold text-primary">Foto del Empleado</label>
+                    <!-- Campo oculto para el valor Foto -->
                     <input type="hidden" asp-for="Foto" />
                     <div class="mb-4">
+                        <!-- Imagen para la vista previa de la foto actual -->
                         <img id="imagen"
                              src="@(String.IsNullOrEmpty(Model.Foto) ? "" : Url.Content("~/fotografias/" + Model.Foto))"
                              class="rounded-circle img-thumbnail mb-4"
@@ -84,6 +86,8 @@
                              style="width: 90px; height: 80px; display: none;"
                              asp-append-version="true" />
                     </div>
+
+                    <!-- Input para seleccionar la imagen -->
                     <input type="file" id="seleccionImg" name="imagen" class="form-control" accept=".jpg,.jpeg,.png" />
                 </div>
 

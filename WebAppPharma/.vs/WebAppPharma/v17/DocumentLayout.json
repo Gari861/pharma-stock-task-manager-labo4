@@ -1,7 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|c:\\users\\user\\desktop\\documentar\\pharma-stock-task-manager-labo4\\webapppharma\\webapppharma\\views\\empleados\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|solutionrelative:webapppharma\\views\\empleados\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,6 +35,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Views\\Empleados\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebAppPharma\\Views\\Empleados\\Create.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\documentar\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Views\\Empleados\\Create.cshtml",
+              "RelativeToolTip": "WebAppPharma\\Views\\Empleados\\Create.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-27T06:32:03.785Z",
+              "EditorCaption": ""
             }
           ]
         }

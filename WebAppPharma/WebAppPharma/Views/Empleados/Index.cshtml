@@ -1,4 +1,4 @@
-﻿@model WebAppPharma.ViewModels.EmpleadosViewModel
+﻿@model WebAppPharma.ViewModels.EmpleadosViewModel //utilizamos modelo view model
 
 @{
     ViewData["Title"] = "Index";
@@ -21,6 +21,7 @@
         }
     </p>
 
+    <!-- Formulario de filtro para buscar empleados en la tabla -->
     <form asp-action="Index" method="get" class="mb-4">
         <div class="row g-3">
             <div class="col-md-3">
@@ -38,7 +39,7 @@
             <div class="col-md-2">
                 <label for="BusquedaIdCargo" class="form-label">Cargo</label>
                 <select class="form-select" asp-for="BusquedaIdCargo" asp-items="Model.ListaCargos">
-                    <option value="">Todo</option>
+                    <option value="">Todo</option> <!-- Opción para ver todos los cargos -->
                 </select>
             </div>
             <div class="col-md-2">
@@ -49,12 +50,17 @@
             </div>
         </div>
     </form>
+
+    <!-- Itera sobre cada empleado en Model.Empleados para mostrarlo en una fila -->
     @if (Model.Empleados != null && Model.Empleados.Any())
     {
         <div class="table-responsive">
             <table class="table table-hover table-bordered table-striped text-center align-middle">
                 <thead class="thead-dark">
                     <tr style="border: 1.3px solid black;">
+                        <!-- el índice 0 solo se usa en la cabecera de la tabla y no afecta 
+                        los datos que se muestran en las filas. -->
+
                         <th>@Html.DisplayNameFor(model => model.Empleados[0].Nombre)</th>
                         <th>@Html.DisplayNameFor(model => model.Empleados[0].Apellido)</th>
                         <th>@Html.DisplayNameFor(model => model.Empleados[0].Dni)</th>
