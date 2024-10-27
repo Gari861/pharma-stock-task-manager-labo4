@@ -1,16 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\final\\pharma-stock-task-manager-labo4\\WebAppPharma\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|c:\\users\\user\\desktop\\final\\pharma-stock-task-manager-labo4\\webapppharma\\webapppharma\\controllers\\tareascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|solutionrelative:webapppharma\\controllers\\tareascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|c:\\users\\user\\desktop\\final\\pharma-stock-task-manager-labo4\\webapppharma\\webapppharma\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C07CEE1C-46EA-409F-BD8F-46E0EEF992D7}|WebAppPharma\\WebAppPharma.csproj|solutionrelative:webapppharma\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\labo final\\pharma-stock-task-manager-labo4\\WebAppPharma\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,34 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductosController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Controllers\\ProductosController.cs",
-              "RelativeDocumentMoniker": "WebAppPharma\\Controllers\\ProductosController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Controllers\\ProductosController.cs",
-              "RelativeToolTip": "WebAppPharma\\Controllers\\ProductosController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAYwDoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T20:51:12.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TareasController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Controllers\\TareasController.cs",
-              "RelativeDocumentMoniker": "WebAppPharma\\Controllers\\TareasController.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\final\\pharma-stock-task-manager-labo4\\WebAppPharma\\WebAppPharma\\Controllers\\TareasController.cs",
-              "RelativeToolTip": "WebAppPharma\\Controllers\\TareasController.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAQwEIAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T20:50:14.662Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"

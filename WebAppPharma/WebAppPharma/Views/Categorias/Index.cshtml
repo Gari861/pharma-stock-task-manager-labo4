@@ -8,9 +8,12 @@
     </h1>
 
     <p class="text-center">
-        <a asp-action="Create" class="btn btn-success btn-lg mb-3" style="background-color: #2ecc71; border: none;">
-            <i class="fas fa-plus"></i> Ingresar Nueva Categoría
-        </a>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <a asp-action="Create" class="btn btn-success btn-lg mb-3" style="background-color: #2ecc71; border: none;">
+                <i class="fas fa-plus"></i> Ingresar Nueva Categoría
+            </a>
+        }
     </p>
 
     <div class="table-responsive">
@@ -27,15 +30,21 @@
                     <tr style="border: 1px solid #ccc;">
                         <td style="text-transform: uppercase;">@Html.DisplayFor(modelItem => item.Tipo)</td>
                         <td>
-                            <a asp-action="Edit" asp-route-id="@item.IdCategoria" class="btn btn-warning btn-sm me-2">
-                                <i class="fas fa-edit"></i> Editar
-                            </a>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <a asp-action="Edit" asp-route-id="@item.IdCategoria" class="btn btn-warning btn-sm me-2">
+                                    <i class="fas fa-edit"></i> Editar
+                                </a>
+                            }
                             <a asp-action="Details" asp-route-id="@item.IdCategoria" class="btn btn-info btn-sm me-2">
                                 <i class="fas fa-info-circle"></i> Detalles
                             </a>
-                            <a asp-action="Delete" asp-route-id="@item.IdCategoria" class="btn btn-danger btn-sm">
-                                <i class="fas fa-trash-alt"></i> Eliminar
-                            </a>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <a asp-action="Delete" asp-route-id="@item.IdCategoria" class="btn btn-danger btn-sm">
+                                    <i class="fas fa-trash-alt"></i> Eliminar
+                                </a>
+                            }
                         </td>
                     </tr>
                 }

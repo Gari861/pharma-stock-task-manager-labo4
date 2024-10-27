@@ -1,41 +1,33 @@
 ﻿@using Microsoft.AspNetCore.Identity
+
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
-<ul class="navbar-nav">
+<ul class="collapse navbar-collapse navbar-nav ms-auto" id="navbarNav">
     @if (SignInManager.IsSignedIn(User))
     {
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-light" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fas fa-user"></i> Hello, @User.Identity?.Name!
+        <li class="nav-item">
+            @{
+                var userName = UserManager.GetUserName(User);
+                var displayName = userName?.Contains("@") == true ? userName.Split('@')[0] : userName;
+            }
+            <a id="manage" class="nav-link nav-highlight" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
+                <i class="fas fa-user"></i> Hello @displayName!
             </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                <li class="nav-item">
-                    <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Index">
-                        <i class="fas fa-cog"></i> Manage Account
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <form class="dropdown-item p-0" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })" method="post">
-                        <button type="submit" class="btn btn-link nav-link text-decoration-none">
-                            <i class="fas fa-sign-out-alt"></i> Logout
-                        </button>
-                    </form>
-                </li>
-            </ul>
+        </li>
+        <li class="nav-item">
+            <form class="d-inline" asp-area="Identity" asp-page="/Account/Logout" method="post">
+                <button type="submit" class="nav-link btn btn-link nav-highlight border-0 p-0"><i class="fas fa-sign-out-alt"></i>Logout</button>
+            </form>
         </li>
     }
     else
     {
         <li class="nav-item">
-            <a class="nav-link text-light" asp-area="Identity" asp-page="/Account/Login">
-                <i class="fas fa-sign-in-alt"></i> Login
-            </a>
+            <a class="nav-link nav-highlight" id="register" asp-area="Identity" asp-page="/Account/Register"><i class="fas fa-user-plus"></i> Register</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-light" asp-area="Identity" asp-page="/Account/Register">
-                <i class="fas fa-user-plus"></i> Register
-            </a>
+            <a class="nav-link nav-highlight" id="login" asp-area="Identity" asp-page="/Account/Login"><i class="fas fa-sign-in-alt"></i>Login</a>
         </li>
     }
 </ul>

@@ -10,12 +10,15 @@
     </h1>
 
     <p class="text-center">
-        <a asp-action="Create" class="btn btn-success btn-lg mb-3" style="background-color: #2ecc71; border: none;">
-            <i class="fas fa-plus"></i> Ingresar Nuevo Empleado
-        </a>
-        <a asp-action="Import" class="btn btn-info btn-lg mb-3" style="border: none;">
-            <i class="fas fa-file-import"></i> Importar Nuevos Empleados
-        </a>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <a asp-action="Create" class="btn btn-success btn-lg mb-3" style="background-color: #2ecc71; border: none;">
+                <i class="fas fa-plus"></i> Ingresar Nuevo Empleado
+            </a>
+            <a asp-action="Import" class="btn btn-info btn-lg mb-3" style="border: none;">
+                <i class="fas fa-file-import"></i> Importar Nuevos Empleados
+            </a>
+        }
     </p>
 
     <form asp-action="Index" method="get" class="mb-4">
@@ -46,12 +49,12 @@
             </div>
         </div>
     </form>
-        @if (Model.Empleados != null && Model.Empleados.Any())
+    @if (Model.Empleados != null && Model.Empleados.Any())
     {
-    <div class="table-responsive">
-        <table class="table table-hover table-bordered table-striped text-center align-middle">
-            <thead class="thead-dark">
-                <tr style="border: 1.3px solid black;">
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered table-striped text-center align-middle">
+                <thead class="thead-dark">
+                    <tr style="border: 1.3px solid black;">
                         <th>@Html.DisplayNameFor(model => model.Empleados[0].Nombre)</th>
                         <th>@Html.DisplayNameFor(model => model.Empleados[0].Apellido)</th>
                         <th>@Html.DisplayNameFor(model => model.Empleados[0].Dni)</th>
@@ -60,46 +63,52 @@
                         <th>@Html.DisplayNameFor(model => model.Empleados[0].Telefono)</th>
                         <th>@Html.DisplayNameFor(model => model.Empleados[0].FechaNacimiento)</th>
                         <th>@Html.DisplayNameFor(model => model.Empleados[0].Foto)</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model.Empleados)
-                {
-                    <tr style="border: 1px solid #ccc;">
-                        <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Apellido)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Dni)</td>
-                        <td>@(item.Cargo?.Tipo ?? "---")</td>
-                        <td>@(item.EstadodeEmpleado?.Tipo ?? "---")</td>
-                        <td>@Html.DisplayFor(modelItem => item.Telefono)</td>
-                        <td>@(item.FechaNacimiento.HasValue ? item.FechaNacimiento.Value.ToString("dd/MM/yyyy") : "---")</td>
-                        <td>
-                            @if (!string.IsNullOrEmpty(item.Foto))
-                            {
-                                <img src="~/fotografias/@item.Foto" class="img-fluid img-thumbnail" style="width: 100px; height: 70px;" />
-                            }
-                            else
-                            {
-                                <p>---</p>
-                            }
-                        </td>
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.IdEmpleado" class="btn btn-warning btn-sm me-2">
-                                <i class="fas fa-edit"></i> Editar
-                            </a>
-                            <a asp-action="Details" asp-route-id="@item.IdEmpleado" class="btn btn-info btn-sm me-2">
-                                <i class="fas fa-info-circle"></i> Detalles
-                            </a>
-                            <a asp-action="Delete" asp-route-id="@item.IdEmpleado" class="btn btn-danger btn-sm">
-                                <i class="fas fa-trash-alt"></i> Eliminar
-                            </a>
-                        </td>
+                        <th>Acciones</th>
                     </tr>
-                }
-            </tbody>
-        </table>
-    </div>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Empleados)
+                    {
+                        <tr style="border: 1px solid #ccc;">
+                            <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Apellido)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Dni)</td>
+                            <td>@(item.Cargo?.Tipo ?? "---")</td>
+                            <td>@(item.EstadodeEmpleado?.Tipo ?? "---")</td>
+                            <td>@Html.DisplayFor(modelItem => item.Telefono)</td>
+                            <td>@(item.FechaNacimiento.HasValue ? item.FechaNacimiento.Value.ToString("dd/MM/yyyy") : "---")</td>
+                            <td>
+                                @if (!string.IsNullOrEmpty(item.Foto))
+                                {
+                                    <img src="~/fotografias/@item.Foto" class="img-fluid img-thumbnail" style="width: 100px; height: 70px;" />
+                                }
+                                else
+                                {
+                                    <p>---</p>
+                                }
+                            </td>
+                            <td>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <a asp-action="Edit" asp-route-id="@item.IdEmpleado" class="btn btn-warning btn-sm me-2">
+                                        <i class="fas fa-edit"></i> Editar
+                                    </a>
+                                }
+                                <a asp-action="Details" asp-route-id="@item.IdEmpleado" class="btn btn-info btn-sm me-2">
+                                    <i class="fas fa-info-circle"></i> Detalles
+                                </a>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <a asp-action="Delete" asp-route-id="@item.IdEmpleado" class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i> Eliminar
+                                    </a>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     }
     else
     {

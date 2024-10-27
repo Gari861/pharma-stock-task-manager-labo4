@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ using WebAppPharma.ViewModels;
 
 namespace WebAppPharma.Controllers
 {
+    [Authorize]
     public class ProductosController : Controller
     {
         private readonly AppDBcontext _context;
@@ -23,6 +25,7 @@ namespace WebAppPharma.Controllers
             _env = env;
         }
 
+        [AllowAnonymous]
         // GET: Productos
         public async Task<IActionResult> Index(ProductosViewModel modelo, int pagina = 1)
         {
@@ -193,6 +196,7 @@ namespace WebAppPharma.Controllers
             return RedirectToAction("Index", "Productos");
         }
 
+        [AllowAnonymous]
         // GET: Productos/Details/5
         public async Task<IActionResult> Details(int? id)
         {

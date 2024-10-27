@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,7 @@ using WebAppPharma.ViewModels;
 
 namespace WebAppPharma.Controllers
 {
+    [Authorize]
     public class ProveedoresController : Controller
     {
         private readonly AppDBcontext _context;
@@ -19,6 +21,7 @@ namespace WebAppPharma.Controllers
             _context = context;
         }
 
+        [AllowAnonymous]
         // GET: Proveedores
         public async Task<IActionResult> Index(ProveedoresViewModel modelo, int pagina = 1)
         {
@@ -37,6 +40,7 @@ namespace WebAppPharma.Controllers
             return View(modelo);
         }
 
+        [AllowAnonymous]
         // GET: Proveedores/Details/5
         public async Task<IActionResult> Details(int? id)
         {

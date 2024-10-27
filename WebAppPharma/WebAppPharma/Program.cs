@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
-// Configuración de Entity Framework con SQL Server
+// Configuraciï¿½n de Entity Framework con SQL Server
 var connectionString = builder.Configuration.GetConnectionString("cadena");
 if (string.IsNullOrEmpty(connectionString))
 {
@@ -19,44 +19,18 @@ if (string.IsNullOrEmpty(connectionString))
 builder.Services.AddDbContext<AppDBcontext>(options =>
     options.UseSqlServer(connectionString));
 
-// Configuración de Identity sin roles
-builder.Services.AddDbContext<AppDBcontext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddDefaultIdentity<IdentityUser>(options =>
 {
     options.SignIn.RequireConfirmedAccount = false;
-
-    // Configuración de contraseñas
-    options.Password.RequireDigit = true;
     options.Password.RequiredLength = 3;
     options.Password.RequireNonAlphanumeric = false;
     options.Password.RequireLowercase = false;
     options.Password.RequireUppercase = false;
-    options.Password.RequiredUniqueChars = 1;
-
-    // Configuración de bloqueo
-    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
-    options.Lockout.MaxFailedAccessAttempts = 5;
-    options.Lockout.AllowedForNewUsers = true;
-
-    // Configuración de usuario
-    options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._+";
-    options.User.RequireUniqueEmail = true;
+    options.Password.RequiredUniqueChars = 0;
 })
     .AddEntityFrameworkStores<AppDBcontext>();
 
-// Configuración de cookies
-builder.Services.ConfigureApplicationCookie(options =>
-{
-    // Configuración de cookies
-    options.Cookie.HttpOnly = true;
-    options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
-    options.LoginPath = "/Identity/Account/Login";
-    options.AccessDeniedPath = "/Identity/Account/AccessDenied";
-    options.SlidingExpiration = true;
-});
-
-// Configurar la cultura predeterminada a "es-ES" (España)
+// Configurar la cultura predeterminada a "es-ES" (EspaÃ±a)
 var defaultCulture = new CultureInfo("es-ES")
 {
     NumberFormat = new NumberFormatInfo

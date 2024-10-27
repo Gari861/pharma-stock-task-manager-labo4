@@ -9,9 +9,12 @@
     </h1>
 
     <p class="text-center">
-        <a asp-action="Create" class="btn btn-success btn-lg mb-3" style="background-color: #2ecc71; border: none;">
-            <i class="fas fa-plus"></i> Ingresar Nueva Tarea
-        </a>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <a asp-action="Create" class="btn btn-success btn-lg mb-3" style="background-color: #2ecc71; border: none;">
+                <i class="fas fa-plus"></i> Ingresar Nueva Tarea
+            </a>
+        }
     </p>
 
     <form asp-action="Index" method="get" class="mb-4">
@@ -44,12 +47,12 @@
             </div>
         </div>
     </form>
-        @if (Model.Tareas != null && Model.Tareas.Any())
+    @if (Model.Tareas != null && Model.Tareas.Any())
     {
-    <div class="table-responsive">
-        <table class="table table-hover table-bordered table-striped text-center align-middle">
-            <thead class="thead-dark">
-                <tr style="border: 1.3px solid black;">
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered table-striped text-center align-middle">
+                <thead class="thead-dark">
+                    <tr style="border: 1.3px solid black;">
                         <th>@Html.DisplayNameFor(model => model.Tareas[0].Nombre)</th>
                         <th>@Html.DisplayNameFor(model => model.Tareas[0].Descripcion)</th>
                         <th>@Html.DisplayNameFor(model => model.Tareas[0].Prioridad)</th>
@@ -57,50 +60,56 @@
                         <th>@Html.DisplayNameFor(model => model.Tareas[0].FechaCreacion)</th>
                         <th>@Html.DisplayNameFor(model => model.Tareas[0].FechaLimite)</th>
                         <th>@Html.DisplayNameFor(model => model.Tareas[0].TareasEmpleados)</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model.Tareas)
-                {
-                    <tr style="border: 1px solid #ccc;">
-                        <td style="text-transform: uppercase;">@Html.DisplayFor(modelItem => item.Nombre)</td>
-                        <td>@(item.Descripcion ?? "---")</td>
-                        <td>@(item.Prioridad?.Tipo ?? "---")</td>
-                        <td>@(item.EstadodeTarea?.Tipo ?? "---")</td>
-                        <td>@(item.FechaCreacion.HasValue ? item.FechaCreacion.Value.ToString("dd/MM/yyyy") : "---")</td>
-                        <td>@Html.DisplayFor(modelItem => item.FechaLimite)</td>
-                        <td>
-                            @if(item.TareasEmpleados != null && item.TareasEmpleados.Any())
-                            {
-                                @foreach(var tareaEmpleado in item.TareasEmpleados)
-                                {
-                                    <p>
-                                        @("-" + tareaEmpleado.Empleado.Nombre + " " + tareaEmpleado.Empleado.Apellido + " ")
-                                    </p>
-                                }
-                            }
-                            else
-                            {
-                                <p>---</p>
-                            }
-                        </td>
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.IdTarea" class="btn btn-warning btn-sm me-2">
-                                <i class="fas fa-edit"></i> Editar
-                            </a>
-                            <a asp-action="Details" asp-route-id="@item.IdTarea" class="btn btn-info btn-sm me-2">
-                                <i class="fas fa-info-circle"></i> Detalles
-                            </a>
-                            <a asp-action="Delete" asp-route-id="@item.IdTarea" class="btn btn-danger btn-sm">
-                                <i class="fas fa-trash-alt"></i> Eliminar
-                            </a>
-                        </td>
+                        <th>Acciones</th>
                     </tr>
-                }
-            </tbody>
-        </table>
-    </div>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Tareas)
+                    {
+                        <tr style="border: 1px solid #ccc;">
+                            <td style="text-transform: uppercase;">@Html.DisplayFor(modelItem => item.Nombre)</td>
+                            <td>@(item.Descripcion ?? "---")</td>
+                            <td>@(item.Prioridad?.Tipo ?? "---")</td>
+                            <td>@(item.EstadodeTarea?.Tipo ?? "---")</td>
+                            <td>@(item.FechaCreacion.HasValue ? item.FechaCreacion.Value.ToString("dd/MM/yyyy") : "---")</td>
+                            <td>@Html.DisplayFor(modelItem => item.FechaLimite)</td>
+                            <td>
+                                @if (item.TareasEmpleados != null && item.TareasEmpleados.Any())
+                                {
+                                    @foreach (var tareaEmpleado in item.TareasEmpleados)
+                                    {
+                                        <p>
+                                            @("-" + tareaEmpleado.Empleado.Nombre + " " + tareaEmpleado.Empleado.Apellido + " ")
+                                        </p>
+                                    }
+                                }
+                                else
+                                {
+                                    <p>---</p>
+                                }
+                            </td>
+                            <td>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <a asp-action="Edit" asp-route-id="@item.IdTarea" class="btn btn-warning btn-sm me-2">
+                                        <i class="fas fa-edit"></i> Editar
+                                    </a>
+                                }
+                                <a asp-action="Details" asp-route-id="@item.IdTarea" class="btn btn-info btn-sm me-2">
+                                    <i class="fas fa-info-circle"></i> Detalles
+                                </a>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <a asp-action="Delete" asp-route-id="@item.IdTarea" class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i> Eliminar
+                                    </a>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     }
     else
     {
