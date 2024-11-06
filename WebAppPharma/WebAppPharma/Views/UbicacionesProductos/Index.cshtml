@@ -10,7 +10,7 @@
     </h1>
 
     <p class="text-center">
-        @if (User.Identity.IsAuthenticated)
+        @if (User.IsInRole("Admin"))
         {
             <a asp-action="Create" class="btn btn-success btn-lg mb-3" style="background-color: #2ecc71; border: none;">
                 <i class="fas fa-plus"></i> Ingresar Nueva Ubicacion Producto
@@ -31,7 +31,7 @@
                                 <strong>Sección:</strong> @Html.DisplayFor(modelItem => item.Seccion)<br />
                                 <strong>Pasillo:</strong> @(item.Pasillo ?? "---")
                             </p>
-                            @if (User.Identity.IsAuthenticated)
+                            @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
                             {
                                 <a asp-action="Edit" asp-route-id="@item.IdUbicacion" class="btn btn-warning btn-sm me-2">
                                     <i class="fas fa-edit"></i> Editar
@@ -40,7 +40,7 @@
                             <a asp-action="Details" asp-route-id="@item.IdUbicacion" class="btn btn-info btn-sm me-2">
                                 <i class="fas fa-info-circle"></i> Detalles
                             </a>
-                            @if (User.Identity.IsAuthenticated)
+                            @if (User.IsInRole("Admin"))
                             {
                                 <a asp-action="Delete" asp-route-id="@item.IdUbicacion" class="btn btn-danger btn-sm">
                                     <i class="fas fa-trash-alt"></i> Eliminar

@@ -12,17 +12,16 @@ using WebAppPharma.ViewModels;
 
 namespace WebAppPharma.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class CargosController : Controller
     {
         private readonly AppDBcontext _context;
-
+        
         public CargosController(AppDBcontext context)
         {
             _context = context;
         }
 
-        [AllowAnonymous]
         // GET: Cargos
         public async Task<IActionResult> Index(CargosViewModel modelo, int pagina = 1)
         {
@@ -58,7 +57,6 @@ namespace WebAppPharma.Controllers
             return View(modelo);
         }
 
-        [AllowAnonymous]
         // GET: Cargos/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -182,7 +180,6 @@ namespace WebAppPharma.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
         private bool CargoExists(int id)
         {
             return _context.Cargos.Any(e => e.IdCargo == id);

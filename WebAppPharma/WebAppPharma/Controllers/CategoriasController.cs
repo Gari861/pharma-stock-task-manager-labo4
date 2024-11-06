@@ -11,7 +11,7 @@ using WebAppPharma.ViewModels;
 
 namespace WebAppPharma.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin, Manager")]
     public class CategoriasController : Controller
     {
         private readonly AppDBcontext _context;
@@ -21,7 +21,6 @@ namespace WebAppPharma.Controllers
             _context = context;
         }
 
-        [AllowAnonymous]
         // GET: Categorias
         public async Task<IActionResult> Index(CategoriasViewModel modelo, int pagina = 1)
         {
@@ -40,7 +39,6 @@ namespace WebAppPharma.Controllers
             return View(modelo);
         }
 
-        [AllowAnonymous]
         // GET: Categorias/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -60,6 +58,7 @@ namespace WebAppPharma.Controllers
         }
 
         // GET: Categorias/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
@@ -68,6 +67,7 @@ namespace WebAppPharma.Controllers
         // POST: Categorias/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdCategoria,Tipo")] Categoria categoria)
@@ -133,6 +133,7 @@ namespace WebAppPharma.Controllers
         }
 
         // GET: Categorias/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -151,6 +152,7 @@ namespace WebAppPharma.Controllers
         }
 
         // POST: Categorias/Delete/5
+        [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -165,6 +167,7 @@ namespace WebAppPharma.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize(Roles = "Admin")]
         private bool CategoriaExists(int id)
         {
             return _context.Categorias.Any(e => e.IdCategoria == id);

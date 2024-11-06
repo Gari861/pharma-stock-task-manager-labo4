@@ -11,7 +11,7 @@ using WebAppPharma.ViewModels;
 
 namespace WebAppPharma.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin, Manager, Empleado")]
     public class TareasController : Controller
     {
         private readonly AppDBcontext _context;
@@ -21,7 +21,6 @@ namespace WebAppPharma.Controllers
             _context = context;
         }
 
-        [AllowAnonymous]
         // GET: Tareas
         public async Task<IActionResult> Index(TareasViewModel modelo, int pagina = 1)
         {
@@ -83,8 +82,6 @@ namespace WebAppPharma.Controllers
             return View(modelo);
         }
 
-
-        [AllowAnonymous]
         // GET: Tareas/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -109,6 +106,7 @@ namespace WebAppPharma.Controllers
         }
 
         // GET: Tareas/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             // Obtiene las listas desde el contexto de datos y la almacena en una variable
@@ -138,7 +136,7 @@ namespace WebAppPharma.Controllers
             return View();
         }
 
-
+        [Authorize(Roles = "Admin")]
         // POST: Tareas/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -195,6 +193,7 @@ namespace WebAppPharma.Controllers
         }
 
         // GET: Tareas/Edit/5
+        [Authorize(Roles = "Admin, Manager")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -243,6 +242,7 @@ namespace WebAppPharma.Controllers
         // POST: Tareas/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Admin, Manager")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("IdTarea,Nombre,Descripcion,IdPrioridad,IdEstadodeTarea,FechaCreacion,FechaLimite")] Tarea tarea, List<int> empleadosSeleccionados)
@@ -314,6 +314,7 @@ namespace WebAppPharma.Controllers
 
 
         // GET: Tareas/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -335,6 +336,7 @@ namespace WebAppPharma.Controllers
         }
 
         // POST: Tareas/Delete/5
+        [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -354,6 +356,7 @@ namespace WebAppPharma.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize(Roles = "Admin")]
         private bool TareaExists(int id)
         {
             return _context.Tareas.Any(e => e.IdTarea == id);

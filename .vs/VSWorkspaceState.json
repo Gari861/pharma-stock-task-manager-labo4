@@ -4,9 +4,10 @@
     "\\WebAppPharma",
     "\\WebAppPharma\\WebAppPharma",
     "\\WebAppPharma\\WebAppPharma\\Controllers",
+    "\\WebAppPharma\\WebAppPharma\\Migrations",
     "\\WebAppPharma\\WebAppPharma\\Views",
     "\\WebAppPharma\\WebAppPharma\\Views\\Empleados"
   ],
-  "SelectedNode": "\\WebAppPharma\\WebAppPharma\\Controllers\\UbicacionesProductosController.cs",
+  "SelectedNode": "\\WebAppPharma\\WebAppPharma\\Views\\Empleados\\Create.cshtml",
   "PreviewInSolutionExplorer": false
 }

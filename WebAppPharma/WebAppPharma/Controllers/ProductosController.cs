@@ -12,7 +12,7 @@ using WebAppPharma.ViewModels;
 
 namespace WebAppPharma.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin, Manager, Empleado, Cliente")]
     public class ProductosController : Controller
     {
         private readonly AppDBcontext _context;
@@ -25,7 +25,6 @@ namespace WebAppPharma.Controllers
             _env = env;
         }
 
-        [AllowAnonymous]
         // GET: Productos
         public async Task<IActionResult> Index(ProductosViewModel modelo, int pagina = 1)
         {
@@ -72,6 +71,7 @@ namespace WebAppPharma.Controllers
         }
 
         // GET: /Productos/Import
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult Import()
         {
@@ -79,6 +79,7 @@ namespace WebAppPharma.Controllers
         }
 
         // POST: /Productos/ImportarDatosEsenciales
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> ImportarDatosEsenciales(IFormFile excelFile)
         {
@@ -143,6 +144,7 @@ namespace WebAppPharma.Controllers
         }
 
         // POST: /Productos/ImportarDatosAdicionales
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> ImportarDatosAdicionales(IFormFile excelFile)
         {
@@ -208,7 +210,6 @@ namespace WebAppPharma.Controllers
             return RedirectToAction("Index", "Productos");
         }
 
-        [AllowAnonymous]
         // GET: Productos/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -231,6 +232,7 @@ namespace WebAppPharma.Controllers
         }
 
         // GET: Productos/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             ViewBag.Categorias = new MultiSelectList(_context.Categorias, "IdCategoria", "Tipo");
@@ -241,6 +243,7 @@ namespace WebAppPharma.Controllers
         // POST: Productos/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdProducto,CodigoProducto,Nombre,Precio,CantSock,Foto,FechaIngreso,FechaVencimiento")] Producto producto, List<int> categoriasSeleccionadas, List<int> proveedoresSeleccionados)
@@ -314,7 +317,7 @@ namespace WebAppPharma.Controllers
             ViewBag.Proveedores = new MultiSelectList(_context.Proveedores, "IdProveedor", "Nombre");
             return View(producto);
         }
-
+        [Authorize(Roles = "Admin, Manager")]
         // GET: Productos/Edit/5
         public async Task<IActionResult> Edit(int id)
         {
@@ -344,6 +347,7 @@ namespace WebAppPharma.Controllers
         // POST: Productos/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Admin, Manager")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("IdProducto,CodigoProducto,Nombre,Precio,CantSock,Foto,FechaIngreso,FechaVencimiento")] Producto producto, List<int> categoriasSeleccionadas, List<int> proveedoresSeleccionados)
@@ -454,7 +458,7 @@ namespace WebAppPharma.Controllers
             ViewBag.Proveedores = new MultiSelectList(_context.Proveedores, "IdProveedor", "Nombre");
             return View(producto);
         }
-
+        [Authorize(Roles = "Admin")]
         // GET: Productos/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -475,7 +479,7 @@ namespace WebAppPharma.Controllers
 
             return View(producto);
         }
-
+        [Authorize(Roles = "Admin")]
         // POST: Productos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -490,7 +494,7 @@ namespace WebAppPharma.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
+        [Authorize(Roles = "Admin")]
         private bool ProductoExists(int id)
         {
             return _context.Productos.Any(e => e.IdProducto == id);

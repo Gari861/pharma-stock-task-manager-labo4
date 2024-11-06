@@ -17,475 +17,475 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebAppPharma
 build_property.RootNamespace = WebAppPharma
-build_property.ProjectDir = C:\Users\User\Desktop\documentar\pharma-stock-task-manager-labo4\WebAppPharma\WebAppPharma\
+build_property.ProjectDir = C:\Users\User\Desktop\labo4\pharma-stock-task-manager-labo4\WebAppPharma\WebAppPharma\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\User\Desktop\documentar\pharma-stock-task-manager-labo4\WebAppPharma\WebAppPharma
+build_property.MSBuildProjectDirectory = C:\Users\User\Desktop\labo4\pharma-stock-task-manager-labo4\WebAppPharma\WebAppPharma
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/AccessDenied.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWxDaGFuZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxFeHRlcm5hbExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Lockout.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Lockout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2Nrb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/LoginWith2fa.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/LoginWith2fa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbldpdGgyZmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbldpdGhSZWNvdmVyeUNvZGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Logout.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRGVsZXRlUGVyc29uYWxEYXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/Disable2fa.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/Disable2fa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRGlzYWJsZTJmYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRG93bmxvYWRQZXJzb25hbERhdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/Email.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/Email.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW5hYmxlQXV0aGVudGljYXRvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRXh0ZXJuYWxMb2dpbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcR2VuZXJhdGVSZWNvdmVyeUNvZGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcUGVyc29uYWxEYXRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcUmVzZXRBdXRoZW50aWNhdG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcU2V0UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcU2hvd1JlY292ZXJ5Q29kZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcVHdvRmFjdG9yQXV0aGVudGljYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1N0YXR1c01lc3NhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNlbmRFbWFpbENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/ResetPassword.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/_StatusMessage.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/_StatusMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfU3RhdHVzTWVzc2FnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Error.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Cargos/Create.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Cargos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZ29zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Cargos/Delete.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Cargos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZ29zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Cargos/Details.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Cargos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZ29zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Cargos/Edit.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Cargos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZ29zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Cargos/Index.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Cargos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZ29zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Categorias/Create.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Categorias/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Categorias/Delete.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Categorias/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Categorias/Details.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Categorias/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Categorias/Edit.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Categorias/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Categorias/Index.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Categorias/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Empleados/Create.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Empleados/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Empleados/Delete.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Empleados/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Empleados/Details.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Empleados/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Empleados/Edit.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Empleados/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Empleados/Import.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Empleados/Import.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXEltcG9ydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Empleados/Index.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Empleados/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/EstadosdeEmpleados/Create.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/EstadosdeEmpleados/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc2RlRW1wbGVhZG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/EstadosdeEmpleados/Delete.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/EstadosdeEmpleados/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc2RlRW1wbGVhZG9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/EstadosdeEmpleados/Details.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/EstadosdeEmpleados/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc2RlRW1wbGVhZG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/EstadosdeEmpleados/Edit.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/EstadosdeEmpleados/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc2RlRW1wbGVhZG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/EstadosdeEmpleados/Index.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/EstadosdeEmpleados/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc2RlRW1wbGVhZG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/EstadosdeTareas/Create.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/EstadosdeTareas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc2RlVGFyZWFzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/EstadosdeTareas/Delete.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/EstadosdeTareas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc2RlVGFyZWFzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/EstadosdeTareas/Details.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/EstadosdeTareas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc2RlVGFyZWFzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/EstadosdeTareas/Edit.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/EstadosdeTareas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc2RlVGFyZWFzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/EstadosdeTareas/Index.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/EstadosdeTareas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvc2RlVGFyZWFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Home/Index.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Home/Privacy.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Prioridades/Create.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Prioridades/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpb3JpZGFkZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Prioridades/Delete.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Prioridades/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpb3JpZGFkZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Prioridades/Details.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Prioridades/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpb3JpZGFkZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Prioridades/Edit.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Prioridades/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpb3JpZGFkZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Prioridades/Index.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Prioridades/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpb3JpZGFkZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/ProductosCategorias/Create.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/ProductosCategorias/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zQ2F0ZWdvcmlhc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/ProductosCategorias/Delete.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/ProductosCategorias/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zQ2F0ZWdvcmlhc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/ProductosCategorias/Details.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/ProductosCategorias/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zQ2F0ZWdvcmlhc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/ProductosCategorias/Edit.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/ProductosCategorias/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zQ2F0ZWdvcmlhc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/ProductosCategorias/Index.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/ProductosCategorias/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zQ2F0ZWdvcmlhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/ProductosProveedores/Create.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/ProductosProveedores/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zUHJvdmVlZG9yZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/ProductosProveedores/Delete.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/ProductosProveedores/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zUHJvdmVlZG9yZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/ProductosProveedores/Details.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/ProductosProveedores/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zUHJvdmVlZG9yZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/ProductosProveedores/Edit.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/ProductosProveedores/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zUHJvdmVlZG9yZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/ProductosProveedores/Index.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/ProductosProveedores/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zUHJvdmVlZG9yZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Productos/Create.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Productos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Productos/Delete.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Productos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Productos/Details.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Productos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Productos/Edit.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Productos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Productos/Import.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Productos/Import.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEltcG9ydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Productos/Index.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Productos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Proveedores/Create.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Proveedores/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Proveedores/Delete.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Proveedores/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Proveedores/Details.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Proveedores/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Proveedores/Edit.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Proveedores/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Proveedores/Index.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Proveedores/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Shared/Error.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Shared/_Paginator.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Shared/_Paginator.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdpbmF0b3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/TareasEmpleados/Create.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/TareasEmpleados/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWFzRW1wbGVhZG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/TareasEmpleados/Delete.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/TareasEmpleados/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWFzRW1wbGVhZG9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/TareasEmpleados/Details.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/TareasEmpleados/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWFzRW1wbGVhZG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/TareasEmpleados/Edit.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/TareasEmpleados/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWFzRW1wbGVhZG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/TareasEmpleados/Index.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/TareasEmpleados/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWFzRW1wbGVhZG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Tareas/Create.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Tareas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWFzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Tareas/Delete.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Tareas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWFzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Tareas/Details.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Tareas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWFzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Tareas/Edit.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Tareas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWFzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Tareas/Index.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Tareas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/UbicacionesProductos/Create.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/UbicacionesProductos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWJpY2FjaW9uZXNQcm9kdWN0b3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/UbicacionesProductos/Delete.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/UbicacionesProductos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWJpY2FjaW9uZXNQcm9kdWN0b3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/UbicacionesProductos/Details.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/UbicacionesProductos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWJpY2FjaW9uZXNQcm9kdWN0b3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/UbicacionesProductos/Edit.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/UbicacionesProductos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWJpY2FjaW9uZXNQcm9kdWN0b3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/UbicacionesProductos/Index.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/UbicacionesProductos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWJpY2FjaW9uZXNQcm9kdWN0b3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/_ViewImports.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/_ViewStart.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/documentar/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Shared/_Layout.cshtml]
+[C:/Users/User/Desktop/labo4/pharma-stock-task-manager-labo4/WebAppPharma/WebAppPharma/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-e1ezf3g3rw

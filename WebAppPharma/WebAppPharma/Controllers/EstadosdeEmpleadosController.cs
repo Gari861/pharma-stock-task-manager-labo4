@@ -11,7 +11,7 @@ using WebAppPharma.ViewModels;
 
 namespace WebAppPharma.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class EstadosdeEmpleadosController : Controller
     {
         private readonly AppDBcontext _context;
@@ -21,7 +21,6 @@ namespace WebAppPharma.Controllers
             _context = context;
         }
 
-        [AllowAnonymous]
         // GET: EstadosdeEmpleados
         public async Task<IActionResult> Index(EstadosdeEmpleadosViewModel modelo, int pagina = 1)
         {
@@ -40,7 +39,6 @@ namespace WebAppPharma.Controllers
             return View(modelo);
         }
 
-        [AllowAnonymous]
         // GET: EstadosdeEmpleados/Details/5
         public async Task<IActionResult> Details(int? id)
         {

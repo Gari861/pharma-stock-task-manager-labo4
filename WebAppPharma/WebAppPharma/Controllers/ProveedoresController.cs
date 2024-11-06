@@ -11,7 +11,7 @@ using WebAppPharma.ViewModels;
 
 namespace WebAppPharma.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin, Manager")]
     public class ProveedoresController : Controller
     {
         private readonly AppDBcontext _context;
@@ -21,7 +21,6 @@ namespace WebAppPharma.Controllers
             _context = context;
         }
 
-        [AllowAnonymous]
         // GET: Proveedores
         public async Task<IActionResult> Index(ProveedoresViewModel modelo, int pagina = 1)
         {
@@ -40,7 +39,6 @@ namespace WebAppPharma.Controllers
             return View(modelo);
         }
 
-        [AllowAnonymous]
         // GET: Proveedores/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -60,6 +58,7 @@ namespace WebAppPharma.Controllers
         }
 
         // GET: Proveedores/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
@@ -68,6 +67,7 @@ namespace WebAppPharma.Controllers
         // POST: Proveedores/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdProveedor,Nombre,Apellido,Telefono")] Proveedor proveedor)
@@ -82,6 +82,7 @@ namespace WebAppPharma.Controllers
         }
 
         // GET: Proveedores/Edit/5
+        [Authorize(Roles = "Admin, Manager")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -100,6 +101,7 @@ namespace WebAppPharma.Controllers
         // POST: Proveedores/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Admin, Manager")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("IdProveedor,Nombre,Apellido,Telefono")] Proveedor proveedor)
@@ -133,6 +135,7 @@ namespace WebAppPharma.Controllers
         }
 
         // GET: Proveedores/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -151,6 +154,7 @@ namespace WebAppPharma.Controllers
         }
 
         // POST: Proveedores/Delete/5
+        [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -165,6 +169,7 @@ namespace WebAppPharma.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize(Roles = "Admin")]
         private bool ProveedorExists(int id)
         {
             return _context.Proveedores.Any(e => e.IdProveedor == id);

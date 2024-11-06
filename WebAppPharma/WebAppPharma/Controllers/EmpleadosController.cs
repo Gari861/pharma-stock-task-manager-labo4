@@ -12,7 +12,7 @@ using WebAppPharma.ViewModels;
 
 namespace WebAppPharma.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin, Manager")]
     public class EmpleadosController : Controller
     {
         private readonly AppDBcontext _context;
@@ -23,7 +23,6 @@ namespace WebAppPharma.Controllers
             _env = env;
         }
 
-        [AllowAnonymous]
         // GET: Empleados
         public async Task<IActionResult> Index(EmpleadosViewModel modelo)
         {
@@ -71,6 +70,7 @@ namespace WebAppPharma.Controllers
         }
 
         // GET: /Productos/Import
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult Import()
         {
@@ -78,6 +78,7 @@ namespace WebAppPharma.Controllers
         }
 
         // POST: /Productos/ImportarDatos
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> ImportarDatos(IFormFile excelFile)
         {
@@ -137,8 +138,6 @@ namespace WebAppPharma.Controllers
             return RedirectToAction("Index", "Empleados");
         }
 
-
-        [AllowAnonymous]
         // GET: Empleados/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -160,6 +159,7 @@ namespace WebAppPharma.Controllers
         }
 
         // GET: Empleados/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             var cargos = _context.Cargos.ToList();
@@ -180,6 +180,7 @@ namespace WebAppPharma.Controllers
         // POST: Empleados/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdEmpleado,Nombre,Apellido,Dni,IdCargo,IdEstadodeEmpleado,Telefono,FechaNacimiento,Foto")] Empleado empleado)
@@ -324,6 +325,7 @@ namespace WebAppPharma.Controllers
             return View(empleado);
         }
 
+        [Authorize(Roles = "Admin")]
         // GET: Empleados/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -344,6 +346,7 @@ namespace WebAppPharma.Controllers
             return View(empleado);
         }
 
+        [Authorize(Roles = "Admin")]
         // POST: Empleados/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -359,6 +362,7 @@ namespace WebAppPharma.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize(Roles = "Admin")]
         private bool EmpleadoExists(int id)
         {
             return _context.Empleados.Any(e => e.IdEmpleado == id);

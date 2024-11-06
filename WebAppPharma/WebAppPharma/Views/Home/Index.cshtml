@@ -17,20 +17,29 @@
     <hr class="my-4" style="border-top: 2px solid #2980b9;">
 
     <div class="row">
-        <div class="col-md-4">
-            <h3 style="color: #27ae60;"><strong>Gestión de Productos</strong></h3>
-            <p style="font-size: 1.1rem;">Controla y actualiza el <strong>inventario de productos</strong>, supervisa las existencias y asegúrate de que el stock esté siempre al día.</p>
-            <a href="https://localhost:7213/Productos" class="btn btn-success btn-lg" style="background-color: #2ecc71; border: none;">Ir a Gestión de Productos</a>
-        </div>
-        <div class="col-md-4">
-            <h3 style="color: #2980b9;"><strong>Gestión de Tareas</strong></h3>
-            <p style="font-size: 1.1rem;">Administra y asigna <strong>tareas</strong> a empleados de forma eficiente, definiendo <strong>prioridades</strong>, <strong>fechas límites</strong> para la realización y controla el <strong>estado</strong> de las tareas. </p>
-            <a href="https://localhost:7213/Tareas" class="btn btn-primary btn-lg" style="background-color: #3498db; border: none;">Ir a Gestión de Tareas</a>
-        </div>
-        <div class="col-md-4">
-            <h3 style="color: #16a085;"><strong>Gestión de Empleados</strong></h3>
-            <p style="font-size: 1.1rem;">Visualiza la información clave de los empleados, incluyendo su <strong>cargo</strong>, <strong>número de teléfono</strong>, <strong>foto</strong> y el <strong>estado</strong> de actividad.</p>
-            <a href="https://localhost:7213/Empleados" class="btn btn-info btn-lg" style="background-color: #1abc9c; border: none;">Ir a Gestión de Empleados</a>
-        </div>
+        @if (User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("Empleado") || User.IsInRole("Cliente"))
+        {
+            <div class="col-md-4">
+                <h3 style="color: #27ae60;"><strong>Gestión de Productos</strong></h3>
+                <p style="font-size: 1.1rem;">Controla y actualiza el <strong>inventario de productos</strong>, supervisa las existencias y asegúrate de que el stock esté siempre al día.</p>
+                <a href="https://localhost:7213/Productos" class="btn btn-success btn-lg" style="background-color: #2ecc71; border: none;">Ir a Gestión de Productos</a>
+            </div>
+        }
+        @if (User.IsInRole("Admin") || User.IsInRole("Manager") || User.IsInRole("Empleado"))
+        {
+            <div class="col-md-4">
+                <h3 style="color: #2980b9;"><strong>Gestión de Tareas</strong></h3>
+                <p style="font-size: 1.1rem;">Administra y asigna <strong>tareas</strong> a empleados de forma eficiente, definiendo <strong>prioridades</strong>, <strong>fechas límites</strong> para la realización y controla el <strong>estado</strong> de las tareas. </p>
+                <a href="https://localhost:7213/Tareas" class="btn btn-primary btn-lg" style="background-color: #3498db; border: none;">Ir a Gestión de Tareas</a>
+            </div>
+        }
+        @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
+        {
+            <div class="col-md-4">
+                <h3 style="color: #16a085;"><strong>Gestión de Empleados</strong></h3>
+                <p style="font-size: 1.1rem;">Visualiza la información clave de los empleados, incluyendo su <strong>cargo</strong>, <strong>número de teléfono</strong>, <strong>foto</strong> y el <strong>estado</strong> de actividad.</p>
+                <a href="https://localhost:7213/Empleados" class="btn btn-info btn-lg" style="background-color: #1abc9c; border: none;">Ir a Gestión de Empleados</a>
+            </div>
+        }
     </div>
 </div>

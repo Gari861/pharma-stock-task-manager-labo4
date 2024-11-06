@@ -11,7 +11,7 @@ using WebAppPharma.ViewModels;
 
 namespace WebAppPharma.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin, Manager, Empleado")]
     public class UbicacionesProductosController : Controller
     {
         private readonly AppDBcontext _context;
@@ -21,7 +21,6 @@ namespace WebAppPharma.Controllers
             _context = context;
         }
 
-        [AllowAnonymous]
         public async Task<IActionResult> Index(UbicacionesProductosViewModel modelo, int pagina = 1)
         {
             int RegistrosPorPagina = 3;
@@ -44,8 +43,6 @@ namespace WebAppPharma.Controllers
             return View(modelo);
         }
 
-
-        [AllowAnonymous]
         // GET: UbicacionesProductos/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -65,6 +62,7 @@ namespace WebAppPharma.Controllers
             return View(ubicacionProducto);
         }
 
+        [Authorize(Roles = "Admin")]
         // GET: UbicacionesProductos/Create
         public IActionResult Create()
         {
@@ -88,6 +86,7 @@ namespace WebAppPharma.Controllers
         // POST: UbicacionesProductos/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("IdUbicacion,Estante,Seccion,Pasillo,IdProducto")] UbicacionProducto ubicacionProducto)
@@ -102,6 +101,7 @@ namespace WebAppPharma.Controllers
             return View(ubicacionProducto);
         }
 
+        [Authorize(Roles = "Admin, Manager")]
         // GET: UbicacionesProductos/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -132,7 +132,7 @@ namespace WebAppPharma.Controllers
             return View(ubicacionProducto);
         }
 
-
+        [Authorize(Roles = "Admin, Manager")]
         // POST: UbicacionesProductos/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -169,6 +169,7 @@ namespace WebAppPharma.Controllers
             return View(ubicacionProducto);
         }
 
+        [Authorize(Roles = "Admin")]
         // GET: UbicacionesProductos/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -188,6 +189,7 @@ namespace WebAppPharma.Controllers
             return View(ubicacionProducto);
         }
 
+        [Authorize(Roles = "Admin")]
         // POST: UbicacionesProductos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -202,7 +204,7 @@ namespace WebAppPharma.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
+        [Authorize(Roles = "Admin")]
         private bool UbicacionProductoExists(int id)
         {
             return _context.UbicacionesProductos.Any(e => e.IdUbicacion == id);

@@ -10,7 +10,7 @@ using WebAppPharma.Models;
 
 namespace WebAppPharma.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class ProductosCategoriasController : Controller
     {
         private readonly AppDBcontext _context;
